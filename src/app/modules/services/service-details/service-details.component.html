@@ -1,0 +1,66 @@
+<section class="pb-200" *ngIf="!showDetail">
+    <div class="tabinfo responsive-top-spacing-softSer">
+        <div class="pt-100 spacetab">
+
+<div *ngFor="let owi of ourWorksItems">
+            <div class="leftservices" *ngIf="owi.card == 'leftservices'">
+                <div class="boxcard overlapleft">
+                    <div class="boxcardtitle">{{owi.title}}</div>
+                    <div class="boxcardSub">{{owi.desc}}</div>
+                    <div class="hashtag">
+                        <ul>
+                            <li *ngFor="let tag of owi.tag"> {{tag}}</li>
+
+                        </ul>
+                    </div>
+
+                    <div  class="redmoreservices">
+                        <a href="javascript:void(0)" (click)="onExplore(owi.title,true,owi.category)" class="read-mores">Read
+                            More</a>
+                    </div>
+                </div>
+                <div class="imgservies">
+                    <img src="../../../../assets/media/images/services/design/UXServicess.gif" alt="">
+                </div>
+            </div>
+
+            <div class="rightservices" *ngIf="owi.card == 'rightservices'">
+
+                <div class="imgservies">
+                    <img src="../../../../assets/media/images/services/design/UXServicess.gif" alt="">
+                </div>
+                <div class="boxcard overlapright">
+                    <div class="boxcardtitle">{{owi.title}}</div>
+                    <div class="boxcardSub">{{owi.desc}}</div>
+                    <div class="hashtag">
+                        <ul>
+                            <li *ngFor="let tag of owi.tag"> {{tag}}</li>
+
+                        </ul>
+                    </div>
+                    <div  class="redmoreservices">
+                        <a href="javascript:void(0)" (click)="onExplore(owi.title,true,owi.category)" class="read-mores">Read
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</section>
+
+<app-product-design *ngIf="showDetail && service == 'Physical Product Design' "></app-product-design>
+<app-uiuxdesign *ngIf="showDetail && service == 'UI-UX Design' "></app-uiuxdesign>
+<app-graphicsdesign *ngIf="showDetail && service == 'Graphics Design' "></app-graphicsdesign>
+<app-animation *ngIf="showDetail && service == 'Animation & VFX Design' "></app-animation>
+<app-photography *ngIf="showDetail && service == 'Photography' "></app-photography>
+
+<app-product-developement *ngIf="showDetail && service == 'Product Development' "></app-product-developement>
+<app-mobile-web-developement *ngIf="showDetail && service == 'Mobile & Web Development' "></app-mobile-web-developement>
+<app-architecture-design *ngIf="showDetail && service == 'Architecture & Design' "></app-architecture-design>
+<app-data-science *ngIf="showDetail && service == 'Data Science' "></app-data-science>
+<app-ar-vr *ngIf="showDetail && service == 'AR/VR' "></app-ar-vr>
+<app-consulting-staffing *ngIf="showDetail && service == 'Consulting & Staffing' "></app-consulting-staffing>
+<app-infra-service *ngIf="showDetail && service == 'Infra Services' "></app-infra-service>
+<app-technology-consulting *ngIf="showDetail && service == 'Technology Consulting' "></app-technology-consulting>

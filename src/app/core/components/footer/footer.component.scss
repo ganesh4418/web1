@@ -1,0 +1,158 @@
+footer {
+  li a {
+    color: #ffffff;
+  }
+}
+
+.HzV7m-b7CEbf .i4ewOd-pzNkMb-tJHJj {
+  padding: 11px 0 11px 20px;
+  display: none !important;
+}
+
+.HzV7m-b7CEbf {
+  display: none;
+}
+
+.social {
+  .icon_hover {
+    display: none;
+  }
+  a:hover {
+      .icon_hover {
+        display: flex;
+    }
+    .icon {
+      display: none;
+    }
+  }
+  li {
+    list-style: none;
+    margin-right: 0.5rem;
+  }
+}
+.fotter-titel {
+  font-family: "Roboto Bold";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 13px;
+  letter-spacing: 0.01em;
+  margin-bottom: 15px;
+}
+
+.fotter_sub {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  letter-spacing: 0.01em;
+
+  /* White */
+
+  color: #ffffff;
+}
+.m5 {
+  margin-top: 2rem;
+}
+.quick {
+  ul {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 15px;
+    font-family: "Roboto";
+    font-style: normal;
+    // font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    /* White */
+    color: #ffffff;
+  }
+  li {
+    font-weight: 300;
+    margin-bottom: 3px;
+    &:hover {
+      font-weight: 500;
+    }
+  }
+}
+
+.m-top {
+  margin-top: 30px;
+}
+
+.address {
+  // padding:0px 20px;
+  width: 66%;
+  margin: auto;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+
+  /* White */
+
+  color: #ffffff;
+  .address-title{
+  
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+  
+    /* White */
+  
+    color: #ffffff;
+  }
+}
+
+.ContactFotter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .iconFotter {
+    display: flex;
+    gap: 8px;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    letter-spacing: 0.01em;
+
+    /* White */
+
+    color: #ffffff;
+
+    img {
+      width: 25px;
+    }
+    a:hover {
+      font-weight: 500;
+    }
+  }
+}
+
+.letter-spacing {
+  letter-spacing: 0.2px;
+}
+
+.make-center {
+  flex-basis: content;
+}
+
+.left-space{
+  margin-left: 17%;
+}
+
+.suEOdc {
+  display: none !important;
+}

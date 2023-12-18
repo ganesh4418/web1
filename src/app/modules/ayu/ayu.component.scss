@@ -1,0 +1,61 @@
+
+.m-20{
+    margin-top: 3rem;
+}
+.tabinfo {
+    width: 85%;
+    /* background: red; */
+    margin: auto;
+}
+
+.products {
+.tabcusmeting li {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding: 11px 2rem;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    border: 1px solid #E2E7EF;
+    border-radius: 35px;
+    margin-left: 13px;
+    background-color: transparent;
+
+    &:hover{
+        background-color: #2673E5;
+        color: #fff;
+    }
+    
+
+
+}
+.activep{
+    background-color: #2673E5 !important;
+    color: #fff !important;
+}
+}
+
+.ayu{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+/* identical to box height, or 100% */
+
+text-align: center;
+letter-spacing: 0.01em;
+margin: 0px 20px;
+}
+
+.alchenter{
+    align-items: center;
+    padding-bottom: 1.5rem;
+}

@@ -1,0 +1,285 @@
+<div class="pl-140 pt-100">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<div class="submitiBg">
+    <img src="../../../assets/media/images/submitId.svg" alt="">
+</div>
+
+<section>
+    <section class="submiti ">
+        <div class="home position-relative h-100 space">
+
+            <div class="titlesubmit">
+                <span>Submit </span> Your Idea
+            </div>
+
+            <div class="submitideaForm pt-5 pb-5 mt-5 mb-5">
+                <form [formGroup]="submitIdeaForm" class="form" (ngSubmit)="onSubmit(submitIdeaForm)">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+
+                            <div class="floating-label">
+                                <input type="text" placeholder="Full Name *" class="form-control form-input  " id="fullName"
+                                formControlName="fullName" required autocomplete="off">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                            </div>
+
+                           
+                            <div
+                                *ngIf="(submitIdeaFormControl['fullName'].touched && submitIdeaFormControl['fullName'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['fullName'].errors && submitIdeaFormControl['fullName'].errors['required']">
+                                    <small class="form-text text-danger">Enter your full name</small>
+                                </div>
+                                <div
+                                    *ngIf="submitIdeaFormControl['fullName'].errors && submitIdeaFormControl['fullName'].errors['pattern']">
+                                    <small class="form-text text-danger">Enter valid full name</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+
+                            <div class="floating-label">
+                                <select class="form-control form-select form-input" formControlName="youAre"
+                                (change)="onSelectYouAre($event)">
+                                <option value="" disabled selected>You Are *</option>
+                                <option *ngFor="let x of youAreDropdown" [value]="x">{{x}}</option>
+                                </select>
+                            </div>
+
+                            <div
+                                *ngIf="(submitIdeaFormControl['youAre'].touched && submitIdeaFormControl['youAre'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['youAre'].errors && submitIdeaFormControl['youAre'].errors['required']">
+                                    <small class="form-text text-danger">Enter who you are</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3" *ngIf="yorAre=='Organisation'">
+
+                            <div class="floating-label">
+                                <input type="text" placeholder="Fill your organisation name *" class="form-control form-input  " id="youAreName"
+                                formControlName="youAreName" required autocomplete="off">
+                                <label for="youAreName" class="form-label">Fill your organisation name *</label>
+                            </div>
+
+                            <div
+                                *ngIf="(submitIdeaFormControl['youAreName'].touched && submitIdeaFormControl['youAreName'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['youAreName'].errors && submitIdeaFormControl['youAreName'].errors['required']">
+                                    <small class="form-text text-danger">Enter your organisation name</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="floating-label">
+                                <select class="form-control form-select form-input" formControlName="country"
+                                    (change)="onSelectChange($event)">
+                                    <option value="" disabled selected hidden>Country *</option>
+                                    <option *ngFor="let country of prefixes" [value]="country.name">
+                                        {{country.name}}
+                                    </option>
+                                </select>
+                                <label for="country" class="form-label">Select Country*</label>
+                            </div>
+                            <!-- <input type="text"  id="country" placeholder="Country*" class="form-control" formControlName="country" #country
+                (keyup.enter)="getCountry(country.value)"
+                (blur)="getCountry(country.value)" required> -->
+                            <div
+                                *ngIf="(submitIdeaFormControl['country'].touched && submitIdeaFormControl['country'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['country'].errors && submitIdeaFormControl['country'].errors['required']">
+                                    <small class="form-text text-danger">Enter your country</small>
+                                </div>
+                                <div
+                                    *ngIf="submitIdeaFormControl['country'].errors && submitIdeaFormControl['country'].errors['pattern']">
+                                    <small class="form-text text-danger">Enter valid country</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+
+                            <div class="floating-label">
+                                <input type="email" placeholder="Email Address *" class="form-control form-input  " id="email"
+                                formControlName="email" required autocomplete="off">
+                                <label for="email" class="form-label">Email Address *</label>
+                            </div>
+
+
+                            <div
+                                *ngIf="(submitIdeaFormControl['email'].touched && submitIdeaFormControl['email'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['email'].errors && submitIdeaFormControl['email'].errors['required']">
+                                    <small class="form-text text-danger">Enter your email address</small>
+                                </div>
+                                <div
+                                    *ngIf="submitIdeaFormControl['email'].errors && submitIdeaFormControl['email'].errors['pattern']">
+                                    <small class="form-text text-danger">Enter valid email address</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <input type="text" id="contactPreNo" class="form-control" formControlName="contactPreNo"
+                                 readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="floating-label">
+                                <input type="number" placeholder="Contact Number *" class="form-control form-input  " id="contactNo"
+                                formControlName="contactNo"  maxlength="14" required autocomplete="off">
+                                <label for="contactNo" class="form-label">Contact Number *</label>
+                            </div>
+                            <div
+                                *ngIf="(submitIdeaFormControl['contactNo'].touched && submitIdeaFormControl['contactNo'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['contactNo'].errors && submitIdeaFormControl['contactNo'].errors['required']">
+                                    <small class="form-text text-danger">Enter your contact number</small>
+                                </div>
+                                <div
+                                    *ngIf="submitIdeaFormControl['contactNo'].errors && submitIdeaFormControl['contactNo'].errors['pattern']">
+                                    <small class="form-text text-danger">Enter valid contact number</small>
+                                </div>
+                                <div
+                                    *ngIf="submitIdeaFormControl['contactNo'].errors && submitIdeaFormControl['contactNo'].errors['minlength']">
+                                    <small class="form-text text-danger">Enter min {{minMobileLength}} length contact no</small>
+                                </div>
+                                <div
+                                    *ngIf="submitIdeaFormControl['contactNo'].errors && submitIdeaFormControl['contactNo'].errors['maxlength']">
+                                    <small class="form-text text-danger">Enter max {{maxMobileLength}} length contact no</small>
+                                </div>
+                                <div
+                                            *ngIf="submitIdeaFormControl['contactNo'].errors &&  submitIdeaFormControl['contactNo'].errors['prefixValid']">
+                                            <small class="form-text text-danger">Enter valid contact no</small>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 mb-3">
+                            <input type="text" id="altContactPreNo" class="form-control"
+                                formControlName="altContactPreNo" readonly>
+                        </div>
+                        <div class="col-md-4 mb-3">
+
+                            <div class="floating-label">         
+                                <input type="number" placeholder="Alternate Contact Number*" class="form-control form-input  " id="altContactNo"
+                                formControlName="altContactNo"  maxlength="14" required autocomplete="off">
+                                <label for="altContactNo" class="form-label alternate-contact-label">Alternate Contact Number*</label>
+                            </div>
+
+                           
+                            <div
+                                *ngIf="(submitIdeaFormControl['altContactNo'].touched && submitIdeaFormControl['altContactNo'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['altContactNo'].errors && submitIdeaFormControl['altContactNo'].errors['pattern']">
+                                    <small class="form-text text-danger">Enter valid contact number</small>
+                                </div>
+                                <div
+                                    *ngIf="submitIdeaFormControl['altContactNo'].errors && submitIdeaFormControl['altContactNo'].errors['minlength']">
+                                    <small class="form-text text-danger">Enter min {{minMobileLength}} length contact no</small>
+                                </div>
+                                <div
+                                    *ngIf="submitIdeaFormControl['altContactNo'].errors && submitIdeaFormControl['altContactNo'].errors['maxlength']">
+                                    <small class="form-text text-danger">Enter max {{maxMobileLength}} length contact no</small>
+                                </div>
+                                <div
+                                            *ngIf="submitIdeaFormControl['altContactNo'].errors &&  submitIdeaFormControl['altContactNo'].errors['prefixValid']">
+                                            <small class="form-text text-danger">Enter valid contact no</small>
+                                        </div>
+                            </div>
+                            
+                        </div>
+                        <div class="text-center" *ngIf="this.submitIdeaForm.get('contactNo')?.value == this.submitIdeaForm.get('altContactNo')?.value && this.submitIdeaForm.get('altContactNo')?.touched">
+                            <small class="form-text text-danger alternateContact">Contact number and Alternate number should not be same.</small>
+                        </div>
+
+                        <div class="titleidea">About your idea</div>
+
+                        <div class="col-md-12 mb-3">
+
+                            <div class="floating-label">         
+                                <input type="text" placeholder="Subject *" class="form-control form-input  " id="subject"
+                                formControlName="subject" required autocomplete="off">
+                                <label for="altContactNo" class="form-label">Subject *</label>
+                            </div>
+
+                            <div
+                                *ngIf="(submitIdeaFormControl['subject'].touched && submitIdeaFormControl['subject'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['subject'].errors && submitIdeaFormControl['subject'].errors['required']">
+                                    <small class="form-text text-danger">Enter your subject</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="floating-label">
+                                 <select class="form-control form-select form-input" formControlName="domain" id="domain">
+                                    <option value="" disabled selected>Domain *</option>
+                                    <option *ngFor="let d of domain" [value]="d">
+                                        {{d}}
+                                    </option>
+                                </select>
+
+                                <label for="country" class="form-label">Domain *</label>
+                            </div>
+
+
+                            <div
+                                *ngIf="(submitIdeaFormControl['domain'].touched && submitIdeaFormControl['domain'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['domain'].errors && submitIdeaFormControl['domain'].errors['required']">
+                                    <small class="form-text text-danger">Enter your domain</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="floating-label">
+                               <select class="form-control form-select form-input" formControlName="ideaStage" id="ideaStage">
+                                <option value="" disabled selected>Idea Stage *</option>
+                                <option *ngFor="let i of idea" [value]="i">
+                                    {{i}}
+                                </option>
+                            </select>
+
+
+                               <label for="country" class="form-label">Domain *</label>
+                           </div>
+
+                      
+                            <div
+                                *ngIf="(submitIdeaFormControl['ideaStage'].touched && submitIdeaFormControl['ideaStage'].invalid) || isSubmitted">
+                                <div
+                                    *ngIf="submitIdeaFormControl['ideaStage'].errors && submitIdeaFormControl['ideaStage'].errors['required']">
+                                    <small class="form-text text-danger">Enter your idea stage</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="floating-label ">
+                                <textarea name="" id="ideaDescription" cols="30" rows="5" class="form-control textarea"
+                                     formControlName="ideaDescription" required></textarea>
+                                <label for="ideaDescription" class="form-label">Describe Your Idea*</label>
+                            </div>
+
+
+                        </div>
+
+                        <h5>Attachment</h5>
+                        <div class="col-md-12 mb-3">
+                            <div class="d-flex align-items-center text-muted">
+                                <input type="file" id="actual-btn" (change)="readFile($event)" hidden />
+                                <label for="actual-btn" class="choose">Choose File</label>
+                                <span id="file-chosen" *ngIf="fileName==''"> No file selected DOC, DOCX and PDF (5 MB)</span>
+                                <span id="file-chosen" *ngIf="fileName!=''"> {{fileName}}</span>
+                            </div>
+                            <p class="mt-2 small text-danger" *ngIf="error">Invalid file format</p>
+                            <div *ngIf="fileName==''" class="ml-2">
+                                <small class="form-text text-danger">Please upload File</small>
+                            </div>
+                        </div>
+                        <div class="tcenter"> <button type="submit" class="btnSubmit" [disabled]="submitIdeaForm.invalid"> Submit </button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>

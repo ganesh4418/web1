@@ -1,0 +1,155 @@
+@import "includes";
+
+.team_img {
+    top: 0;
+    height: auto;
+    left: auto;
+    @extend %right-absolute;
+    transform: translate(0%, -65%)
+}
+
+.absolute-right {
+    @extend %right-absolute;
+}
+
+.imgLi {
+    width: 16px;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
+}
+.linkedin-r {
+    text-align: right;
+}
+
+.card-border {
+    border-color: $primary-opacity;
+
+    padding: 1.6rem 1.9rem;
+    .linkedin,
+    .behance {
+        opacity: 0;
+    }
+
+    .member-img {
+        overflow: hidden;
+        min-height: 132px;
+        min-width: 100px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &:hover {
+        border: 2px solid rgba(38, 115, 229, 0.5);
+        box-shadow: 4px 4px 15px rgb(0 0 0 / 5%);
+
+        .linkedin,
+        .behance {
+            opacity: 1;
+        }
+
+        .member-img {
+            transition: transform 0.2s linear;
+            transform: scale(1.1);
+        }
+    }
+}
+
+// .linkedin,
+// .behance {
+//     img {
+//         width: 15px;
+//         @extend %right-absolute;
+//         height: 15px;
+//         opacity: 0.5;
+//     }
+
+//     &:hover {
+//         img {
+//             opacity: 1;
+//         }
+//     }
+// }
+
+.behance img {
+    top: 25px;
+}
+
+.team-font {
+    font-weight: 100;
+}
+
+img.img-fluid.my-3.rounded-circle {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.bottom-space {
+    margin-bottom: 5%;
+}
+
+.img-pre-text {
+    margin-right: -5%;
+    margin-bottom: 3%;
+}
+
+// .main-container {
+//     margin-left: 7%;
+// }
+
+.our-team-heading {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.align-center {
+    transform: translate(0%, -45%)
+}
+
+.ourTeam{
+    margin-top: 4rem;
+    width: 90%;
+    margin-left: auto;
+    margin-bottom: 4rem;
+}
+.m0px{
+    margin: 0px;
+}
+.alignCenter{
+    align-items: center;
+}
+.mt5 {
+    margin-top: 11rem
+
+}
+.outtemP{
+    margin-top: 8%;
+    width: 63%;
+    line-height: 2;
+}
+.t-right{
+    text-align: right;
+}
+
+@media  (max-width: 820px) and (min-width: 720px) {
+
+    .ourTeam {
+        margin-top: 6rem;
+        width: 85%;
+        margin-left: auto;
+        margin-bottom: 0rem;
+    }
+
+}
+
+@media   (min-width: 768px) {
+.outtemP {
+    margin-top: 8%;
+    width: auto;
+    line-height: 2;
+}
+}

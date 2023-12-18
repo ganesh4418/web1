@@ -1,0 +1,169 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<section class="tophiring">
+    <div class="tabinfo">
+        <div class="input-container">
+            <input type="text" class="form-control" id="search" placeholder="Explore more" (keyup)="onKeyPress($event)">
+            <img src="assets/media/icons/search.svg" alt="" class="search-right">
+        </div>
+        <div class="flex-xs-column row row-default pt-4">
+            <div class="d-flex flex-column flex-md-row">
+                <div class="inline-container">
+                    <div>Work Locations - </div>
+                    <div>
+                        <div class="arrow_icon">
+                            <button class="border-0 selected-menu-item" mat-icon-button
+                                [matMenuTriggerFor]="locationmenu"
+                                (click)="$event.stopPropagation()">{{selectedLocation}}
+                                <mat-icon class="">keyboard_arrow_down</mat-icon>
+                            </button>
+                        </div>
+                        <mat-menu #locationmenu="matMenu" backdropClass="servicescustomize" class="filtercustomize">
+                            <button mat-menu-item *ngFor="let l of location" (click)="onLocation(l)">{{l}}</button>
+                        </mat-menu>
+                    </div>
+                </div>
+                <div class="inline-container">
+                    <div>Domain - </div>
+                    <div>
+                        <div class="arrow_icon">
+                            <button class="border-0 selected-menu-item" mat-icon-button [matMenuTriggerFor]="domainmenu"
+                                (click)="$event.stopPropagation()">{{selectedDomain}}
+                                <mat-icon class="">keyboard_arrow_down</mat-icon>
+                            </button>
+                        </div>
+                        <mat-menu #domainmenu="matMenu" backdropClass="servicescustomize" class="filtercustomize">
+                            <button mat-menu-item *ngFor="let d of domain" (click)="onDomain(d)">{{d}}</button>
+                        </mat-menu>
+                    </div>
+                </div>
+                <div class="inline-container">
+                    <div>Designations - </div>
+                    <div>
+                        <div class="arrow_icon">
+                            <button class="border-0 selected-menu-item" mat-icon-button [matMenuTriggerFor]="desigmenu"
+                                (click)="$event.stopPropagation()">{{selectedDesignation}}
+                                <mat-icon class="">keyboard_arrow_down</mat-icon>
+                            </button>
+                        </div>
+                        <mat-menu #desigmenu="matMenu" backdropClass="servicescustomize" class="filtercustomize">
+                            <button mat-menu-item *ngFor="let d of designation"
+                                (click)="onDesignation(d)">{{d}}</button>
+                        </mat-menu>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-filter class="blogf" (selectedSortBy)="onSortBy($event)"></app-filter>
+        <div>
+
+            <section class="tabinfo" *ngIf="filteredOpening.length == 0">
+                <div>
+                    <h1 class="fs-48 font-weight-bold mb-5">
+                        Currently No Opening
+                        <span class="fs-48 weight-100"> for "{{ searchText }}" </span>
+                    </h1>
+                </div>
+                <div class="tabinfo">
+                  <div>
+                    <div class="card details-box p-3">
+                      <h5>Search tips</h5>
+                      <ul>
+                        <li>Check your spelling and try again.</li>
+                        <li>Search for simpler, shorter terms.</li>
+                        <li>Search for something less specific.</li>
+                        <li>Try frequent searches listed below.</li>
+                        <li>Searching for a job? <span>Click here.</span></li>
+                      </ul>
+                    </div>
+                    <hr class="text-primary my-4" />
+                  </div>
+                  <div>
+                    <div class="card details-box p-3 mb-5">
+                      <h5>Search tips</h5>
+                      <ul>
+                        <li>Client Case Study</li>
+                        <li>Cloud</li>
+                        <li>Digital Transformation</li>
+                        <li>Data & Analytics</li>
+                        <li>Artificial Intelligence</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            <div class="row row-default">
+                <div class="col-md-6" *ngFor="let team of filteredOpening; let i=index">
+                    <!-- src\assets\media\icons\hiring\hiring-1.svg -->
+                    <div class="hirinCard">
+                        <div class="hirejobtitle">{{team.name}}</div>
+                        <div class="position">{{team.position}}</div>
+                        <div class="icontext">
+                            <div> <img src="assets/media/icons/hiring/hiring-1.svg" class="hiringImg" alt="">
+                                {{team.experience}}</div>
+                            <div> <img src="assets/media/icons/hiring/hiring-2.svg" alt="" class="hiringImg">
+                                {{team.role}}</div>
+                            <div> <img src="assets/media/icons/hiring/hiring-3.svg" alt="" class="hiringImg">
+                                {{team.package}}</div>
+                        </div>
+                        <div class="dec">
+                            {{team.sortdiscription}}
+                        </div>
+                        <div class="listBtn">
+                            <div class="list">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <ul>
+                                            <li *ngFor="let skill of team.skills">{{skill}}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <a routerLink="/hiring/hiring-details" class="btn btn-primary btn-small" (click)="onDeatil(i)">
+                                            Apply now
+                                        </a>
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="card card-body card-border">
+                            <div class="position-relative">
+                                <a href="javascript:void(0)" target="_blank" class="linkedin">
+
+                                </a>
+                                <a href="javascript:void(0)" target="_blank" class="behance">
+
+                                </a>
+                            </div>
+                         <h5>
+                                <img src="assets/media/images/blueSquare.svg" alt="" class="img-pre-text">
+                                {{team.name}}
+                            </h5>
+
+
+                            <p class="text-muted mb-3">{{team.position}}</p>
+
+                            <ul class="text-left job-description">
+                                <li *ngFor="let sd of team.sortdiscription">{{sd}}</li>
+                            </ul>
+                            <div class="check">
+                                <a routerLink="/hiring/hiring-details" class="btnchekc" (click)="onDeatil(i)">Check
+                                    Details
+                                </a>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</section>

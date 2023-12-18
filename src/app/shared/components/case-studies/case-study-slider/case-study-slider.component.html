@@ -1,0 +1,64 @@
+<div class="bg-light">
+    <div class="tabinfo pt-100 pb-100 case-studies-hover">
+        <div class="position-relative  ">
+            <h6 class="swiper_top title">{{title}}</h6>
+        </div>
+        <div>
+            <swiper id="case-study" [config]="swiperConfig" [spaceBetween]="50" [slidesPerGroup]="1" 
+                [loopFillGroupWithBlank]="true" [navigation]="true" class="pt-85 mySwiper">
+                <ng-template swiperSlide *ngFor="let csi of caseStudyItems" class="   center">
+                    <div class="case-box mb-3">
+                        <div class="img-container">
+                            <img src="{{csi.pic}}" class="img-fluid image" alt="">
+                            <div class="top-left-content">{{csi.category}} - {{csi.date}}</div>
+
+                            <div class="perfect-center">
+                                <a href="{{csi.link}}" target="_blank" class="read-more" *ngIf="csi.link!=''">Read More</a>
+                                <button   class="read-more" (click)="onReadMore(csi)" *ngIf="csi.link==''">Read More</button>
+                                <!-- <div class="share">
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1226_25059)">
+                                            <path
+                                                d="M5.86523 12.5C7.24595 12.5 8.36523 11.3807 8.36523 10C8.36523 8.61929 7.24595 7.5 5.86523 7.5C4.48452 7.5 3.36523 8.61929 3.36523 10C3.36523 11.3807 4.48452 12.5 5.86523 12.5Z"
+                                                stroke="#ffffff" stroke-width="1.25" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M15.8652 7.5C17.2459 7.5 18.3652 6.38071 18.3652 5C18.3652 3.61929 17.2459 2.5 15.8652 2.5C14.4845 2.5 13.3652 3.61929 13.3652 5C13.3652 6.38071 14.4845 7.5 15.8652 7.5Z"
+                                                stroke="#ffffff" stroke-width="1.25" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M15.8652 17.5C17.2459 17.5 18.3652 16.3807 18.3652 15C18.3652 13.6193 17.2459 12.5 15.8652 12.5C14.4845 12.5 13.3652 13.6193 13.3652 15C13.3652 16.3807 14.4845 17.5 15.8652 17.5Z"
+                                                stroke="#ffffff" stroke-width="1.25" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M8.11523 8.91671L13.6152 6.08337" stroke="#ffffff"
+                                                stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M8.11523 11.0834L13.6152 13.9167" stroke="#ffffff"
+                                                stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1226_25059">
+                                                <rect width="20" height="20" fill="white"
+                                                    transform="translate(0.865234)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="text-inner mh-200">
+                            <h4 class="text-ellipsis pt-4 pl-2 ">{{csi.title}}</h4>
+                            <p class="text-ellipsis-multiline description">{{csi.desc}}</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+        <div class="d-flex">
+            <a class="arrow_animation d-inline-flex text-primary w-500 all-case-studies" type="button" (click)="onAllCaseStudy()">See all case studies
+                <img src="assets/media/icons/Arrow-Link.svg" class="arrow_anim opacity-6" alt="" >
+                <!-- <img src="assets/media/icons/Arrow.gif" class="arrow-anim icon_hover" alt=""> -->
+            </a>
+        </div>
+    </div>
+</div>

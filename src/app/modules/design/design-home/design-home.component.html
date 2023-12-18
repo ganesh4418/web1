@@ -1,0 +1,31 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<mat-tab-group mat-align-tabs="start" (selectedTabChange)="onChangeTab($event)" >
+    <mat-tab label="Introduction">
+        <app-design-introduction></app-design-introduction>
+    </mat-tab>
+    <mat-tab label="Servics">
+        <ng-template mat-tab-label>
+            <span>Services</span>
+            <div class="arrow_icon">
+                <button class="border-0" mat-icon-button [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                </button>
+            </div>
+            <mat-menu #menu="matMenu" backdropClass="servicescustomize" class="servicescustomizeclass">
+                <button mat-menu-item (click)="servicesView('productdesign')">Product Design</button>
+                <button mat-menu-item (click)="servicesView(3)">UI-UX Design</button>
+                <button mat-menu-item (click)="servicesView(4)">Graphics Design</button>
+                <button mat-menu-item (click)="servicesView(4)">Animation Design</button>
+                <button mat-menu-item (click)="servicesView(4)">Photography</button>
+            </mat-menu>
+        </ng-template>
+        Servics</mat-tab>
+    <mat-tab label="Our Works">
+        <app-our-works [ourWorksItems]="ourWorksItems"></app-our-works>
+    </mat-tab>
+    <mat-tab label="Blogs">
+        <app-blogs [blogItems]="blogItems"></app-blogs>
+    </mat-tab>
+</mat-tab-group>

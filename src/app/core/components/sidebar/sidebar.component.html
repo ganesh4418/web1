@@ -1,0 +1,49 @@
+<section >
+    <div class="sidebar left">
+        <div *ngFor="let menu of leftmenu" >
+            <a href="javascript:void(0)" class="menu" [routerLink]="[menu.route]" routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{exact:
+                true}" (click)="changeIcon(menu)" >
+
+                <img class="icon " src="{{menu.icon}}" alt=""  >
+
+                <img class="icon_hover" src="{{menu.hover_icon}}" alt="" >
+                <p>{{menu.title}}</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section >
+    <div class="sidebar right">
+        <div class="d-flex flex-column">
+            <a href="javascript:void(0)" class="p-2 sidebar-icons-background" (click)="contact()">
+                <img *ngIf="isContactPopUp" class="border-bottom pb-2" src="assets/media/icons/callWhite.svg" alt="">
+                <img *ngIf="!isContactPopUp" class="border-bottom pb-2 contact" src="assets/media/icons/call.svg" alt=""
+                    onmouseover="this.src=`assets/media/icons/CallHover.gif`"
+                    onmouseout="this.src=`assets/media/icons/call.svg`">
+            </a>
+            <a href="javascript:void(0)" class="p-2 sidebar-icons-background">
+             
+                <img src="assets/media/icons/comment.svg" class="border-bottom pb-2 comment" alt=""
+                    onmouseover="this.src=`assets/media/icons/ChatHover.gif`"
+                    onmouseout="this.src=`assets/media/icons/comment.svg`">
+            </a>
+            <a href="javascript:void(0)" class="p-2 sidebar-icons-background" (click)="mail()">
+                <img *ngIf="isMailClicked" class="border-bottom pb-2" src="assets/media/icons/mailWhite.svg" alt="">
+                <img *ngIf="!isMailClicked" class="border-bottom pb-2" src="assets/media/icons/mail.svg" alt=""
+                    onmouseover="this.src=`assets/media/icons/MailHover.gif`"
+                    onmouseout="this.src=`assets/media/icons/mail.svg`" class="mail">
+            </a>
+
+            
+            <a href="javascript:void(0)" class="pt-0 p-2 sidebar-icons-background" (click)="location()">
+                <img *ngIf="isLocationClicked" class="pb-2" src="assets/media/icons/metting.svg" alt="">
+                <img *ngIf="!isLocationClicked" class=" pb-2" src="assets/media/icons/metting.svg" alt=""
+                    onmouseover="this.src=`assets/media/icons/Meeting.gif`"
+                    onmouseout="this.src=`assets/media/icons/metting.svg`" class="location">
+            </a>
+        </div>
+    </div>
+</section>

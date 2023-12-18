@@ -1,0 +1,135 @@
+<div class="pl-140 pt-100">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+
+<section class="topPadding pt-5">
+    <div class="tabinfo">
+        <section>
+            <div>
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-5 shadow-box mb-3 order-2 order-md-1">
+                        <div class="">
+                            <h3>{{blog.title}}</h3>
+                            <h6>{{blog.desc}}</h6>
+                            <div class="pt-5 pb-3">By <b>{{blog.by}}</b> </div>
+                            <div class="pb-2"><span *ngFor="let rt of blog.relatedTopics" class="trend-font"> {{rt}}
+                                </span>
+                            </div>
+                            <div class="row row-default">
+                                <div class="d-flex justify-content-between">
+                                    <span class="read-font"><img src="assets/media/icons/blogs/calendar.svg" alt="">
+                                        {{blog.date}} | <img src="assets/media/icons/blogs/time.svg" alt="">
+                                        {{blog.readTime}} </span>
+
+                                    <span class="read-font text-right"><img src="assets/media/icons/blogs/share.svg"
+                                            alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <img class="img-fluid" src="assets/media/images/blogs/double-row.svg" alt=""> -->
+                    <div class="col-md-7 mb-3 p-0 order-1 order-md-2">
+                        <img class="img-fluid rounded-10" src="{{blog.pic}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="tabinfo des-padding">
+        <section>
+            <div>
+                <div class="py-5">{{blog.firstBlock.desc}}</div>
+                <img class="img-fluid" src="{{blog.firstBlock.img}}" alt="">
+                <div class="pt-1 pb-5 text-break">{{blog.firstBlock.src}}</div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h4>{{blog.secondBlock.title}}</h4>
+                <div class="pb-5" *ngFor="let des of blog.secondBlock.desc">{{des}}</div>
+                <div class="row row-default justify-content-between">
+                    <div class="col-md-6" *ngFor="let img of blog.secondBlock.imgs">
+                        <img class="img-fluid mb-3" src="{{img}}" alt="">
+                    </div>
+                </div>
+                <div class="pt-1 text-break">{{blog.secondBlock.src}}</div>
+            </div>
+        </section>
+        <section class="pb-100 above-quotes-space  ">
+            <div>
+
+                <div class="quotes ">
+
+                    <div class="bg">
+                        {{blog.tought.title}}
+                    </div>
+
+
+                    <div class="quotesAu"> {{blog.tought.author}} </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div>
+                <h4>{{blog.thirdBlock.title}}</h4>
+                <div class="pb-5" *ngFor="let des of blog.thirdBlock.desc">{{des}}</div>
+                <div class="row row-default justify-content-between pb-5">
+                    <div class="col-md-6" *ngFor="let img of blog.thirdBlock.imgs; let i=index;">
+                        <img class="img-fluid" src="{{img}}" alt="">
+                        <div class="pt-1 text-break">{{blog.thirdBlock.src[i]}}</div>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{{blog.thirdBlock.video.link}}" alt="">
+                <div class="pt-1 pb-5 text-break">{{blog.thirdBlock.video.src}}</div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h4>{{blog.fourthBlock.title}}</h4>
+                <div class="pb-2" *ngFor="let des of blog.fourthBlock.desc">{{des}}</div>
+                <div *ngFor="let st of blog.fourthBlock.subTitle">
+                    <h5>{{st.title}}</h5>
+                    <div class="pt-1 pb-3 text-break pb-1">
+                        <div>{{st.point1.point}}</div>
+                        <img class="img-fluid py-1 text-break" src="{{st.point1.img}}" alt="">
+                    </div>
+                    <div class="pt-1 pb-3 text-break pb-1">
+                        <div>{{st.point2.point}}</div>
+                        <img class="img-fluid py-1 text-break" src="{{st.point2.img1}}" alt="">
+                        <div class="pt-1 pb-5 text-break">{{st.point2.src1}}</div>
+                    </div>
+                    <div class="row row-default justify-content-between pt-1 pb-5 text-break pb-1">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="{{st.point2.img2}}" alt="">
+                            <div class="img-fluid pt-1 pb-1 text-break">{{st.point2.src2}}</div>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="{{st.point2.img3}}" alt="">
+                            <div class="pt-1 pb-1 text-break">{{st.point2.src3}}</div>
+                        </div>
+                    </div>
+                    <div class="pt-1 pb-3 text-break pb-1">
+                        <div>{{st.point3.point}}</div>
+                        <img class="img-fluid py-1 text-break" src="{{st.point3.img1}}" alt="">
+                        <div class="pt-1 pb-5 text-break">{{st.point3.src1}}</div>
+                        <ul class="pt-1 pb-5 text-break pb-1 ps-md-0">
+                            <li *ngFor="let sp of st.point3.subPoints" class="pt-1 text-break pb-1">
+                                <div>{{sp.subPoint}}</div>
+                                <img *ngIf="sp.video!=''" class="img-fluid pt-1 text-break pb-1" src="{{sp.video}}"
+                                    alt="">
+                                <div *ngIf="sp.src!=''" class="pt-1 pb-1 text-break">{{sp.src}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<section>
+    <app-blogs-slider [blogsItems]="blogsItems" [title]="title"></app-blogs-slider>
+    <!-- <div><img src="assets/media/images/design_ beauto.jpg" alt=""></div> -->
+</section>

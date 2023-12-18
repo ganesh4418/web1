@@ -1,0 +1,22 @@
+<div class="tabinfo">
+    <app-filter (selectItem)="onFilteredValue($event)" (selectedSortBy)="onSortBy($event)" [selectedTab]="selectedTab"
+        [subCategoryList]="subCategoryList"></app-filter>
+    <div class="row">
+        <div class="col-md-4  " *ngFor="let csi of caseStudyItems">
+            <div class="case-box mb-5">
+                <div class="img-container">
+                    <img src="{{csi.pic}}" class="img-fluid image" alt="">
+                    <div class="top-left-content">{{csi.category}} - {{csi.date}}</div>
+                    <div class="perfect-center">
+                        <a href="{{csi.link}}" target="_blank" class="read-more" *ngIf="csi.link!=''">Read More</a>
+                        <a type="button" (click)="onReadMore(csi)" class="read-more" *ngIf="csi.link==''">Read More</a>
+                    </div>
+                </div>
+                <div class="p-2 text-inner">
+                    <h4 class="text-ellipsis pt-4 pl-2">{{csi.title}}</h4>
+                    <p class="text-ellipsis-multiline description">{{csi.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

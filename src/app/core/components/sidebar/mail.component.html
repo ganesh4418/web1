@@ -1,0 +1,171 @@
+<section>
+
+    <div class="sideforms">
+
+        <div class="sideheader">
+            <h4 class="mb-0"><span class="w-normal"> Write </span><strong> Us</strong></h4>
+            <a class="close-icon" href="javascript:void(0)" (click)="closeDialog()">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2209_30515)">
+                        <path d="M15 5L5 15" stroke="black" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M5 5L15 15" stroke="black" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2209_30515">
+                            <rect width="20" height="20" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+
+
+        <form [formGroup]="touchForm" class="form" (ngSubmit)="onSubmit(touchForm)">
+            <div class="row p-4 pt-3">
+                <div class="col-md-6 mb-3">
+                    <div class="floating-label">
+                        <input type="text" id="firstname" placeholder="First Name*" class="form-control form-input"
+                            formControlName="firstName" required autocomplete="off">
+                        <label for="firstname" class="form-label">First name*</label>
+                    </div>
+                    <div *ngIf="stouchFormControl['firstName'].touched && stouchFormControl['firstName'].invalid">
+                        <div
+                            *ngIf="stouchFormControl['firstName'].errors && stouchFormControl['firstName'].errors['required']">
+                            <small class="form-text text-danger">Enter your first name</small>
+                        </div>
+                        <div
+                            *ngIf="stouchFormControl['firstName'].errors && stouchFormControl['firstName'].errors['pattern']">
+                            <small class="form-text text-danger">Enter valid first name</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="floating-label">
+                        <input type="text" id="lastname" placeholder="Last Name*" class="form-control form-input"
+                            formControlName="lastName" required autocomplete="off">
+                        <label for="lastname" class="form-label">Last Name*</label>
+                    </div>
+                    <div *ngIf="stouchFormControl['lastName'].touched && stouchFormControl['lastName'].invalid">
+                        <div
+                            *ngIf="stouchFormControl['lastName'].errors && stouchFormControl['lastName'].errors['required']">
+                            <small class="form-text text-danger">Enter your last name</small>
+                        </div>
+                        <div
+                            *ngIf="stouchFormControl['lastName'].errors && stouchFormControl['lastName'].errors['pattern']">
+                            <small class="form-text text-danger">Enter valid last name</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <div class="floating-label">
+                        <!-- <mat-icon class="email"> email</mat-icon> -->
+                        <input type="email" id="email" placeholder="Email Address*" class="form-control form-input"
+                            formControlName="email" required autocomplete="off">
+                        <label for="lastname" class="form-label">Email Address*</label>
+                    </div>
+
+                    <div *ngIf="stouchFormControl['email'].touched && stouchFormControl['email'].invalid">
+                        <div *ngIf="stouchFormControl['email'].errors && stouchFormControl['email'].errors['required']">
+                            <small class="form-text text-danger">Enter your email</small>
+                        </div>
+                        <div *ngIf="stouchFormControl['email'].errors && stouchFormControl['email'].errors['pattern']">
+                            <small class="form-text text-danger">Enter valid email</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="floating-label">
+                        <select class="form-control form-select form-input" id="country" formControlName="country"
+                            (change)="onSelectChange($event)">
+                            <option value="" disabled selected hidden>Country *</option>
+                            <option *ngFor="let country of prefixes" [value]="country.name">
+                                {{country.name}}
+                            </option>
+                        </select>
+                        <label for="country" class="form-label">Select Country*</label>
+                    </div>
+                    <div *ngIf="(stouchFormControl['country'].touched && stouchFormControl['country'].invalid) ">
+                        <div
+                            *ngIf="stouchFormControl['country'].errors && stouchFormControl['country'].errors['required']">
+                            <small class="form-text text-danger">Enter your country</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <input type="text" id="contactPreNo" class="form-control" formControlName="contactPreNo" readonly autocomplete="off">
+                </div>
+                <div class="col-md-9 mb-3">
+                    <div class="floating-label">
+                        <!-- <mat-icon class="mobile">mobile_friendly</mat-icon> -->
+                        <input type="text" id="contactNo" placeholder="Contact Number*" class="form-control form-input"
+                            formControlName="contactNo" maxlength="14" required autocomplete="off">
+                        <label for="contactNo" class="form-label">Contact Number*</label>
+                    </div>
+                    <div>
+                        <div *ngIf="stouchFormControl['contactNo'].touched && stouchFormControl['contactNo'].invalid">
+                            <div
+                                *ngIf="stouchFormControl['contactNo'].errors && stouchFormControl['contactNo'].errors['required']">
+                                <small class="form-text text-danger">Enter contact no</small>
+                            </div>
+                            <div
+                                *ngIf="stouchFormControl['contactNo'].errors && stouchFormControl['contactNo'].errors['pattern'] ">
+                                <small class="form-text text-danger">Enter valid contact no</small>
+                            </div>
+                            <div
+                                *ngIf="stouchFormControl['contactNo'].errors && stouchFormControl['contactNo'].errors['minlength']">
+                                <small class="form-text text-danger">Enter min {{minMobileLength}} length contact no</small>
+                            </div>
+                            <div
+                                *ngIf="stouchFormControl['contactNo'].errors && stouchFormControl['contactNo'].errors['maxlength']">
+                                <small class="form-text text-danger">Enter max {{maxMobileLength}} length contact no</small>
+                            </div>
+                            <div
+                                *ngIf="stouchFormControl['contactNo'].errors &&  stouchFormControl['contactNo'].errors['prefixValid']">
+                                <small class="form-text text-danger">Enter valid contact no</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <div class="floating-label textarea-height">
+                        <textarea name="" id="msg" cols="30" rows="5" class="form-control textarea"
+                             formControlName="msg" required></textarea>
+                        <label for="msg" class="form-label">Brief for the meeting*</label>
+                    </div>
+                    <div *ngIf="stouchFormControl['msg'].touched && stouchFormControl['msg'].invalid">
+                        <div *ngIf="stouchFormControl['msg'].errors && stouchFormControl['msg'].errors['required']">
+                            <small class="form-text text-danger">Write your message</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <!-- <select name=" " id="type" class="form-control form-select" formControlName="type" >
+                        <option value="disabled" selected disabled>Select Budget</option>
+                        <option value="Budget">Budget</option>
+                        <option value="Category">Category</option>
+                    </select> -->
+                    <!-- <input type="text" id="budget" placeholder="Project Expected Budget" class="form-control"
+                            formControlName="budget" >
+                        <div *ngIf="stouchFormControl['budget'].touched && stouchFormControl['budget'].invalid">
+                            <div
+                                *ngIf="stouchFormControl['budget'].errors && stouchFormControl['budget'].errors['required']">
+                                <small class="form-text text-danger">Enter budget</small>
+                            </div>
+                            <div
+                                *ngIf="stouchFormControl['budget'].errors && stouchFormControl['budget'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid budget</small>
+                            </div>
+                        </div> -->
+                </div>
+                <div class="col-md-12 mb-3 text-center">
+                    <button class="btn btn-primary" [disabled]="touchForm.invalid" type="submit"> Send </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<app-toaster *ngFor="let toast of toasts; let i=index" [toast]="toast" [i]="i" (remove)="remove(i)"></app-toaster>

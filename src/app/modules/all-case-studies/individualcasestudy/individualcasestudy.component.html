@@ -1,0 +1,74 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+
+<section class="topPadding pt-5">
+    <section>
+        <div class="tabinfo case-studies">
+            <div class="row align-items-center mb-5">
+                <!-- <div >
+                <img src="assets/media/images/blogs/double-row.svg" alt="">
+            </div> -->
+                <div class="col-md-4 shadow-box mb-3 order-2 order-md-1">
+                    <h3>{{caseStudy.title}}</h3>
+                    <h6 class="pb-5">{{caseStudy.desc}}</h6>
+                    <div class="row row-default">
+                        <div class="d-flex justify-content-between">
+                            <span class="read-font"><img src="assets/media/icons/blogs/calendar.svg" alt="">
+                                {{caseStudy.date}} | <img src="assets/media/icons/blogs/time.svg" alt="">
+                                {{caseStudy.readTime}} </span>
+                            <span class="read-font text-right"><img src="assets/media/icons/blogs/share.svg"
+                                    alt=""></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mb-3 p-0 order-1 order-md-2">
+                    <img class="img-fluid rounded-10" src="{{caseStudy.pic}}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="tabinfo des-padding">
+        <ng-container *ngIf="caseStudy.brief.title !== '' && caseStudy.brief.desc !== ''">
+        <section class="pb-5">
+            <h4>{{caseStudy.brief.title}}</h4>
+            <p>{{caseStudy.brief.desc}}</p>
+        </section>
+        </ng-container>
+        <ng-container *ngIf="caseStudy.brief.title !== '' && caseStudy.brief.desc !== ''">
+        <section class="pb-5">
+            <h4>{{caseStudy.challenges.title}}</h4>
+            <ol>
+                <li class="pt-md-3" *ngFor="let pt of caseStudy.challenges.points">{{pt}}</li>
+            </ol>
+        </section>
+        </ng-container>
+        <ng-container *ngIf="caseStudy.solution.title !== '' && caseStudy.solution.points !== ''">
+        <section class="pb-5">
+            <h4>{{caseStudy.solution.title}}</h4>
+            <ol>
+                <li class="pt-md-3" *ngFor="let pt of caseStudy.solution.points">{{pt}}</li>
+            </ol>
+        </section>
+    </ng-container>
+    <ng-container *ngIf="caseStudy.result.title !== '' && caseStudy.result.points !== ''">
+        <section class="pb-5">
+            <h4>{{caseStudy.result.title}}</h4>
+            <ol>
+                <li class="pt-md-3" *ngFor="let pt of caseStudy.result.points">{{pt}}</li>
+            </ol>
+        </section>
+        </ng-container>
+        <ng-container *ngIf="caseStudy.video.link !== '' && caseStudy.video.src !== ''">
+        <section class="pb-5">
+            <img class="img-fluid" src="{{caseStudy.video.link}}" alt="">
+            <div class="pt-1 pb-5 text-break">{{caseStudy.video.src}}</div>
+        </section>
+        </ng-container>
+    </div>
+</section>
+
+<section>
+    <app-case-study-slider [caseStudyItems]="caseStudyItems" [title]="title"></app-case-study-slider>
+</section>

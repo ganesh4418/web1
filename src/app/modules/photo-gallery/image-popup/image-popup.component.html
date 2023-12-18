@@ -1,0 +1,91 @@
+<!-- <section style="text-align: -webkit-center;">
+    <div class="image-container">
+        <img src="{{currentImageInfo.pic}}" alt="">
+        <div class="img-prev">
+            <div class="img-slide">
+                <swiper [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="6" [spaceBetween]="30"
+                    [navigation]="true" class="mySwiper" [loop]="true" class="mySwiper">
+                    <ng-template swiperSlide *ngFor="let img of allImageInfo">
+                        <img src="{{img.pic}}" alt="">
+                    </ng-template>
+                </swiper>
+            </div>
+        </div>
+
+    </div>
+
+</section> -->
+
+<!-- <swiper [thumbs]="{ swiper: thumbsSwiper }" class="mySwiper2">
+    <ng-template swiperSlide *ngFor="let img of allImageInfo">
+        <img src="{{img}}" alt="" style="width: 100%;
+        height: 100%;
+        object-fit: contain;" *ngIf="imageChange">
+        <img src="assets/media/icons/close-white.svg" alt="" class="close-button" (click)="close()">
+        <img src="{{currentImageInfo.pic}}" alt="" style="width: 100%;
+         height: 100%;
+         object-fit: contain;" *ngIf="!imageChange">
+    </ng-template>
+</swiper> -->
+<!-- <swiper style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff" (swiper)="thumbsSwiper = $event"
+    [loop]="true" [spaceBetween]="1" [slidesPerView]="4" [freeMode]="true" [watchSlidesProgress]="true" class="mySwiper"
+    [navigation]="true">
+    <ng-template swiperSlide *ngFor="let img of allImageInfo">
+        <img src="{{img}}" alt="" style="height: 100%;width: 75%;" (click)="onSlideChange(img)">
+    </ng-template>
+</swiper> -->
+<div class="p-container">
+    <div class="p-2">
+        <div class="text-left">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="mb-0">{{currentImageInfo.category}}</h4>
+                <mat-icon (click)="close()" class="close-popup">close</mat-icon>
+
+            </div>
+            <p class="mb-0">{{currentImageInfo.title}}</p>
+        </div>
+
+        <div class="img-parent-box">
+            <img src="{{imgUrl}}" alt="" class="img-fit img-fluid">
+        </div>
+
+        <div class="f-box p-container">
+            <button (click)="slidePrev()" class="bg-transparent" *ngIf="navButton">
+                <!-- <svg width="30" height="30" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5367_47044)">
+                        <path d="M32.5 39L19.5 26L32.5 13" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_5367_47044">
+                            <rect width="52" height="52" fill="white" transform="translate(52 52) rotate(-180)" />
+                        </clipPath>
+                    </defs>
+                </svg> -->
+                <mat-icon class="left-arrow">keyboard_arrow_left</mat-icon>
+            </button>
+            <swiper #swiper style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff" [loop]="isLoop"
+                [spaceBetween]="0" [slidesPerView]="4" [freeMode]="true" [watchSlidesProgress]="true"
+                class="mySwiper">
+                <ng-template swiperSlide *ngFor="let img of currentImageInfo.allPics;let i=index">
+                    <img src="{{img}}" alt="" (click)="onSlideChange(i)" style="cursor:pointer ;">
+                </ng-template>
+            </swiper>
+            <button (click)="slideNext()" class="bg-transparent" *ngIf="navButton">
+                <!-- <svg width="30" height="30" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5367_47039)">
+                        <path d="M19.5 13L32.5 26L19.5 39" stroke="white" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_5367_47039">
+                            <rect width="52" height="52" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg> -->
+                <mat-icon class="right-arrow">keyboard_arrow_right</mat-icon>
+            </button>
+        </div>
+    </div>
+
+</div>

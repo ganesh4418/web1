@@ -1,0 +1,112 @@
+@import "includes";
+
+.img-container {
+  position: relative;
+  text-align: center;
+}
+
+.top-left-content {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: $font-xs;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 30px;
+  color: $white;
+}
+
+.content-center {
+  transition: 0.5s ease;
+  opacity: 0;
+  @extend %vertical-center;
+  text-align: center;
+}
+
+.case-box {
+  .perfect-center {
+    opacity: 0;
+  }
+  &:hover {
+    .top-left-content {
+      font-weight: $medium;
+      color: $black;
+      background-color: #9eb7e5ec;
+    }
+    .img-container {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      background: $secondary-color-base;
+      box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+    }
+    img {
+      opacity: 0.2;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .perfect-center {
+      opacity: 1;
+      margin-top: 1rem;
+    }
+    .text-inner {
+      background: $white;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      box-shadow: 2px 2px 20px 0px #00000014;
+    }
+  }
+}
+
+.card:hover .top-left-content {
+  color: $black;
+  background-color: lightgray;
+}
+
+.share {
+  border-radius: 25px;
+  width: 30px;
+  margin: 1rem auto;
+  height: 30px;
+  background-color: transparent;
+  line-height: 30px;
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.read-more {
+  background-color: transparent;
+  padding: 10px 16px;
+  border-radius: 50px;
+  border: 1px solid $white;
+  color: $white;
+  font-weight: $regular;
+  font-size: 14px;
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+@media (max-width: 768px) {
+  .read-more {
+    background-color: transparent;
+    padding: 10px 11px;
+    border-radius: 44px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 9px;
+}
+
+}
+

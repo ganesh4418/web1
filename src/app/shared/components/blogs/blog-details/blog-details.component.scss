@@ -1,0 +1,118 @@
+@import "includes";
+
+.shadow-box {
+    position: relative;
+    left: 0px;
+    z-index: 1;
+    background: $white;
+    box-shadow: 2px 2px 20px 0px #00000014;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.rounded-10 {
+    border-radius: 10px !important;
+}
+
+.tabinfo.case-studies:before {
+    margin-top: 100px;
+}
+
+.tabinfo.case-studies:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    background: #2673e526;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+}
+
+.tabinfo.case-studies:after {
+    margin-top: -200px;
+}
+
+.tabinfo.case-studies:after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    background: #2673e526;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+.des-padding {
+    // padding-left: 200px;
+    // padding-right: 250px;
+    max-width: 60% !important;
+}
+.quotes {
+    margin-top: 5em 0px;
+    font-family: "Roboto Light";
+    font-style: normal;
+    font-size: 72px;
+    line-height: 86px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+
+    .desingC {
+        font-family: "Roboto Light";
+        font-weight: 300;
+        font-style: normal;
+        font-size: 72px;
+    }
+
+    .desing-sc {
+        font-family: "Roboto Light";
+        font-weight: 100;
+        font-style: normal;
+        font-size: 55px;
+    }
+
+    .desing-sc-bold {
+        font-family: "Roboto Medium";
+        font-weight: 100;
+        font-style: normal;
+    }
+}
+
+.bg::before {
+    content: "";
+    background-image: Url("./assets/media/images/startT.svg");
+    display: inline-block;
+    position: relative;
+    height: 34px;
+    background-repeat: no-repeat;
+    width: 100%;
+    top: 8px;
+}
+
+.bg::after {
+    content: "";
+    background-image: Url("./assets/media/images/startE.svg");
+    display: inline-block;
+    height: 43px;
+    width: 100%;
+    text-align: right;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -4rem;
+}
+
+.quotesAu {
+    text-align: right;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 0px;
+    letter-spacing: 0.01em;
+}
+
+.no-padding {
+    padding: 0;
+}

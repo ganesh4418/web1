@@ -1,0 +1,136 @@
+<div class="innbanners">
+    <div class="row align-items-center m-0 services-top">
+        <div class="col-md-5 offset-md-1 pb-4 mb-2 pb-md-0 mb-md-0 pt-4 mt-2 mt-md-0 pt-md-0">
+            <div class="info">
+                <div class="bannertxt">Data</div>
+                <div class="subbannertxt">Science</div>
+                <div class="subinfo">Leveraging the power of data to provide insightful metrics, predictions and
+                    visualizations</div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0 video-4k">
+            <div class="y-tube">
+                <!-- <iframe width="100%" height="415" src="https://www.youtube.com/embed/wT3oce4Uibk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe> -->
+                <video width="100%" height="auto" autoplay muted>
+                    <source src="assets/media/images/pagein/Software/Data Science.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">What we
+                        offer</span>
+                </div>
+            </div>
+
+            <div class="physicalInfo  ">
+                <!-- <p class="what-is-design-text">Our company offers comprehensive data science services that help
+                    organizations make informed business decisions. Our services include data mining, data analysis,
+                    predictive analytics, machine learning, and artificial intelligence solutions. We leverage the
+                    latest tools and technologies to extract meaningful insights from your data and develop custom
+                    solutions that address your specific needs. Our team of experienced data scientists works
+                    collaboratively with clients to ensure that our solutions are aligned with their business goals and
+                    objectives. We also offer ongoing support and maintenance to ensure that your data science solutions
+                    remain relevant and effective. Trust us to be your partner in driving innovation and growth through
+                    data science.</p> -->
+                    <p class="what-is-design-text">
+                    We provide innovative solutions in the fields of Data Engineering, Data Science, and Artificial
+                    Intelligence well versed with open source tools and cloud-based services to help our clients solve
+                    complex business problems and improve their bottom line. With a team of experienced professionals,
+                    we offer a wide range of services, including data modeling, data integration, data warehousing, data
+                    mining, machine learning, and predictive analytics. Our solutions are customizable, scalable, and
+                    cost-effective, allowing our clients to gain insights from their data and make informed decisions.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionsapce ourstrengths">
+
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our
+                        Capabilities</span>
+                </div>
+            </div>
+
+            <div class="ourbg">
+
+                <div class="row m-0">
+
+                    <div class=" col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-6 t-center  "
+                       > <img
+                            src="assets/media/images/our-capabilitites/04_Software_Data_Science_GIF.gif" alt="" class="gif-file" alt=""></div>
+                    <div class=" col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6  "
+                       >
+
+                        <div class="Capabilitiesinfo">
+                            <ul>
+                                <li>Data architecture</li>
+                                <li>Machine learning</li>
+                                <li>Computer vision</li>
+                                <li>Data Visualization</li>
+                                <li>NLP</li>
+                                <li>Elastic stack</li>
+                                <li>Event streaming and processing platforms</li>
+                                <li>Cloud data pipelines</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="bggary">
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>
+<!-- 
+<section class="sectionsapce">
+    <div class="tabinfo">
+        <div class="quotes ">
+            <div class="bg">
+                <div>
+                    Photography helps
+                    <span class="desingC">
+                        <span class="desing-sc-bold">P</span>eople
+                        <span class="quotes"> to </span><span class="desing-sc-bold">S</span>ee
+                    </span>
+                </div>
+            </div>
+            <div class="quotesAu">- Walt Disney</div>
+        </div>
+    </div>
+</section> -->
+<section class="bglet" *ngIf="!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Build <br>
+            Something Awesome!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf="connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>

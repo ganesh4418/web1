@@ -1,0 +1,118 @@
+<div class="pl-140 pt-100">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+
+<section class="tophiring">
+    <div class="tabinfo">
+        <div class="home position-relative h-100 mt-5 pt-3">
+            <div class="titlesubmit mb-5">
+                <span>Build </span> Your Team
+            </div>
+
+            <h5 class="pb-1">Enter your requirements</h5>
+            <form action="" class="form">
+                <div class="floating-label textarea-height mb-5">
+                    <textarea name="" id="msg" cols="30" rows="5" class="form-control form-input"
+                        placeholder="Fill the details*" formControlName="msg" required></textarea>
+                    <label for="msg" class="form-label">Fill the details*</label>
+                </div>
+                <div class="row row-default">
+                    <div class="col-md-6">
+                        <div class="bg-white">
+                            <h5>Select team members</h5>
+                            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo"
+                                [cdkDropListConnectedTo]="[doneList]" (cdkDropListDropped)="drop($event)">
+                                <div class="row">
+                                    <div class="col-md-6" *ngFor="let item of todo">
+                                        <div class="data-box" cdkDrag>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="title text-ellipsis"> {{item}}</p>
+                                                <a href="javascript:void(0)"><img src="assets/media/icons/grid.svg"
+                                                        class="img-fluid" alt=""></a>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <p class="mb-0"><img src="assets/media/icons/Job.svg" class="img-fluid"
+                                                        alt=""> 3 Yrs</p>
+                                                <p class="mb-0"><img src="assets/media/icons/Calendar.svg"
+                                                        class="img-fluid" alt=""> Immediate</p>
+                                                <a href="javascript:void(0)"><img src="assets/media/icons/show.svg"
+                                                        class="img-fluid" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="detail-box">
+                            <h5>Your team bucket</h5>
+                            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done"
+                                [cdkDropListConnectedTo]="[todoList]" (cdkDropListDropped)="drop($event)">
+                                <div class="row">
+                                    <div class="col-md-4" *ngFor="let item of done">
+                                        <div class="data-box" cdkDrag>{{item}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tcenter"> <button type="submit" class="btn btn-primary btn-small"> Submit </button></div>
+
+            </form>
+
+
+
+
+
+            <!-- <div class="submitideaForm">
+
+                <div>
+
+                    <div>
+                        <div class="titleidea">Fill your details</div>
+                    </div>
+
+                    <div class="mb20  ">
+                        <input type="text" placeholder="Full Name *" class="form-control inputc" required>
+                    </div>
+
+                    <div class="mb20  ">
+                        <select class="inputc w100">
+                            <option value="" disabled selected hidden>You Are *</option>
+                            <option *ngFor="let x of youAreDropdown" [value]="x">{{x}}</option>
+                        </select>
+                    </div>
+
+                    <div class="mb20  ">
+                        <select class="inputc w100">
+                            <option value="" disabled selected hidden>Country *</option>
+                            <option *ngFor="let country of countriesList" [value]="country.name">
+                                {{country.name}}
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 p0Left  "> <input type="text"
+                                placeholder="Email Address *" class="form-control inputc" required> </div>
+                        <div class="col-md-6 p0Right  "> <input type="text"
+                                placeholder="Contact Number *" class="form-control inputc" required> </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="tcenter"> <button type="submit" class="btnSubmit"> Submit </button></div>
+ -->
+
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,54 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<div class=" ">
+
+    <div class="tabcusmeting">
+        <div class="tabinfo topPaddingDomainPage news">
+
+            
+            <ul class="scrolling-wrapper ">
+                <li (click)="servicesView('All')" [ngClass]="{'active': tabchanedrop === 'All'}"> All</li>
+                <li (click)="servicesView('Design')" [ngClass]="{'active': tabchanedrop === 'Design'}">Design</li>
+                <li (click)="servicesView('Software')" [ngClass]="{'active': tabchanedrop === 'Software'}">Software</li>
+                <li (click)="servicesView('Electronics')" [ngClass]="{'active': tabchanedrop === 'Electronics'}">
+                    Electronics</li>
+                <li (click)="servicesView('Mechanical')" [ngClass]="{'active': tabchanedrop === 'Mechanical'}">
+                    Mechanical</li>
+                <li (click)="servicesView('Others')" [ngClass]="{'active': tabchanedrop === 'Others'}">Others</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'All'" >
+        <app-news-template [tabName]="tabchanedrop" [tabData]="about"></app-news-template>
+    </div>
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'Design' ">
+        <app-news-template [tabName]="tabchanedrop" [tabData]="tabData"></app-news-template>
+
+    </div>
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'Software' ">
+        <app-news-template [tabName]="tabchanedrop" [tabData]="tabData"></app-news-template>
+
+    </div>
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'Mechanical' ">
+        <app-news-template [tabName]="tabchanedrop" [tabData]="tabData"></app-news-template>
+
+    </div>
+    <div class="Introduction" *ngIf="tabchanedrop === 'Electronics' ">
+        <app-news-template [tabName]="tabchanedrop" [tabData]="tabData"></app-news-template>
+
+    </div>
+    <div class="Introduction" *ngIf="tabchanedrop === 'Others' ">
+        <app-news-template [tabName]="tabchanedrop" [tabData]="tabData"></app-news-template>
+
+    </div>
+
+</div>

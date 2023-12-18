@@ -1,0 +1,393 @@
+<header class="headerbg">
+  <div class="container-fluid px-4">
+    <div class="d-flex align-items-center justify-content-between">
+      <div
+        class="d-flex mobile-menu align-items-center justify-content-between"
+      >
+        <a href="javascript:void(0)" [routerLink]="['/']" class="hidem">
+          <img
+            src="assets/media/images/beauto_logo.svg"
+            class="img-fluid p-4 ps-0"
+            alt=""
+          />
+        </a>
+        <a href="javascript:void(0)" [routerLink]="['/']" class="d-md-none">
+          <img
+            src="assets/media/images/logo_m.svg"
+            class="img-fluid p-4 ps-0"
+            alt=""
+          />
+        </a>
+
+        <div
+          class="d-flex d-md-none flex-column justify-content-center align-items-center"
+        >
+          <a href="javascript:void(0)" (click)="toggleMenu()">
+            <img src="assets/media/icons/menu.svg" alt="" />
+          </a>
+        </div>
+        <div
+          class="d-none d-md-flex flex-column border-left border-right p-4 text-center"
+        >
+          <div class="h-subsidiaries">Our Subsidiaries</div>
+          <div class="d-flex justify-content-between brandimg">
+            <a
+              href="https://www.beautosys.com/beautodesignstudio/"
+              target="_blank"
+            >
+              <img matTooltip="Beauto Design Studio"
+                src="assets/media/images/bds.svg"
+                alt=""
+                class="smallbdsicon"
+              />
+            </a>
+            <a matTooltip="Quro Labs" href="https://qurolabs.com" target="_blank">
+              <img src="assets/media/images/Quro.svg" alt="" />
+            </a>
+            <a matTooltip="Coming soon" href="javascript:void(0)" [routerLink]="['/comingSoon']">
+              <img src="assets/media/images/JMR.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="countries">
+          <div class="h-locations">Our Foot Prints</div>
+          <div class="testimonial">
+            <swiper
+              [config]="client"
+              [effect]="'coverflow'"
+              [grabCursor]="true"
+              [centeredSlides]="true"
+              [loop]="true"
+              [spaceBetween]="0"
+              [navigation]="true"
+              class="swiper_w"
+            >
+              <ng-template swiperSlide *ngFor="let comments of coverflow">
+                <div class="col-md-3 mx-auto">
+                  <div class="testimonialsCard">
+                    <img matTooltip="{{comments.name}}"
+                    aria-label="Button that displays a tooltip when focused or hovered"
+                      class="img-fluid testimonialsImg"
+                      src="{{ comments.pic }}"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </ng-template>
+            </swiper>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-md-flex d-none justify-content-between text-center align-items-center"
+      >
+        <div class="d-flex justify-content-between">
+          <div class="py-4 px-20">
+            <a href="" class="topMenu" [routerLink]="['/services']" routerLinkActive="active">
+              <!-- <img src="assets/media/icons/submit_idea.svg" class="img-fluid" alt=""> -->
+              Services
+            </a>
+          </div>
+          <div class="py-4 px-20">
+            <a
+              href="javascript:void(0)"
+              [matMenuTriggerFor]="work"
+              (click)="$event.stopPropagation()"
+            >
+              <!-- <img src="assets/media/icons/submit_idea.svg" class="img-fluid" alt=""> -->
+              <div class="topMenu arrow_icontop">
+                <span> Our Work </span>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+              </div>
+            </a>
+            <mat-menu
+              #work="matMenu"
+              backdropClass="topHeadercustomizeclass"
+              class="topHeadercustomizeclass"
+            >
+              <a
+                href=""
+                [routerLink]="['/all-products']"
+                mat-menu-item
+                class="d-fl hover-clr"
+              >
+                <span class="topMenu">Products</span>
+              </a>
+              <a
+                href=""
+                [routerLink]="['/all-projects']"
+                mat-menu-item
+                class="d-fl hover-clr"
+              >
+                <span class="topMenu">Projects</span>
+              </a>
+            </mat-menu>
+          </div>
+          <!-- <div class="py-4 px-20">
+                        <a href="" [routerLink]="['/submitidea']" >
+                            <img src="assets/media/icons/submit_idea.svg" class="img-fluid" alt="">
+                            <div class="topMenu">Submit Idea</div>
+                        </a>
+                    </div>
+                    <div class="py-4 px-20">
+                        <a href="" [routerLink]="['/comingSoon']">
+                            <img src="assets/media/icons/build_team.svg" class="img-fluid" alt="">
+                            <div class="topMenu">Build Your Team</div>
+                        </a>
+                    </div> -->
+          <div class="py-4 px-4">
+            <a href="" [routerLink]="['/hiring']" routerLinkActive="active">
+              <div class="topMenu">We're Hiring</div>
+            </a>
+          </div>
+        </div>
+        <div class="ps-4 pe-4 py-3 border-left min-box">
+          <div class="position-relative">
+            <a href="javascript:void(0)" class="arrow_icon arrow_icontop">
+              <button
+                class="border-0"
+                mat-icon-button
+                [matMenuTriggerFor]="menu"
+                (click)="$event.stopPropagation()"
+              >
+                <span class="topMenu">Collaborate</span>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+            </a>
+            <mat-menu
+              #menu="matMenu"
+              backdropClass="topHeadercustomizeclass"
+              class="topHeadercustomizeclass"
+            >
+              <a
+                href=""
+                [routerLink]="['/submitidea']"
+                mat-menu-item
+                class="d-fl hover-clr"
+              >
+                <img
+                  src="assets/media/icons/submit_idea.svg"
+                  class="topmenudrop"
+                  alt=""
+                />
+                <span class="topMenu">Submit Idea</span>
+              </a>
+              <!-- <a href="" [routerLink]="['/buildyourteam']" mat-menu-item class="d-fl hover-clr">
+                                <img src="assets/media/icons/build_team.svg" class="topmenudrop" alt="">
+                                <span class="topMenu">Build Your Team</span>
+                            </a> -->
+            </mat-menu>
+          </div>
+        </div>
+        <div class="ps-4 py-3 border-left min-box">
+          <div class="showinmoblih">
+            <a href="javascript:void(0)" (click)="toggleMenu()">
+              <img src="assets/media/icons/menu.svg" alt="" />
+            </a>
+          </div>
+
+          <!-- <div class="showinmoblihhide">
+            <input
+              type="text"
+              ngModel
+              #data="ngModel"
+              [(ngModel)]="searchText"
+              class="searchtop"
+              placeholder="Search"
+              *ngIf="showBox"
+              (keyup.enter)="onSearch(data.value)"
+            />
+            <img
+              src="assets/media/icons/search.svg"
+              class="img-fluid search"
+              alt=""
+              *ngIf="showBox"
+              (click)="onSearch(searchText)"
+            />
+            <img
+              src="assets/media/icons/search.svg"
+              class="img-fluid search"
+              alt=""
+              *ngIf="!showBox"
+              (click)="showBox = true"
+            />
+          </div> -->
+          <!-- <div class="showinmoblihhide">
+                        <button class="btn btn-primary"  type="submit"> Log In </button>
+                    </div> -->
+        </div>
+      </div>
+    </div>
+
+    <nav *ngIf="mobile_menu">
+      <div class="menu-bar">
+        <a
+          href="javascript:void(0)"
+          (click)="mobile_menu = false"
+          class="close text-white text-end"
+        >
+          X
+        </a>
+        <!-- <div class="py-3">
+                    <div class="position-relative">
+                        <input type="text" class="searchtop w-100" placeholder="Product, Services">
+                        <div class="img-fluid search">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1025_26684)">
+                                    <path
+                                        d="M6.66667 11.3333C9.244 11.3333 11.3333 9.244 11.3333 6.66667C11.3333 4.08934 9.244 2 6.66667 2C4.08934 2 2 4.08934 2 6.66667C2 9.244 4.08934 11.3333 6.66667 11.3333Z"
+                                        stroke="#ffffff" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M14 14L10 10" stroke="#ffffff" stroke-width="1.25" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1025_26684">
+                                        <rect width="16" height="16" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div> -->
+        <h6 class="mb-4">Main Menu</h6>
+        <div *ngFor="let menu of leftmenu">
+          <a
+            href="javascript:void(0)"
+            (click)="mobile_menu = false"
+            class="d-flex align-items-center mb-3 menu"
+            [routerLink]="[menu.route]"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <img class="icon" src="{{ menu.white_icon }}" alt="" />
+            <p>{{ menu.title }}</p>
+          </a>
+        </div>
+
+        <div class="submenu">
+          <h6 class="mb-4">Main Menu</h6>
+
+          <a
+            href=""
+            [routerLink]="['/services']"
+            class="menu"
+            (click)="mobile_menu = false"
+          >
+            <div class="topMenu">Services</div>
+          </a>
+
+          <a
+            href=""
+            [routerLink]="['/all-products']"
+            class="menu"
+            (click)="mobile_menu = false"
+          >
+            <div class="topMenu">Our Work</div>
+          </a>
+
+          <a
+            href=""
+            [routerLink]="['/hiring']"
+            class="menu"
+            (click)="mobile_menu = false"
+          >
+            <div class="topMenu">We're Hiring</div>
+          </a>
+
+          <div>
+            <a
+              href="javascript:void(0)"
+              class="arrow_icon arrow_icontop mobile-col"
+            >
+              <button
+                class="border-0"
+                mat-icon-button
+                [matMenuTriggerFor]="menu"
+                (click)="$event.stopPropagation()"
+              >
+                <span class="topMenu">Collaborate</span>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+            </a>
+            <mat-menu
+              #menu="matMenu"
+              backdropClass="topHeadercustomizeclass"
+              class="topHeadercustomizeclass"
+            >
+              <a
+                href=""
+                [routerLink]="['/submitidea']"
+                mat-menu-item
+                class="d-fl"
+                (click)="mobile_menu = false"
+              >
+                <img
+                  src="assets/media/icons/submit_idea.svg"
+                  class="topmenudrop"
+                  alt=""
+                />
+                <span class="topMenu">Submit Idea</span>
+              </a>
+              <!-- <a href="" [routerLink]="['/comingSoon']" mat-menu-item class="d-fl">
+                                <img src="assets/media/icons/build_team.svg" class="topmenudrop" alt="">
+                                <span class="topMenu">Build Your Team</span>
+                            </a> -->
+            </mat-menu>
+
+            <!-- <input type="text" class="searchtop" placeholder="Products, Services">
+                        <img src="assets/media/icons/search.svg" class="img-fluid search" alt=""> -->
+          </div>
+        </div>
+        <!-- <div class="d-flex justify-content-around bg-light rounded-full text-center">
+
+                    <div class="p-3">
+                        <a href="" [routerLink]="['/comingSoon']" (click)="mobile_menu = false" >
+                            <img src="assets/media/icons/submit_idea.svg" class="img-fluid" alt="">
+                            <div class="topMenu">Submit Idea</div>
+                        </a>
+                    </div>
+                    <div class="p-3">
+                        <a href="" [routerLink]="['/comingSoon']" (click)="mobile_menu = false">
+                            <img src="assets/media/icons/build_team.svg" class="img-fluid" alt="">
+                            <div class="topMenu">Build Your Team</div>
+                        </a>
+                    </div>
+                    <div class="p-3">
+                        <a href="" [routerLink]="['/hiring']" (click)="mobile_menu = false">
+                            <img src="assets/media/icons/Hiring.svg" class="img-fluid" alt="">
+                            <div class="topMenu">We're Hiring</div>
+                        </a>
+                    </div>
+                </div> -->
+        <div
+          class="d-flex d-md-none justify-content-center p-4 text-center align-items-center"
+        >
+          <div class="h-subsidiaries me-4 mb-0 text-white">
+            Our Subsidiaries
+          </div>
+          <div class="d-flex justify-content-between brandimg">
+            <a
+              href="https://www.beautosys.com/beautodesignstudio/"
+              target="_blank"
+            >
+              <img src="assets/media/icons/bds_white.svg" class="me-3" alt="" />
+            </a>
+            <a href="https://qurolabs.com" target="_blank">
+              <img
+                src="assets/media/icons/quoro_white.svg"
+                class="me-3"
+                alt=""
+              />
+            </a>
+            <a href="javascript:void(0)" [routerLink]="['/comingSoon']">
+              <img src="assets/media/icons/jmr_white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

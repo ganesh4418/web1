@@ -1,0 +1,154 @@
+<!-- <section class="bannerDesing">
+    <div class="bg-video-wrap">
+        <img src="assets/media/images/softwareServices.png" alt="" class="serimg">
+        <div class="overlay">
+        </div>
+        <div class="v_banner test">
+
+            <div><span>Electronics</span> Services </div>
+        </div>
+
+    </div>
+</section> -->
+
+
+<section class="tabinfo responsive-top-spacing-softSer services-top">
+    <div class="py-4 my-1">
+        <div class="serv_title">
+            <div>Electronics<span> Services</span></div>
+        </div>
+    </div>
+
+    <div>
+        <div class="row no-gutter">
+            <div class="col-md-4">
+                <div class="Servicescard">
+                    <img src="assets/media/images/img260.jpg" class="img-fluid" alt="">
+
+                    <div class="decdottom">
+                        <div class="titleserv"> PCB Designing Services </div>
+                        <div class="dec"> Get the best quote for quick and reliable schematic
+                            development, PCB designing, layout and readiness for manufacturing.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Servicescard">
+                    <img src="assets/media/images/img261.jpg" class="img-fluid" alt="">
+                    <div class="decdottom">
+                        <div class="titleserv">Product Prototyping Services </div>
+                        <div class="dec">We can help you turn your ideas into tangible products. We
+                            offer PCB design for box build assembly, manufacturing, product testing,
+                            packaging design and prototyping of consumer electronics and
+                            industrial products.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="Servicescard">
+
+                    <img src="assets/media/images/img262.jpg" class="img-fluid" alt="">
+
+                    <div class="decdottom">
+                        <div class="titleserv">Control Panel Assebly/ Systems Integration </div>
+                        <div class="dec"> Systems integration, control and instrumentation of machine
+                            with PLC, HMI, SCADA Systems...etc. We have experience with SIEMENS, ABB,
+                            Allen Bradly, Mitsubishi, Delta...etc. PLCs.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 
+<section class="sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto mb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="electroser">
+                            <span class="etitel">PCB Designing Services</span>
+                            <div class="edce">Get the best quote for quick and reliable schematic
+                                development,<br>
+                                PCB designing, layout and rediness for manufacturing.</div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 offset-lg-1">
+                        <img src="assets/media/images/img260.jpg" class="img-fluid mb-0" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto mb-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <img src="assets/media/images/img261.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <div class="electroser">
+                            <span class="etitel">Product Prototyping Services</span>
+                            <div class="edce">We can help you turn your ideas into tangible products. We
+                                offer PCB <br>design for box build assembly, manufacturing, product tesing,
+                                <br>packaging design and prototyping of consumer electronics and
+                                <br>industrial products.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto mb-0">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6">
+                        <div>
+                            <span class="title">Control Panel Assebly/ Systems Integration</span>
+                            <div class="design-sc">Systems integration, control and instrumentation of machine
+                                with PLC,
+                                <br>HMI, SCADA Systems...etc. We have experience with SIEMENS, ABB,
+                                <br>Allen Bradly, Mitsubishi, Delta...etc. PLCs.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                        <img src="assets/media/images/img262.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="bglet" *ngIf = "!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Build Something <br>
+            Awesome!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf = "connectClicked"></app-connect-now>

@@ -1,0 +1,31 @@
+<div class="pl-140 pt-100">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<div class="submitiBg">
+    <img src="assets/media/images/check.svg" alt="">
+</div>
+<section class="submiti ">
+    <div class="home position-relative h-100 space">
+
+        <div class="titlesubmit">
+            <span>{{highlitedtitle}} </span> {{nothighlitedtitle}}
+        </div>
+        <div class="outer">
+            <div class="t-font-size pt-4 pb-2">
+                Thanks for <span class="text-color">submitting.</span>
+            </div>
+            <img src="assets/media/icons/check.svg" alt="">
+            <div class="mt-5 mb-5">
+                We will connect soon with you on <span class="text-color">{{email}}</span> <br>
+                Your reference number - <span class="text-color">{{code}}</span>
+            </div>
+            <a routerLink="/all-products" href="javascript:void(0)"
+                class="btn btn-secondary border-primary btn-outline-primary bg-transparent text-primary">Explore our
+                work</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>

@@ -1,0 +1,261 @@
+.bannerprodcut {
+
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    /* or 133% */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    .sub {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    .maintitle {
+        color: #000;
+    }
+
+    .understandmore {
+a{
+
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        letter-spacing: 0.01em;
+
+        /* Royal Blue */
+
+        color: #2673E5;
+        text-decoration: underline;
+    }
+    }
+
+}
+
+.rang {
+    background: #FAFAFC;
+    padding: 2rem 0px;
+
+
+    .innrage {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+.rageinfo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 44px;
+    /* or 138% */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: rgba(0, 0, 0, 0.8);
+
+    margin: 3rem 0px;
+
+}
+
+.radiussection {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: auto;
+    width: 65%;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.imagecri {
+    width: 200px;
+    height: 200px;
+
+    background: #D0DBEF;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+}
+
+.imgtitlegal{
+    /* Body/Text-Size-Xlarge */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+text-align: center;
+letter-spacing: 0.005em;
+
+color: rgba(0, 0, 0, 0.8);
+margin-bottom: 10px;
+}
+
+.features {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 80px;
+/* identical to box height, or 200% */
+
+text-align: center;
+letter-spacing: 0.01em;
+
+color: rgba(0, 0, 0, 0.8);
+}
+
+
+.pproduct {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 80px;
+/* identical to box height, or 200% */
+
+text-align: center;
+letter-spacing: 0.01em;
+
+color: rgba(0, 0, 0, 0.8);
+}
+
+.garybg{
+    background: #FAFAFC;
+}
+
+.featurescard{
+    text-align: center;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 32px;
+/* identical to box height, or 160% */
+
+text-align: center;
+letter-spacing: 0.002em;
+padding: 5rem 0px;
+
+color: rgba(0, 0, 0, 0.8);
+
+    img{
+        width: 59.44px;
+        height:59.51px;
+        padding-bottom: 2rem;
+    }
+
+}
+.features{
+    text-align: center;
+    padding: 4rem 0px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 80px;
+/* identical to box height, or 200% */
+letter-spacing: 0.01em;
+color: rgba(0, 0, 0, 0.8);
+
+}
+
+.pproduct{
+    text-align: center;
+    padding-top: 4rem ;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 80px;
+/* identical to box height, or 200% */
+letter-spacing: 0.01em;
+color: rgba(0, 0, 0, 0.8);
+
+}
+
+.ppspace{
+    margin-bottom: 4rem;
+}
+
+.subtitlepreemium{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 40px;
+/* identical to box height, or 200% */
+
+text-align: center;
+letter-spacing: 0.01em;
+
+color: #000000;
+
+}
+
+.bgadd{
+    background: #FAFAFC;
+}
+.blugeadd{
+    background: rgba(57, 177, 240, 0.1);
+    
+
+}
+
+.m_pSpce{
+    padding: 3rem 0px;
+}
+
+.addtitleon{
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+
+text-align: center;
+letter-spacing: 0.01em;
+
+color: rgba(0, 0, 0, 0.8);
+
+}
+
+.addtitleonsub {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* or 162% */
+
+text-align: center;
+width: 70%;
+/* text-align: center; */
+margin: auto;
+margin-top: 20px;
+
+color: rgba(0, 0, 0, 0.8);
+}
+.ai{
+    align-items: center;
+}

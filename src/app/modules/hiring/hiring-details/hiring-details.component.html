@@ -1,0 +1,294 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+
+<!-- <section class="h-100">
+    <div class="home position-relative h-100">
+        <div class="tabinfo h-100">
+            <div class="row flex-column justify-content-center m-0 h-100 align-items-start">
+                <div class="col-md-6">
+                    <div class="text-justify w-100 pe-3">
+                        <h1 class="extralarge"> We're looking for </h1>
+                        <h1 class="extra-large"> Talent </h1>
+                    </div>
+                </div>
+                <div class="col-md-6 right-absolute vertical-center">
+                    <img src="assets/media/images/our_team.png" class="vertical-center img-fluid w-100 mw-50 team_img"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="topPadding mb-5" *ngIf="!isSubmitted">
+
+    <form [formGroup]="jobApplyForm" (ngSubmit)="onSubmit(jobApplyForm)">
+        <div class="card tabinfo details-box pb-0 sticky-top">
+            <div>
+                <div class="row align-items-center">
+                    <div class="col-md-7 col-sm-12 mb-3">
+                        <h4 class="card-title title-layout mb-0"><span>
+                                {{jobDetails.name}}
+                                <small class="job-position"> ({{jobDetails.position}})</small></span></h4>
+                    </div>
+                    <div class="col-md-5 col-sm-12 text-md-end mb-3">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <!-- <div class="txt-right" *ngIf="isApply">
+                                Read Description
+                            </div> -->
+                            <a (click)="onApply()" class="btn btn-primary" *ngIf="!isApply">Apply</a>
+                            <button type="submit" class="btn btn-primary ms-3" *ngIf="isApply" [disabled]="jobApplyForm.invalid">Submit</button>
+                            <a routerLink="/hiring" class="btn btn-secondary border ms-3" *ngIf="!isApply">Cancel</a>
+                            <a (click)="isApply=false" class="btn btn-secondary border ms-3" *ngIf="isApply">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="card tabinfo details-box-child">
+
+            <div *ngIf="!isApply && !isSubmitted">
+                <div>
+                    <h4>Description</h4>
+                    <p>{{jobDetails.discription}}</p>
+                </div>
+                <div>
+                    <h4>Responsibilities</h4>
+                    <ul class="text-left">
+                        <li *ngFor="let res of jobDetails.responsibilities">{{res}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Requirements</h4>
+                    <ul class="text-left">
+                        <li *ngFor="let req of jobDetails.requirements">{{req}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Benefits</h4>
+                    <ul class="text-left">
+                        <li *ngFor="let ben of jobDetails.benefits">{{ben}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div *ngIf="isApply && !isSubmitted" class="form">
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+
+                        <div class="floating-label">
+                            <input type="text" id="firstname" placeholder="First Name*" class="form-control form-input"
+                                formControlName="firstName" required autocomplete="off">
+                            <label for="firstname" class="form-label">First name*</label>
+                        </div> 
+                        
+              
+                        <div
+                            *ngIf="(jobApplyFormControl['firstName'].touched && jobApplyFormControl['firstName'].invalid) || submitted">
+                            <div
+                                *ngIf="jobApplyFormControl['firstName'].errors && jobApplyFormControl['firstName'].errors['required']">
+                                <small class="form-text text-danger">Enter your first name</small>
+                            </div>
+                            <div
+                                *ngIf="jobApplyFormControl['firstName'].errors && jobApplyFormControl['firstName'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid first name</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="floating-label">
+                            <input type="text" id="lastName" placeholder="Last Name*" class="form-control form-input"
+                                formControlName="lastName" required autocomplete="off">
+                            <label for="lastName" class="form-label">Last name*</label>
+                        </div> 
+
+
+                        <div
+                            *ngIf="(jobApplyFormControl['lastName'].touched && jobApplyFormControl['lastName'].invalid) || submitted">
+                            <div
+                                *ngIf="jobApplyFormControl['lastName'].errors && jobApplyFormControl['lastName'].errors['required']">
+                                <small class="form-text text-danger">Enter your last name</small>
+                            </div>
+                            <div
+                                *ngIf="jobApplyFormControl['lastName'].errors && jobApplyFormControl['lastName'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid last name</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="floating-label">
+                            <select class="form-control form-select form-input" formControlName="country"
+                                (change)="onSelectChange($event)">
+                                <option value="" disabled selected hidden>Country *</option>
+                                <option *ngFor="let country of prefixes" [value]="country.name">
+                                    {{country.name}}
+                                </option>
+                            </select>
+                            <!-- <label for="country" class="form-label">Select Country*</label> -->
+                            
+                        </div>
+
+
+                        <div *ngIf="(jobApplyFormControl['country'].touched && jobApplyFormControl['country'].invalid) || submitted">
+                            <div *ngIf="jobApplyFormControl['country'].errors && jobApplyFormControl['country'].errors['required']">
+                                <small class="form-text text-danger">Enter your country</small>
+                            </div>
+                            <div *ngIf="jobApplyFormControl['country'].errors && jobApplyFormControl['country'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid country</small>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="floating-label">
+                            <input type="email" id="email" placeholder="Email Address*" class="form-control form-input"
+                                formControlName="email" required autocomplete="off">
+                            <label for="email" class="form-label">Email Address*</label>
+                        </div> 
+
+
+                        <div
+                            *ngIf="(jobApplyFormControl['email'].touched && jobApplyFormControl['email'].invalid) || submitted">
+                            <div
+                                *ngIf="jobApplyFormControl['email'].errors && jobApplyFormControl['email'].errors['required']">
+                                <small class="form-text text-danger">Enter your email address</small>
+                            </div>
+                            <div
+                                *ngIf="jobApplyFormControl['email'].errors && jobApplyFormControl['email'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid email address</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 mb-3">
+                        <input type="text" id="contactPreNo" class="form-control" formControlName="contactPreNo"
+                            readonly>
+                        <!-- <select name="contactPreNo" class="form-control" id="contactPreNo" formControlName="contactPreNo" >
+                            <option *ngFor="let p of prefixes" value="p.dial_code">{{p.dial_code}}</option>
+                        </select> -->
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <div class="floating-label">
+                            <input type="number" id="contactNo" placeholder="Contact Number*" maxlength="14" class="form-control form-input"
+                            formControlName="contactNo" required autocomplete="off">
+                            <label for="email" class="form-label">Contact Number*</label>
+                        </div> 
+
+                        <div
+                            *ngIf="(jobApplyFormControl['contactNo'].touched && jobApplyFormControl['contactNo'].invalid) || submitted">
+                            <div
+                                *ngIf="jobApplyFormControl['contactNo'].errors && jobApplyFormControl['contactNo'].errors['required']">
+                                <small class="form-text text-danger">Enter your contact number</small>
+                            </div>
+                            <div
+                                *ngIf="jobApplyFormControl['contactNo'].errors && jobApplyFormControl['contactNo'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid contact number</small>
+                            </div>
+                            <div
+                            *ngIf="jobApplyFormControl['contactNo'].errors && jobApplyFormControl['contactNo'].errors['minlength']">
+                            <small class="form-text text-danger">Enter min {{minMobileLength}} length contact no</small>
+                        </div>
+                        <div
+                            *ngIf="jobApplyFormControl['contactNo'].errors && jobApplyFormControl['contactNo'].errors['maxlength']">
+                            <small class="form-text text-danger">Enter max {{maxMobileLength}} length contact no</small>
+                        </div>
+                        <div
+                                *ngIf="jobApplyFormControl['contactNo'].errors &&  jobApplyFormControl['contactNo'].errors['prefixValid']">
+                                <small class="form-text text-danger">Enter valid contact no</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 mb-3">
+                        <input type="text" id="altContactPreNo" class="form-control" formControlName="altContactPreNo"
+                            readonly>
+                        <!-- <select name="altContactPreNo" class="form-control" id="altContactPreNo" formControlName="altContactPreNo" >
+                            <option *ngFor="let p of prefixes" value="p.dial_code">{{p.dial_code}}</option>
+                        </select> -->
+                    </div>
+                    <div class="col-md-5 mb-3">
+
+                        <div class="floating-label">
+                            <input type="number" id="altContactNo" placeholder="Alternate Contact Number*" class="form-control form-input"
+                            formControlName="altContactNo" maxlength="14" autocomplete="off">
+                            <label for="email" class="form-label">Alternate Contact Number*</label>
+                        </div> 
+                       
+                            <div
+                    *ngIf="(jobApplyFormControl['altContactNo'].touched && jobApplyFormControl['altContactNo'].invalid) || isSubmitted">
+                    <div
+                        *ngIf="jobApplyFormControl['altContactNo'].errors && jobApplyFormControl['altContactNo'].errors['pattern']">
+                        <small class="form-text text-danger">Enter valid contact number</small>
+                    </div>
+                    <div
+                    *ngIf="jobApplyFormControl['altContactNo'].errors && jobApplyFormControl['altContactNo'].errors['minlength']">
+                    <small class="form-text text-danger">Enter min {{minMobileLength}} length contact no</small>
+                </div>
+                <div
+                    *ngIf="jobApplyFormControl['altContactNo'].errors && jobApplyFormControl['altContactNo'].errors['maxlength']">
+                    <small class="form-text text-danger">Enter max {{maxMobileLength}} length contact no</small>
+                </div>
+                
+                <div
+                                *ngIf="jobApplyFormControl['altContactNo'].errors &&  jobApplyFormControl['altContactNo'].errors['prefixValid']">
+                                <small class="form-text text-danger">Enter valid contact no</small>
+                            </div>
+                </div>
+                <div *ngIf="this.jobApplyForm.get('contactNo')?.value == this.jobApplyForm.get('altContactNo')?.value">
+                    <small class="form-text text-danger alternateContact">Contact number and Alternate number should not be same.</small>
+                </div>
+                    </div>
+                    
+                    <div class="col-md-12 mb-3">
+                        <div class="floating-label">
+                            <input type="text" id="address" placeholder="You’re Address*" maxlength="14" class="form-control form-input"
+                            formControlName="address" required autocomplete="off">
+                            <label for="address" class="form-label">You’re Address*</label>
+                        </div>
+
+
+                        <div
+                            *ngIf="(jobApplyFormControl['address'].touched && jobApplyFormControl['address'].invalid) || submitted">
+                            <div
+                                *ngIf="jobApplyFormControl['address'].errors && jobApplyFormControl['address'].errors['required']">
+                                <small class="form-text text-danger">Enter you’re address</small>
+                            </div>
+                            <div
+                                *ngIf="jobApplyFormControl['address'].errors && jobApplyFormControl['address'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid you’re address</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="floating-label">
+                            <input type="text" id="workLink" placeholder="Work link*"  class="form-control form-input"
+                            formControlName="workLink" autocomplete="off">
+                            <label for="workLink" class="form-label">Work link</label>
+                        </div>
+                    </div>
+                    <h5>Resume</h5>
+                    <div class="col-md-12 mb-3">
+                        <div class="d-flex align-items-center text-muted">
+                            <input type="file" id="actual-btn" formControlName="resume" required (change)="readFile($event)" hidden />
+                            <label for="actual-btn" class="choose">Choose File</label>
+                            <span id="file-chosen" *ngIf="fileName==''"> No file selected DOC, DOCX and PDF (5 MB)</span>
+                            <span id="file-chosen" *ngIf="fileName!=''"> {{fileName}}</span>
+                            <div *ngIf="fileName==''" class="ml-2">
+                                <small class="form-text text-danger">Please upload Resume</small>
+                            </div>
+                        </div>
+                       
+                        <!-- <label for="actual-btn " class="choose">Choose File</label> -->
+                        <!-- <span id="file-chosen" *ngIf="fileName==''"> No file selected DOC, DOCX and PDF (5 MB)</span>
+                        <span id="file-chosen" *ngIf="fileName!=''"> {{fileName}}</span> -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+</section>
+
+<!-- <app-submitted-confirm [highlitedtitle]="highlitedtitle" [nothighlitedtitle]="nothighlitedtitle"
+    *ngIf="!isApply && isSubmitted"></app-submitted-confirm> -->

@@ -1,0 +1,121 @@
+.electronics .top-left-content,
+.electronics .perfect-center {
+  display: none;
+}
+
+.redmoreservices {
+
+  margin-top: 1rem;
+
+  .read-mores{
+    color: #2673E5;
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px; 
+  
+  }
+
+}
+
+.leftservices {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0px;
+
+  .imgservies{
+    width: 85%;
+    margin-left: auto;
+    img{
+      width: 100%;
+      height: 436px;
+    }
+  }
+
+
+}
+.rightservices {
+  display: flex;
+  align-items: center;
+  margin: 5rem 0px;
+
+  .imgservies{
+    width: 85%;
+    margin-right: auto;
+    img{
+      width: 100%;
+      height: 436px;
+    }
+  }
+}
+
+
+
+
+.overlapright{
+  position: absolute;
+  right: 5rem;
+  width: 24rem;
+  // margin-top: 5rem;
+}
+
+.overlapleft{
+  position: absolute;
+  width: 24rem;
+}
+
+.boxcard {
+  background: #FFFFFF;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 28px;
+
+
+
+
+
+  .boxcardtitle{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .boxcardSub{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 1rem;
+  }
+
+  .hashtag {
+    margin-top: 1rem;
+    ul {
+      padding: 0px;
+      margin: 0px;
+      list-style: none;
+    }
+    li{
+      margin-right: 10px;
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.4);
+      font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+    }
+  }
+
+}
+
+
+
+@media only screen and (max-device-width: 768px) {
+
+  .spacetab {
+    margin-top: 4rem;
+  }
+}

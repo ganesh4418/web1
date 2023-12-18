@@ -1,0 +1,11 @@
+<nav class="breadcrumb-fixed" aria-label="breadcrumb">
+  <ol class="breadcrumb mb-0" [ngClass]="stepColorchange ? 'lichildegary' : 'lichil'">
+    <li class="breadcrumb-item" *ngFor="let a of menuItems; let i=index">
+      <a class="text-muted" [routerLink]="[a.url]">{{a.label}}
+        <span *ngIf="menuItems.length-1==i" (click)="onBack(currentBreadcum)">
+          <span *ngIf="currentBreadcum!=''" style="font-weight: 400;"> / </span>
+          {{currentBreadcum}} </span>
+      </a>
+    </li>
+  </ol>
+</nav>

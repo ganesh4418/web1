@@ -1,0 +1,136 @@
+@import "includes";
+
+.card {
+    padding: 20px;
+}
+
+.check {
+    float: right;
+}
+
+.btnapply {
+    background: linear-gradient(135deg, #487ae3 0%, #475f96 100%);
+    border-radius: 35px;
+    color: #fff;
+    border: 1px solid gray;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 14px 48px;
+    margin-top: 20px;
+
+}
+
+.btncancel {
+    background: white;
+    border-radius: 35px;
+    color: black;
+    border: 1px solid gray;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 14px 48px;
+    margin-top: 20px;
+}
+
+.details-box {
+    background: $lighten;
+    border: none;
+    // box-shadow: 0px -3px 15px #00000014;
+    box-shadow: 0px -6px 10px #0000000f;
+}
+
+.details-box-child {
+    background: $lighten;
+    border: none;
+    box-shadow: 2px 20px 20px 0px #00000014;
+}
+
+.job-position {
+    font-size: 1rem;
+    color: #00000080;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 135px;
+    background-color: #FAFAFC;
+    z-index: 10;
+}
+
+.job-sub-title {
+    font-size: 14px;
+    color: #00000080;
+}
+
+.txt-right {
+    text-align: end;
+    color: #2673E5;
+}
+
+.choose {
+    background: white;
+    border-radius: 35px;
+    color: #2673E5;
+    border: 1px solid #2673E5;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 32px;
+    margin-top: 10px;
+}
+
+#file-chosen {
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-res {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-btn {
+    margin-top: -20px !important;
+}
+
+#contactPreNo,
+#altContactPreNo {
+    width: 65px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.alternateContact {
+    color: red;
+    font-size: 13px;
+}
+
+
+.choose{
+    cursor: pointer;
+}
+
+.choose:hover{
+    background-color: #487AE3;
+    color: white;
+}
+
+.ml-2{
+    margin-left: 10px;
+    margin-top: 5px;
+}

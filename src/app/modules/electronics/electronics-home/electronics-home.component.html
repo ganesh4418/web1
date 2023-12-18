@@ -1,0 +1,77 @@
+<!-- <div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<div class=" ">
+
+    <div class="tabcusmeting">
+        <div class="tabinfo">
+            <ul>
+                <li (click)="servicesView('introduction')" [ngClass]="{'active': tabchanedrop === 'introduction'}">
+                    Introduction</li>
+                <li (click)="servicesView('services')" [ngClass]="{'active': tabchanedrop === 'services'}">Services</li>
+                <li (click)="servicesView('ourwork')" [ngClass]="{'active': tabchanedrop === 'ourwork'}">Our Work</li>
+                <li (click)="servicesView('blogs')" [ngClass]="{'active': tabchanedrop === 'blogs'}">Blogs</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'introduction' ">
+        <app-electronics-introduction></app-electronics-introduction>
+    </div>
+   
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'services' ">
+        <app-services></app-services>
+    </div>
+
+
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'ourwork' ">
+        <app-our-works [ourWorksItems]="ourWorksItems"></app-our-works>
+    </div>
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'blogs' ">
+        <app-blogs [blogItems]="blogItems"></app-blogs>
+    </div>
+
+
+
+
+</div> -->
+
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<div class=" ">
+
+    <div class="tabcusmeting">
+        <div class="tabinfo topPaddingDomainPage">
+            <ul class="scrolling-wrapper">
+                <li (click)="servicesView('introduction')" [ngClass]="{'active': tabchanedrop === 'introduction'}">Introduction</li>
+
+                <li (click)="servicesView('services')" [ngClass]="{'active': tabchanedrop === 'services'}">Services</li>
+                <!-- <li (click)="servicesView('ourwork')" [ngClass]="{'active': tabchanedrop === 'ourwork'}">Our Work</li> -->
+                <li (click)="servicesView('blogs')" [ngClass]="{'active': tabchanedrop === 'blogs'}">Blogs</li>
+            </ul>
+        </div>
+    </div>
+    <div class="Introduction" *ngIf="tabchanedrop === 'introduction' ">
+        <app-electronics-introduction></app-electronics-introduction>
+    </div>
+   
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'services' ">
+        <app-services></app-services>
+    </div>
+
+
+
+    <!-- <div class="Introduction" *ngIf="tabchanedrop === 'ourwork' ">
+        <app-our-works [ourWorksItems]="ourWorksItems"></app-our-works>
+    </div> -->
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'blogs' ">
+        <app-blogs [blogItems]="blogItems"></app-blogs>
+    </div>
+</div>

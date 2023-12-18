@@ -1,0 +1,76 @@
+@import "includes";
+
+.breadcrumb-fixed {
+    margin-top: 0.9rem;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 13px 0px;
+    padding-left: 10vw;
+    a {
+        font-size: $font-xs;
+    }
+}
+
+.breadcrumb {
+    line-height: 20px;
+}
+
+.breadcrumb-item:last-child {
+    a {
+        font-weight: $full-bold;
+    }
+}
+a.text-muted.w-normal {
+    font-weight: $regular !important;
+}
+.w-normal span {
+    font-weight: $full-bold;
+}
+.lichildegary li:nth-child(2){
+    a{
+        color: #6c757d!important;
+        font-weight: 400;
+
+      span{
+        color: #6c757d!important;
+        font-weight: 800;
+      }  
+    }
+}
+.breadcrumb-item + .breadcrumb-item {
+    padding-left: 2px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    font-size: 12px;
+    margin-top: 1px;
+    padding-right: 2px;
+}
+@media only screen and (max-device-width: 768px) {
+
+    .breadcrumb-fixed {
+
+    padding-left: 13vw;
+    }
+}
+
+@media  (max-width: 820px) and (min-width: 720px) {
+
+
+    .breadcrumb-fixed {
+
+        padding-left: 13vw;
+        }
+}
+
+@media (max-width:475px) {
+
+    .breadcrumb-fixed {
+        padding-left: 5vw;
+    }
+    
+}

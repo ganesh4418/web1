@@ -1,0 +1,49 @@
+.sb-padding{
+    padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+}
+
+.form-select,.form-select:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.filter-buttons{
+    margin-right: 20px;
+    margin-bottom: 1rem;
+border: 1px solid #E2E7EF;
+border-radius: 35px;
+padding: 7px 30px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+
+text-align: center;
+letter-spacing: 0.01em;
+
+/* Black */
+
+color: #000000;
+
+}
+
+.selected-button{
+    background: #2673E5;
+   color: white;
+}
+
+.unselected-button{
+   background-color: white;
+   color:black;
+}
+.dropsort{    
+    display: flex;
+    gap: 14px;
+    justify-content: flex-end;
+}
+.al-chenter{
+    align-items: center;
+}
+

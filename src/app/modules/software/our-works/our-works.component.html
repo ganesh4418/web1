@@ -1,0 +1,24 @@
+<section class="responsive-top-spacing-blog">
+    <div class="container px-5">
+        <div class="pt-100">
+            <div class="row">
+                <div class="col-4" *ngFor="let owi of ourWorksItems">
+                    <div class="card card-body m-2">
+                        <div class="img-container">
+                            <img src="{{owi.pic}}" class="img-fluid image" alt="">
+                            <div class="top-left-content">{{owi.category}}</div>
+                            <div class="content-center">
+                                <div class="read-more">Explore More</div>
+                                <div class="share">
+                                    <img src="assets/media/icons/submit_idea.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <h6 class="pt-4 pl-2 ">{{owi.title}}</h6>
+                        <p>{{owi.desc}}</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

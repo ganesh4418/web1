@@ -1,0 +1,230 @@
+<!-- <div class="tabinfo"
+    (appear)="onAppear()"
+    @fadeSlide
+    (@fadeSlide.start)="hasAppeared = true"
+    (@fadeSlide.done)="hasAppeared = false"
+    >
+      <div
+        *ngFor="let e of events" 
+        [ngClass]="e.bgColor" 
+        class="item p-4 rounded-xl w-full mb-4" 
+      >
+        <div class="text-sm">{{ e.time }}</div>
+        <div class="font-bold">{{ e.action }}</div>
+      </div>
+    </div> -->
+
+<section class="bannerDesing">
+
+    <div class="bg-video-wrap">
+
+        <video class="background" loop autoplay playsinline oncanplay="this.play()"
+            onloadedmetadata="this.muted = true">
+            <source src="assets/media/video/design.mp4" type="video/webm" />
+            <track label="English" kind="captions" default>
+        </video>
+        <div class="overlay">
+        </div>
+        <div class="v_banner test">
+            <div> We <span>Design, Create, Animate & Deliver </span>
+            </div>
+
+            <div>physical and digital products</div>
+
+            <div class="v_subtitle">
+                Creating experience beyond expectations, and deliver design outcomes unimagined to our clients, with
+                latest <br> designs with best in the world user experiences.
+            </div>
+            <a href="https://www.youtube.com/watch?v=zCWB3wZqdw4" target="_blank" class="mt-4 btn btn-primary">Check out
+                more
+                <img src="assets/media/icons/play.svg" class="ms-2">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="bggary pt-100 pb-100">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="">
+                <div>
+                    <span class="title mb-4  ">Design Process</span>
+                </div>
+            </div>
+
+            <img src={{gifUrl}} alt="">
+        </div>
+    </div>
+</section>
+
+
+
+<section class="ourstrengths pt-100">
+    <div class="bgbluecard">
+    </div>
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="">
+                <div>
+                    <span class="title mb-4  ">Our Strengths</span>
+                </div>
+            </div>
+
+            <div class="row strengths">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                    <!--box1-->
+                    <div class="card-gary">
+                        <div class="position-relative">
+                            <img src="assets/media/images/blueDiamond.svg" alt="" class="position-absolute">
+                            <img src="assets/media/images/design/Research.webp" alt="">
+                        </div>
+                        <div class="cardtitle"> Research</div>
+                        <div class="dsc">Observe, interact and <br> understand users when <br> they are in natural
+                            settings. </div>
+                    </div>
+                    <!--boxend-->
+                    <!--box1-->
+                    <div class="card-white cardspace">
+                        <div class="position-relative">
+                            <img src="assets/media/images/blueDiamond.svg" alt="" class="position-absolute">
+                            <img src="assets/media/images/design/Sketching.webp" alt="">
+                        </div>
+                        <div class="cardtitle"> Sketching and Illustration</div>
+                        <div class="dsc">
+                            For quick concept generation, we <br> generate hand drawings of <br> product designs.
+
+                        </div>
+                        <!--boxend-->
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 m-cardspace">
+                    <!--box1-->
+                    <div class="card-white ">
+                        <div class="position-relative">
+                            <img src="assets/media/images/blueDiamond.svg" alt="" class="position-absolute">
+                            <img src="assets/media/images/design/Problem-Solving.webp" alt="">
+                        </div>
+                        <div class="cardtitle"> Problem Solving</div>
+                        <div class="dsc">Design thinking process as a <br> problem solving design <br> methodology.
+                        </div>
+                    </div>
+                    <!--boxend-->
+
+                    <!--box1-->
+                    <div class="card-gary cardspace">
+                        <div class="position-relative">
+                            <img src="assets/media/images/blueDiamond.svg" alt="" class="position-absolute">
+                            <img src="assets/media/images/design/Modelling.webp" alt="">
+                        </div>
+                        <div class="cardtitle"> 3D Modelling</div>
+                        <div class="dsc">
+                            For improved control over product <br> design details, we use 3 dimensional <br>
+                            representation.
+
+                        </div>
+                    </div>
+                    <!--boxend-->
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 res">
+                    <!--box1-->
+
+                    <div class="tabgirdindi">
+                        <div class="card-gary">
+                            <div class="position-relative">
+                                <img src="assets/media/images/blueDiamond.svg" alt="" class="position-absolute">
+                                <img src="assets/media/images/design/Concept-Design.webp" alt="">
+                            </div>
+                            <div class="cardtitle"> Concept Design</div>
+                            <div class="dsc">
+                                Explore range of options to create <br> design that will feel, look, & work <br> exactly
+                                as planned.
+                            </div>
+                        </div>
+                        <!--boxend-->
+    
+                        <!--box1-->
+                        <div class="card-white cardspace">
+                            <div class="position-relative">
+                                <img src="assets/media/images/blueDiamond.svg" alt="" class="position-absolute">
+                                <img src="assets/media/images/design/Prototyping.webp" alt="">
+                            </div>
+                            <div class="cardtitle"> Prototyping</div>
+                            <div class="dsc">
+                                We prototype to assess a new design <br> that aims to increase precision by <br>
+                                considering users.
+                            </div>
+                        </div>
+                        <!--boxend-->
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</section>
+
+<section class="pb-100 above-quotes-space">
+    <div class="tabinfo">
+
+        <div class="quotes ">
+
+            <div class="bg">
+                <div>
+                    <span class="desingC">Design </span>
+                    <span class="desing-sc">adds </span>
+                    <span class="design-sc-font-size"><span class="desing-sc-bold">V</span>alue</span>
+                    faster than it <br>
+                    adds
+                    <span class="design-sc-font-size"><span class="desing-sc-bold">C</span>osts</span>
+                </div>
+            </div>
+
+
+            <div class="quotesAu"> - Joel Spolsky </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+    <!-- <div><img src="assets/media/images/design_ beauto.jpg" alt=""></div> -->
+</section>
+
+<section class="bg-gradient-primary pt-100 pb-100" *ngIf="!explore_design">
+    <div class="text-center">
+        <div class="container">
+            <div class="row align-items-center mb-md-4 mb-0">
+                <div class="col-md-5 text-md-end me-md-5 mb-4 mb-md-0">
+                    <img src="assets/media/images/main_logo.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-white gradient-text"> Creating beautiful
+                        <span class="design-stories">
+                            Design Stories
+                        </span>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="javascript:void(0)" [routerLink]="['/comingSoon']" class="mt-3 btn btn-secondary">
+                        Explore more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="explore_design">
+    <app-connect-now></app-connect-now>
+</section>

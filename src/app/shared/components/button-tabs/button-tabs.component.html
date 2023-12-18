@@ -1,0 +1,7 @@
+<section>
+    <div class="row py-5 al-chenter">
+        <div class="col-12">
+            <button mat-stroked-button  *ngFor="let sb of categoryList" class="filter-buttons" (click)="onSelectedButton(sb)"  [ngClass]="{ 'selected-button':defaultSelected === sb, 'unselected-button':defaultSelected !== sb  }">{{sb}}</button>
+        </div>
+    </div>
+</section>

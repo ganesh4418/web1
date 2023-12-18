@@ -1,0 +1,84 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<div class=" ">
+
+    <div class="tabcusmeting">
+        <div class="tabinfo topPaddingDomainPage">
+
+            
+            <ul class="scrolling-wrapper">
+                <li class="" (click)="servicesView('introduction')" [ngClass]="{'active': tabchanedrop === 'introduction'}">
+                    Introduction</li>
+                <li class="" [ngClass]="{'active': tabchanedrop=='productdesign', 'active2':tabchanedrop=='uiuxdesign','active3':tabchanedrop=='graphicsdesign',
+        
+            'active4':tabchanedrop=='animationdesign','active5':tabchanedrop=='photography'}">
+                    <div class="arrow_icon">
+                        <button class="border-0" mat-icon-button [matMenuTriggerFor]="menu"
+                            (click)="$event.stopPropagation()"> Services <mat-icon>keyboard_arrow_down</mat-icon>
+                        </button>
+                    </div>
+                    <mat-menu #menu="matMenu" backdropClass="servicescustomize" class="servicescustomizeclass">
+                        <button mat-menu-item (click)="servicesView('productdesign')"
+                            [ngClass]="{'active': tabchanedrop === 'introduction'}">Physical Product Design</button>
+                        <button mat-menu-item (click)="servicesView('uiuxdesign')">UI-UX Design</button>
+                        <button mat-menu-item (click)="servicesView('graphicsdesign')">Graphics Design</button>
+                        <button mat-menu-item (click)="servicesView('animationdesign')">Animation & VFX Design</button>
+                        <button mat-menu-item (click)="servicesView('photography')">Photography</button>
+                    </mat-menu>
+                </li>
+                <!-- <li class="" (click)="servicesView('ourwork')" [ngClass]="{'active': tabchanedrop === 'ourwork'}">Our Work</li> -->
+                <li class="" (click)="servicesView('blogs')" [ngClass]="{'active': tabchanedrop === 'blogs'}">Blogs</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Introduction-->
+    <div class="Introduction" *ngIf="tabchanedrop === 'introduction' ">
+        <app-design-introduction></app-design-introduction>
+
+    </div>
+    <!--end Introduction-->
+
+    <!--Product Design-->
+    <div class="productdesign" *ngIf="tabchanedrop === 'productdesign' ">
+        <app-product-design></app-product-design>
+    </div>
+    <!--end Product Design-->
+
+    <!--Product Design-->
+    <div class="productdesign" *ngIf="tabchanedrop === 'uiuxdesign' ">
+        <app-uiuxdesign></app-uiuxdesign>
+    </div>
+    <!--end Product Design-->
+
+    <!--Product Design-->
+    <div class="productdesign" *ngIf="tabchanedrop === 'graphicsdesign' ">
+        <app-graphicsdesign></app-graphicsdesign>
+    </div>
+    <!--end Product Design-->
+
+    <!--Product Design-->
+    <div class="productdesign" *ngIf="tabchanedrop === 'animationdesign' ">
+        <app-animation></app-animation>
+    </div>
+    <!--end Product Design-->
+
+    <!--Product Design-->
+    <div class="productdesign" *ngIf="tabchanedrop === 'photography' ">
+        <app-photography></app-photography>
+    </div>
+    <!--end Product Design-->
+
+
+
+
+    <!-- <div class="our-work" *ngIf="tabchanedrop === 'ourwork' ">
+        <app-our-works [ourWorksItems]="ourWorksItems"></app-our-works>
+    </div> -->
+
+    <div class="blogs" *ngIf="tabchanedrop === 'blogs' ">
+        <app-blogs [blogItems]="blogItems"></app-blogs>
+    </div>
+
+</div>

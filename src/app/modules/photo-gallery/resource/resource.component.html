@@ -1,0 +1,75 @@
+<section class="responsive-top-spacing-blog" >
+  <div class="tabinfo">
+    <div class="pl-140 pt-100">
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+    <div class="input-container">
+      <input
+        type="text"
+        class="form-control"
+        id="search"
+        placeholder="Find out interesting topics"
+        [(ngModel)]="searchResource"
+        (input)="onSearchInputChange($event)"
+      />
+      <img
+        src="assets/media/icons/search.svg"
+        alt="search-icon"
+        class="search-right"
+      />
+    </div>
+
+    <app-filter
+      class="blogf"
+      (selectItem)="onFilteredValue($event)"
+      (selectedSortBy)="onSortBy($event)"
+      [selectedTab]="selectedTab"
+      [subCategoryList]="subCategoryList"
+    ></app-filter>
+    <div class="">
+      <div class="row no-gutter no-gutter-4k" *ngIf="blogItems.length != 0">
+        <div class="col-md-4 mb-3" *ngFor="let bi of blogItems">
+          <div
+            class="case-box-blog"
+            (mouseenter)="bi.hovered = true"
+            (mouseleave)="bi.hovered = false"
+          >
+            <div class="img-container">
+              <img src="{{ bi.pic }}" class="img-fluid image" />
+              <div class="top-left-content mt-3 resource-title">
+                {{ bi.title }}
+              </div>
+              <div *ngIf="bi.hovered" class="centered">
+                <button class="read-more" (click)="onReadMore(bi)">
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="tabinfo mt-5" *ngIf="blogItems.length < 1">
+        <h1 class="fs-48 font-weight-bold mb-5">
+          No <span class="fs-48 weight-100"> Results for "{{searchResource}}"</span>
+        </h1>
+        <div class="tabinfo">
+            <div>
+                <div class="card details-box p-3">
+                    <h5>Search tips</h5>
+                    <ul>
+                        <li>Check your spelling and try again.</li>
+                        <li>Search for simpler, shorter terms.</li>
+                        <li>Search for something less specific.</li>
+                        <li>Try frequent searches listed below.</li>
+                        <li>Searching for a job? <a routerLink="/hiring" class="text-primary">Click here.</a> </li>
+                    </ul>
+                </div>
+                <hr class="text-primary my-4">
+            </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+

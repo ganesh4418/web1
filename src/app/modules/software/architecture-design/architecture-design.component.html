@@ -1,0 +1,123 @@
+<div class="innbanners">
+    <div class="row align-items-center m-0 services-top">
+        <div class="col-md-5 offset-md-1 pb-4 mb-2 pb-md-0 mb-md-0 pt-4 mt-2 mt-md-0 pt-md-0">
+            <div class="info">
+                <div class="bannertxt">Architecture and</div>
+                <div class="subbannertxt">Design</div>
+                <div class="subinfo">
+                    Blueprint for software products and applications that aligns with business objectives. Optimised
+                    solution to achieve common quality goals of performance and security.</div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0 video-4k">
+            <div class="y-tube">
+                <!-- <iframe width="100%" height="415" src="https://www.youtube.com/embed/wT3oce4Uibk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe> -->
+                <video width="100%" height="auto" autoplay muted>
+                    <source src="assets/media/images/pagein/Software/Architecture & Design.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">What we bring to the table</span>
+                </div>
+            </div>
+
+            <div class="physicalInfo  ">
+                <p class="what-is-design-text">A well-designed architecture lays the foundation for an efficient and
+                    effective development process, leading to a stable and scalable software product that meets the
+                    needs of users and stakeholders. And we bring to the table our numerous years of expertise with
+                    research architects at leadership positions to collaborate with you to bring out tailor made
+                    products to reach your target audience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionsapce ourstrengths">
+
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our Capabilities</span>
+                </div>
+            </div>
+
+            <div class="ourbg">
+
+                <div class="row m-0">
+
+                    <div class=" col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-6 t-center  "> 
+                        <img src="assets/media/images/our-capabilitites/03_Architecture_Design_GIF.gif" alt="" class="gif-file"></div>
+                    <div class=" col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6  ">
+
+                        <div class="Capabilitiesinfo">
+                            <ul>
+                                <li>Understand & align with business objectives</li>
+                                <li>Design robust and scalable software</li>
+                                <li>Performance optimization</li>
+                                <li>Microservices and API</li>
+                                <li>Modularity</li>
+                                <li>Technology selection</li>
+                                <li>Security</li>
+                                <li>Cloud-Native</li>
+                                <li>SDLC</li>
+                                <li>CI/CD pipeline</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="bggary">
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>
+<!-- 
+<section class="sectionsapce">
+    <div class="tabinfo">
+        <div class="quotes ">
+            <div class="bg">
+                <div>
+                    Photography helps
+                    <span class="desingC">
+                        <span class="desing-sc-bold">P</span>eople
+                        <span class="quotes"> to </span><span class="desing-sc-bold">S</span>ee
+                    </span>
+                </div>
+            </div>
+            <div class="quotesAu">- Walt Disney</div>
+        </div>
+    </div>
+</section> -->
+<section class="bglet" *ngIf="!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Build <br>
+            Something Awesome!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf="connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>

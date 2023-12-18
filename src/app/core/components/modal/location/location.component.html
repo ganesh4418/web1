@@ -1,0 +1,97 @@
+<section>
+    <div class="position-relative p-5">
+        <button class="close btn" (click)="closeDialog()">X</button>
+        <h4><span class="w-normal"> Schedule </span><strong> Your Visit</strong></h4>
+
+        <form [formGroup]="scheduleForm" (ngSubmit)="onSubmit(scheduleForm)">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <input type="text" placeholder="First Name" class="form-control" formControlName="firstname" required>
+                    <div *ngIf="scheduleFormControl.firstname.invalid && submitted">
+                        <div *ngIf="scheduleFormControl.firstname?.errors">
+                          <small class="form-text text-danger text-right">Enter your first name</small>
+                        </div>
+                        <div *ngIf="scheduleFormControl.firstname?.pattern">
+                            <small class="form-text text-danger text-right">Enter valid first name</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="text" placeholder="Last Name" class="form-control" formControlName="lastname" required>
+                    <div *ngIf="scheduleFormControl.lastname.invalid && submitted">
+                        <div *ngIf="scheduleFormControl.lastname?.errors">
+                          <small class="form-text text-danger text-right">Enter your last name</small>
+                        </div>
+                        <div *ngIf="scheduleFormControl.lastname?.pattern">
+                            <small class="form-text text-danger text-right">Enter valid last name</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-3">
+                    <div class="position-relative">
+                        <!-- <mat-icon class="email"> email</mat-icon> -->
+                        <input type="email" placeholder="Email Address" class="form-control ps-5" formControlName="email" required>
+                        <div *ngIf="scheduleFormControl.email.invalid && submitted">
+                            <div *ngIf="scheduleFormControl.email?.errors">
+                              <small class="form-text text-danger text-right">Enter your email</small>
+                            </div>
+                            <div *ngIf="scheduleFormControl.email?.pattern">
+                                <small class="form-text text-danger text-right">Enter valid email</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="position-relative">
+                        <!-- <mat-icon class="mobile">mobile_friendly</mat-icon> -->
+                        <input type="text" placeholder="Contact Number" class="form-control ps-5" formControlName="contactNo" maxlength="14" required>
+                        <div *ngIf="scheduleFormControl.contactNo.invalid && submitted">
+                            <div *ngIf="scheduleFormControl.contactNo?.errors">
+                              <small class="form-text text-danger text-right">Enter your contact no</small>
+                            </div>
+                            <div *ngIf="scheduleFormControl.contactNo?.pattern">
+                                <small class="form-text text-danger text-right">Enter valid contact no</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="position-relative">
+                        <!-- <mat-icon class="mobile">date_range</mat-icon> -->
+                        <input type="datetime-local" placeholder="Select Date & Time" class="form-control ps-5" formControlName="dateAndTime" required>
+                        <div *ngIf="scheduleFormControl.dateAndTime.invalid && submitted">
+                            <div *ngIf="scheduleFormControl.dateAndTime?.errors">
+                              <small class="form-text text-danger text-right">Select date and time</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <select name=" " class="form-control" id="" formControlName="office" required>
+                        <option value="">Baner, Office </option>
+                        <option value="">Narhe, Office</option>
+                    </select>
+                    <div *ngIf="scheduleFormControl.office.invalid && submitted">
+                        <div *ngIf="scheduleFormControl.office?.errors">
+                          <small class="form-text text-danger text-right">Select office</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <textarea name="" id="" cols="30" rows="5" class="form-control"
+                        placeholder="Brief for the meeting" formControlName="meetingMsg" required></textarea>
+                        <div *ngIf="scheduleFormControl.meetingMsg.invalid && submitted">
+                            <div *ngIf="scheduleFormControl.meetingMsg?.errors">
+                              <small class="form-text text-danger text-right">Write meeting agenda</small>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-12 mb-3 text-center">
+                    <button class="btn btn-primary" type="button" (click)="onSubmit(scheduleForm)"> Schedule Now </button>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

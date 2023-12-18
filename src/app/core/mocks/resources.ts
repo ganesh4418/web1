@@ -1,0 +1,60 @@
+export class Resources{
+    ResorucesData = [
+        {
+            id: "1",
+            title: "Design Introduction",
+            pic: "assets/media/images/software/software-our-works-1.png",
+            desc: "By integrating our strategic designers, sophisticated software developers, and advanced engineers.",
+            category: "Design",
+            subcategory: "",
+          },
+        {
+            id: "2",
+            title: "Electronics Introduction",
+            pic: "assets/media/images/software/software-our-works-1.png",
+            desc: "By integrating our strategic designers, sophisticated software developers, and advanced engineers.",
+            category: "Electronics",
+            subcategory: "",
+          },
+        {
+            id: "3",
+            title: "Physical Product Design",
+            pic: "assets/media/images/software/software-our-works-1.png",
+            desc: "By integrating our strategic designers, sophisticated software developers, and advanced engineers.",
+            category: "Design",
+            subcategory: "",
+          },
+        {
+            id: "4",
+            title: "UI/UX Design",
+            pic: "assets/media/images/software/software-our-works-1.png",
+            desc: "By integrating our strategic designers, sophisticated software developers, and advanced engineers.",
+            category: "Design",
+            subcategory: "",
+          },
+        {
+            id: "5",
+            title: "Graphics Design",
+            pic: "assets/media/images/software/software-our-works-1.png",
+            desc: "By integrating our strategic designers, sophisticated software developers, and advanced engineers.",
+            category: "Design",
+            subcategory: "",
+          },
+        {
+            id: "6",
+            title: "Animation Design",
+            pic: "assets/media/images/software/software-our-works-1.png",
+            desc: "By integrating our strategic designers, sophisticated software developers, and advanced engineers.",
+            category: "Mechanical",
+            subcategory: "",
+          },
+        {
+            id: "7",
+            title: "QUB: Home automation device",
+            pic: "assets/media/images/software/software-our-works-1.png",
+            desc: "By integrating our strategic designers, sophisticated software developers, and advanced engineers.",
+            category: "Electronics",
+            subcategory: "",
+          },
+    ]
+}

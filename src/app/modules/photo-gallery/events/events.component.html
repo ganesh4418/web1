@@ -1,0 +1,35 @@
+<!-- <section class="pt-85">
+    <div class="container home position-relative">
+        <div class="row">
+            <div class="col-md-6" *ngFor="let event of events">
+                <img src="{{event}}" alt="" class="mb-4 img-fluid">
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="pb-200">
+    <div class="tabinfo responsive-top-spacing-softSer">
+        <app-filter (selectItem)="onFilteredValue($event)" (selectedSortBy)="onSortBy($event)"
+            [selectedTab]="selectedTab" [subCategoryList]="subCategoryList"></app-filter>
+        <div class="">
+            <div class="row no-gutter">
+                <div class="col p-0  " *ngFor="let csi of galleryItems">
+                    <div class="case-box mb-5">
+                        <a href="javascript:void(0)" class="img-container img-card d-flex">
+                            <div style="display: inline;">
+                                <div class="top-left-content">{{csi.category}}</div>
+                                <img src="assets/media/icons/imageGroupIcon.svg" alt="" class="top-right-content"
+                                    *ngIf="showMultiImageIcon">
+                            </div>
+                            <img src="{{csi.pic}}" class="img-fluid rounded main-image" alt="" (click)="openImage(csi)">
+                        </a>
+                        <div class="img-caption mt-4">
+                            <h4 class="mb-5 w-700">{{csi.title}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

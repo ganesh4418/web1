@@ -1,0 +1,87 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<!-- <app-filter (selectItem)="onFilteredValue($event)" (selectedSortBy)="onSortBy($event)"
+            [selectedTab]="selectedTab"></app-filter> -->
+<section>
+    <div>
+        <div>
+
+            <div class="tabcusmeting">
+                <div class="tabinfo topPaddingDomainPage">
+                    <ul class="scrolling-wrapper">
+                        <li (click)="servicesView('All')" [ngClass]="{'active': tabchanedrop === 'All'}"> All</li>
+                        <li (click)="servicesView('Events')" [ngClass]="{'active': tabchanedrop === 'Events'}">Events
+                        </li>
+                        <li (click)="servicesView('Celebrations')"
+                            [ngClass]="{'active': tabchanedrop === 'Celebrations'}">Celebrations</li>
+                        <li (click)="servicesView('Others')" [ngClass]="{'active': tabchanedrop === 'Others'}">Others
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="Introduction" *ngIf="tabchanedrop === 'All' ">
+                <app-events [galleryItems]="galleryItems" [selectedTab]="selectedTab"></app-events>
+            </div>
+            <div class="Introduction" *ngIf="tabchanedrop === 'Events' ">
+                <app-events [galleryItems]="galleryItems" [selectedTab]="selectedTab"></app-events>
+            </div>
+            <div class="Introduction" *ngIf="tabchanedrop === 'Celebrations' ">
+                <app-events [galleryItems]="galleryItems" [selectedTab]="selectedTab"></app-events>
+            </div>
+            <div class="Introduction" *ngIf="tabchanedrop === 'Others' ">
+                <app-events [galleryItems]="galleryItems" [selectedTab]="selectedTab"></app-events>
+            </div>
+
+
+            <!-- <div class="tabcusmeting">
+                <div class="tabinfo topPaddingDomainPage">
+
+                    <mat-tab-group mat-stretch-tabs="true" mat-align-tabs="center"
+                        (selectedTabChange)="onChangeTab($event)">
+                        <mat-tab label="All">
+                            <app-events [galleryItems]="galleryItems" [selectedTab]="selectedTab"></app-events>
+                        </mat-tab>
+                        <mat-tab label="Events">
+                            <app-events [galleryItems]="galleryItems" [selectedTab]="selectedTab"></app-events>
+                        </mat-tab>
+                        <mat-tab label="Celebrations">
+                            <app-events [galleryItems]="galleryItems" [selectedTab]="selectedTab"></app-events>
+                        </mat-tab>
+                        <mat-tab label="Others">
+                            <app-events [galleryItems]="galleryItems" [selectedTab]="selectedTab"></app-events>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<!-- <div class="pt-35">
+
+        <div class="row">
+
+            <div class="col-md-6" *ngFor="let bi of gallery">
+                <div class="case-box mb-5">
+                    <div class="img-container">
+                        <img src="{{bi.pic}}" class="img-fluid image" alt="">
+                        <div class="top-left-content">{{bi.category}} </div>
+
+                    </div>
+                    <div class="p-2 text-inner">
+                        <h6 class="title pt-4 pl-2 ">{{bi.title}}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+<!-- <mat-tab-group mat-align-tabs="start" (selectedTabChange)="onChangeTab($event)">
+        <mat-tab label="Events" routerLink="/gallery">
+            <app-events></app-events>
+        </mat-tab>
+        <mat-tab label="Resources" (click)="onChangeTab('/gallery/resources')">
+            <app-resources></app-resources>
+        </mat-tab>
+    </mat-tab-group> -->

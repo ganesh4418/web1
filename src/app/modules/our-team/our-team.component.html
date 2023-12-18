@@ -1,0 +1,62 @@
+<div class="pl-140 pt-100">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+
+<section class="about-mobile">
+    <div class="home position-relative">
+        <!-- <div class="about_img  "> <img src="assets/media/images/Union1.svg" alt=""> </div> -->
+        <div class="tabinfo topPadding abouts pb-100">
+            <div class="row  align-items-center ">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="text-justify">
+                        <div class="mw-50 ">
+                            <h1 class="our-team-heading"> Team...
+                            </h1>
+                            <h1 class="our-team-heading team-font">
+                                {{groupTeamData.team=="All"?"Beauto":groupTeamData.team}}
+                            </h1>
+                            <p  class="outtemP">{{groupTeamData.dis}} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 m0px t-right">
+                    <img src="{{groupTeamData.image}}" class="img-fluid w-100  " alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="bottom-space">
+    <div class="tabinfo">
+        <div class="">
+            <div class="row">
+                <div class="col-md-12">
+   
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 text-center mb-5 our-team-card wow fadeInRight" *ngFor="let team of users">
+                            <div class="card card-body card-border">
+                                <div class="linkedin-r">
+                                    <a href="{{team.linkedin}}" target="_blank" class="linkedin">
+                                        <img src="assets/media/icons/linkedin.svg" alt="" class="imgLi">
+                                    </a>
+
+                                </div>
+                                <div class="member-img">
+                                    <img class="img-fluid my-3 rounded-circle" src="{{team.pic}}" alt="">
+                                </div>
+                                <h5>{{team.name}}</h5>
+                                <p class="text-muted mb-3">{{team.position}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

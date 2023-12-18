@@ -1,0 +1,130 @@
+<div class="innbanners">
+    <div class="row align-items-center m-0 services-top">
+        <div class="col-md-5 offset-md-1 pb-4 mb-2 pb-md-0 mb-md-0 pt-4 mt-2 mt-md-0 pt-md-0">
+            <div class="info">
+                <div class="bannertxt"> UI-UX</div>
+                <div class="subbannertxt">Design</div>
+                <div class="subinfo">
+                    We deliver better service and intuitive experience.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0 video-4k">
+            <div class="y-tube">
+                <iframe width="100%" height="415" src="https://www.youtube.com/embed/PsbHAYr5HK0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">What is UI-UX Design?</span>
+                </div>
+            </div>
+
+            <div class="physicalInfo  ">
+                <p class="what-is-design-text"> The interaction that a human user has with routine products and services
+                    is the main emphasis of UX design. <br />
+
+                    UX design is to make using these products and services, whether they are digital or physical,
+                    simple, comprehensible, and enjoyable.
+                    User interface (UI) design is the user-centered method of creating a digital product's aesthetics.
+                    <br />
+                    In essence, they design the user interface of a website or application. The graphical design of the
+                    application is its interface.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionsapce ourstrengths">
+
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our Capabilities</span>
+                </div>
+            </div>
+
+            <div class="ourbg">
+
+                <div class="row m-0">
+
+                    <div class=" col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-6 t-center  "> 
+                        <img src="assets/media/images/our-capabilitites/02_UI_UX-Design_GIF.gif" alt="" class="gif-file"> </div>
+                    <div class=" col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6  ">
+
+                        <div class="Capabilitiesinfo">
+
+                            <ul>
+                                <li>Ethnographic Research</li>
+                                <li>Affinity Mapping</li>
+                                <li>Navigation Flow</li>
+                                <li>Low & High Fidelity Wireframe</li>
+                                <li>Responsive Design</li>
+                                <li>Usability Testing</li>
+                                <li>Prototyping</li>
+                                <li>Visual Design</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="bggary">
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>
+
+<section class="sectionsapce  ">
+    <div class="tabinfo">
+        <div class="quotes ">
+
+            <div class="bg">
+                <div>
+                    A consistent
+                    <span class="design-sc-font-size">
+                        <span class="desing-sc-bold">E</span>xperience
+                    </span>
+                    is a <br/>
+                    <span class="design-sc-font-size">
+                        <span class="desing-sc-bold">B</span>etter
+                    </span>
+                    experience.
+                </div>
+            </div>
+            <div class="quotesAu"> - Mark Eberman </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="bglet" *ngIf = "!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Design <br>
+            Something Together!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf = "connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>

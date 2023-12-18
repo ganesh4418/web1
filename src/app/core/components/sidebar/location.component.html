@@ -1,0 +1,190 @@
+<section>
+    <div class="sideforms">
+        <div class="sideheader">
+            <h4 class="mb-0"><span class="w-normal"> Schedule Meeting </span><strong> With Us</strong></h4>
+            <a class="close-icon" href="javascript:void(0)" (click)="closeDialog()">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2209_30515)">
+                        <path d="M15 5L5 15" stroke="black" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M5 5L15 15" stroke="black" stroke-width="1.25" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2209_30515">
+                            <rect width="20" height="20" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+
+        <form [formGroup]="scheduleForm" class="form" (ngSubmit)="onSubmit(scheduleForm)">
+            <div class="row p-4 pt-3">
+                <div class="col-md-6 mb-3">
+                    <div class="floating-label">
+                        <input type="text" id="firstname" placeholder="First Name*" class="form-control form-input"
+                            formControlName="firstName" required autocomplete="off">
+                        <label for="firstname" class="form-label">First name*</label>
+                    </div>
+                    <div *ngIf="scheduleFormControl['firstName'].touched && scheduleFormControl['firstName'].invalid">
+                        <div
+                            *ngIf="scheduleFormControl['firstName'].errors && scheduleFormControl['firstName'].errors['required']">
+                            <small class="form-text text-danger">Enter your first name</small>
+                        </div>
+                        <div
+                            *ngIf="scheduleFormControl['firstName'].errors && scheduleFormControl['firstName'].errors['pattern']">
+                            <small class="form-text text-danger">Enter valid first name</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="floating-label">
+                        <input type="text" id="lastname" placeholder="Last Name*" class="form-control form-input"
+                            formControlName="lastName" required autocomplete="off">
+                        <label for="firstname" class="form-label">Last name*</label>
+                    </div>
+                    <div *ngIf="scheduleFormControl['lastName'].touched && scheduleFormControl['lastName'].invalid">
+                        <div
+                            *ngIf="scheduleFormControl['lastName'].errors && scheduleFormControl['lastName'].errors['required']">
+                            <small class="form-text text-danger">Enter your last name</small>
+                        </div>
+                        <div
+                            *ngIf="scheduleFormControl['lastName'].errors && scheduleFormControl['lastName'].errors['pattern']">
+                            <small class="form-text text-danger">Enter valid last name</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <div class="position-relative">
+                        <div class="floating-label">
+                            <input type="email" id="email" placeholder="Email Address*" class="form-control form-input"
+                                formControlName="email" required autocomplete="off">
+                            <label for="email" class="form-label">Email Address*</label>
+                        </div>
+                        <div *ngIf="scheduleFormControl['email'].touched && scheduleFormControl['email'].invalid">
+                            <div
+                                *ngIf="scheduleFormControl['email'].errors && scheduleFormControl['email'].errors['required']">
+                                <small class="form-text text-danger">Enter your email</small>
+                            </div>
+                            <div
+                                *ngIf="scheduleFormControl['email'].errors && scheduleFormControl['email'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid email</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <div class="floating-label">
+                        <select class="form-control form-select form-input" formControlName="country"
+                            (change)="onSelectChange($event)">
+                            <option value="" disabled selected hidden>Country *</option>
+                            <option *ngFor="let country of prefixes" [value]="country.name">
+                                {{country.name}}
+                            </option>
+                        </select>
+                        <label for="country" class="form-label">Select Country*</label>
+                    </div>
+                    <div *ngIf="(scheduleFormControl['country'].touched && scheduleFormControl['country'].invalid) ">
+                        <div
+                            *ngIf="scheduleFormControl['country'].errors && scheduleFormControl['country'].errors['required']">
+                            <small class="form-text text-danger">Enter your country</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <input type="text" id="contactPreNo" class="form-control" formControlName="contactPreNo" readonly>
+                </div>
+                <div class="col-md-9 mb-3">
+                    <div class="position-relative">
+                        <div class="floating-label">
+                            <input type="text" id="contactNo" placeholder="Contact Number*"
+                                class="form-control form-input" maxlength="14" formControlName="contactNo" required autocomplete="off">
+                            <label for="contactNo" class="form-label">Contact Number*</label>
+                        </div>
+                        <div
+                            *ngIf="scheduleFormControl['contactNo'].touched && scheduleFormControl['contactNo'].invalid">
+                            <div
+                                *ngIf="scheduleFormControl['contactNo'].errors && scheduleFormControl['contactNo'].errors['required']">
+                                <small class="form-text text-danger">Enter contact no</small>
+                            </div>
+                            <div
+                                *ngIf="scheduleFormControl['contactNo'].errors && scheduleFormControl['contactNo'].errors['pattern']">
+                                <small class="form-text text-danger">Enter valid contact no</small>
+                            </div>
+                            <div
+                                *ngIf="scheduleFormControl['contactNo'].errors && scheduleFormControl['contactNo'].errors['minlength']  ">
+                                <small class="form-text text-danger">Enter min {{minMobileLength}} length contact no</small>
+                            </div>
+                            <div
+                                *ngIf="scheduleFormControl['contactNo'].errors && scheduleFormControl['contactNo'].errors['maxlength'] ">
+                                <small class="form-text text-danger">Enter max {{maxMobileLength}} length contact no</small>
+                                
+                            </div>
+                            <div
+                                *ngIf="scheduleFormControl['contactNo'].errors &&  scheduleFormControl['contactNo'].errors['prefixValid']">
+                                <small class="form-text text-danger">Enter valid contact no</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="position-relative">
+                        <div class="floating-label">
+                            <input type="datetime-local" id="dateAndTime" placeholder="Select Date & Time*"
+                                class="form-control form-input" [min]="minDate" [max]="maxDate"
+                                formControlName="dateAndTime" style="min-height: inherit;" required autocomplete="off">
+                            <label for="dateAndTime" class="form-label">Select Date & Time*</label>
+                        </div>
+                        <div
+                            *ngIf="scheduleFormControl['dateAndTime'].touched && scheduleFormControl['dateAndTime'].invalid">
+                            <div
+                                *ngIf="scheduleFormControl['dateAndTime'].errors && scheduleFormControl['dateAndTime'].errors['required']">
+                                <small class="form-text text-danger">Select date and time</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="floating-label">
+                        <select name="selectMeetingMode" class="form-control form-select form-input" id="selectMeetingMode"
+                            formControlName="selectMeetingMode" required>
+                            <option value="disabled" selected disabled>Meeting Mode </option>
+                            <option value="Online">Online Meeting </option>
+                            <option value="Offline">Offline Meeting</option>
+                        </select>
+                        <label for="selectMeetingMode" class="form-label">Select Meeting Mode*</label>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="floating-label textarea-height">
+                        <textarea style="color : rgba(0, 0, 0, 0.4);" name="" id="meetingMsg" cols="30" rows="5" class="form-control textarea"
+                             formControlName="meetingMsg" required></textarea>
+                        <label for="msg" class="form-label">Brief for the meeting*</label>
+                    </div>
+                    <div *ngIf="scheduleFormControl['meetingMsg'].touched && scheduleFormControl['meetingMsg'].invalid">
+                        <div
+                            *ngIf="scheduleFormControl['meetingMsg'].errors && scheduleFormControl['meetingMsg'].errors['required']">
+                            <small class="form-text text-danger">Write meeting agenda</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3 text-center">
+                    <button class="btn btn-primary" [disabled]="scheduleForm.invalid" type="submit"> Schedule Now
+                    </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<div class="toast">
+    <div class="toast-header">
+        Toast Header
+    </div>
+    <div class="toast-body">
+        Some text inside the toast body
+    </div>
+</div>

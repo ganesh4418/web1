@@ -1,0 +1,70 @@
+<div class="pl-140 pt-100 ">
+  <app-breadcrumb></app-breadcrumb>
+</div>
+<div class=" ">
+
+  <div class="tabcusmeting">
+    <div class="tabinfo topPaddingDomainPage">
+      <ul class="scrolling-wrapper">
+        <li (click)="servicesView('introduction')" [ngClass]="{'active': tabchanedrop === 'introduction'}"> Introduction
+        </li>
+        <li  [ngClass]="{'active': tabchanedrop === 'services'}">
+          <div class="arrow_icon">
+            <button class="border-0" mat-icon-button [matMenuTriggerFor]="menu"
+                (click)="$event.stopPropagation()"> Services <mat-icon>keyboard_arrow_down</mat-icon>
+            </button>
+        </div>
+
+          <mat-menu #menu="matMenu" backdropClass="servicescustomize" class="servicescustomizeclass">
+            
+            <button mat-menu-item (click)="changePage(1)">Product Developement</button>
+            <button mat-menu-item (click)="changePage(2)">Mobile and Web Developement</button>
+            <button mat-menu-item (click)="changePage(3)">Architecture and Design</button>
+            <button mat-menu-item (click)="changePage(4)">Data Science</button>
+            <button mat-menu-item (click)="changePage(5)">AR/VR</button>
+            <button mat-menu-item (click)="changePage(6)">Consulting and Staffing</button>
+            <button mat-menu-item (click)="changePage(7)">Infra Services</button>
+            <button mat-menu-item (click)="changePage(8)">Technology Consulting</button>
+          </mat-menu>
+        </li>
+        <!-- <li (click)="servicesView('ourwork')" [ngClass]="{'active': tabchanedrop === 'ourwork'}">Our Work</li> -->
+        <li (click)="servicesView('blogs')" [ngClass]="{'active': tabchanedrop === 'blogs'}">Blogs</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="Introduction" *ngIf="tabchanedrop === 'introduction' ">
+    <app-introduction></app-introduction>
+  </div>
+  <!--end Introduction-->
+
+  <!--Introduction-->
+  <div class="Introduction" *ngIf="tabchanedrop === 'services' ">
+    <!-- <app-services></app-services> -->
+    <ng-container [ngSwitch]="selectedTab">
+      <app-product-developement *ngSwitchCase="1"></app-product-developement>
+      <app-mobile-web-developement *ngSwitchCase="2"></app-mobile-web-developement>
+      <app-architecture-design *ngSwitchCase="3"></app-architecture-design>
+      <app-data-science *ngSwitchCase="4"></app-data-science>
+      <app-ar-vr *ngSwitchCase="5"></app-ar-vr>
+      <app-consulting-staffing *ngSwitchCase="6"></app-consulting-staffing>
+      <app-infra-service *ngSwitchCase="7"></app-infra-service>
+      <app-technology-consulting *ngSwitchCase="8"></app-technology-consulting>
+
+    </ng-container>
+  </div>
+  <!--end Introduction-->
+
+  <!-- <div class="Introduction" *ngIf="tabchanedrop === 'ourwork' ">
+    <app-our-works [ourWorksItems]="ourWorksItems"></app-our-works>
+  </div> -->
+
+  <div class="Introduction" *ngIf="tabchanedrop === 'blogs' ">
+    <app-blogs [blogItems]="blogItems"></app-blogs>
+  </div>
+
+
+
+
+</div>

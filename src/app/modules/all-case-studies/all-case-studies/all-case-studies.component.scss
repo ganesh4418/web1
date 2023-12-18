@@ -1,0 +1,31 @@
+@media (min-width:768px) {
+    ::ng-deep {
+        .mat-tab-label {
+            font-size: 16px;
+            min-width: 230px !important;
+        }
+
+        mat-tab-body-wrapper,
+        .mat-tab-header {
+            width: 100% !important;
+            margin: auto !important;
+            padding-left: 114px !important;
+            max-width: 100% !important;
+        }
+    }
+}
+
+@media (min-width:320px) and (max-width:768px) {
+
+    ::ng-deep {
+
+        mat-tab-body-wrapper,
+        .mat-tab-header {
+            padding-left: 0px !important;
+        }
+
+        .mat-tab-header .mat-tab-labels {
+            margin-top: 5%;
+        }
+    }
+}

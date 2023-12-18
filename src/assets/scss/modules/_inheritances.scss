@@ -1,0 +1,48 @@
+%full-size {
+    height: $full;
+    width: $full;
+  }
+  
+  %max-width-center {
+    width: $full;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  
+  %max-width-small {
+    width: $full;
+    max-width: $max-width-small;
+    margin: 0 auto;
+  }
+ 
+  %perfect-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: $translate-center;
+   -moz-transform: $translate-center;
+   -o-transform: $translate-center;
+   -ms-transform: $translate-center;
+    transform: $translate-center; 
+  }
+
+  %vertical-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: $translate;
+   -moz-transform: $translate;
+   -o-transform: $translate;
+   -ms-transform: $translate;
+    transform: $translate; 
+  }
+  %right-absolute {
+    position: absolute;
+    right: 0;
+    left: auto;
+  }
+  %absolute-top {
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }

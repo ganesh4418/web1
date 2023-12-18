@@ -1,0 +1,115 @@
+<app-loader></app-loader>
+<footer class="text-lg-start">
+
+    <section class=" bg-gradient text-white">
+      <div class="tabinfo fotter">
+        <div class="row py-5 justify-content-between">
+  
+          <div class=" col-sm-12 col-md-3 col-lg-2 col-xl-3 col-xxl-2 quick mb-4  ">
+            <div class="fotter-titel"> Quick Links </div>
+            <ul>
+              <li><a href="javascript:void(0)" [routerLink]="['/about']"> About Us</a> </li>
+              <li><a href="javascript:void(0)" [routerLink]="['/all-products']"> Our Products</a> </li>
+              <li><a href="javascript:void(0)" [routerLink]="['/about']" (click)="setIncomingPage(true)">Certificates</a></li>
+              <li><a href="javascript:void(0)" [routerLink]="['/all-case-studies']" (click)="setPageForCaseStudies()">Case Studies</a></li>
+              <li><a href="javascript:void(0)" [routerLink]="['/news']">News</a></li>
+              <li><a href="javascript:void(0)" [routerLink]="['/comingSoon']">Resources</a></li>
+              <li><a href="javascript:void(0)" [routerLink]="['/gallery']">Gallery</a></li>
+            </ul>
+  
+          </div>
+  
+          <div class="col-sm-12 col-md-5 col-lg-3 col-xl-3 col-xxl-3  ">
+            <div class="fotter-titel   left-space"> Locations </div>
+            <swiper [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="1" [spaceBetween]="0" [navigation]="true"
+              class="homeLocation mySwiper  ">
+              <ng-template swiperSlide>
+                <div class="address"><span class="address-title">Software & Design - </span> <br/>Pride Gateway Tower 203, Baner Road, Pune, Maharashtra 411045
+                </div>
+  
+              </ng-template>
+              <ng-template swiperSlide>
+                <div class="address"><span class="address-title">Mechatronics - </span><br/>
+                  Chakankar industries, near Eureka international school, S No 28/31, shree control chowk, Narhe, Pune,Maharashtra 411041
+                </div>
+              </ng-template>
+            </swiper>
+  
+
+
+           
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3 mb-4  ">
+            <div style="width: 100%; overflow: hidden; height: 100%;">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1UqesBjtwL6NXVppaC7ManaTRY5ascW8&ehbc=2E312F" width="100%" height="280px" style="margin-top: -60px;" title=""></iframe>
+            </div>
+          </div>
+  
+          <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-4 mb-4   make-center">
+            <div class="fotter-titel  "> Contact us </div>
+            <div class="ContactFotter  ">
+              <div class="flex-column iconFotter">
+                <div>
+                  <img src="assets/media/icons/call.svg" alt="">
+                  <a href="tel:+918956031197" class="text-white">(+91) 895 6031 197</a>
+                </div>
+                <div>
+                  <img src="assets/media/icons/call.svg" alt="">
+                  <a href="tel:+918337660046" class="text-white">(+91) 833 7660 046</a>
+                </div>
+                <div class="iconFotter"> <img src="assets/media/icons/mail.svg" alt="">
+  
+                  <a class="text-white" href="mailto:sales@Beautosys.com">sales@beautosys.com</a>
+                </div>
+              </div>
+            </div>
+            
+
+        
+          <div class="  ">
+            <div class="fotter-titel m-top"> Social Media </div>
+            <ul class="d-flex p-0 social">
+              <li><a href="https://www.linkedin.com/company/beautosys/mycompany/" target="_blank">
+                  <img src="assets/media/icons/linkedin_circle.svg" class="icon" alt="">
+                  <img alt="" class="icon_hover" src="assets/media/icons/linkedin_hover.svg">
+                </a>
+              </li>
+              <li><a href="https://www.facebook.com/beautosys" target="_blank">
+                  <img src="assets/media/icons/facebook.svg" class="icon" alt="">
+                  <img alt="" class="icon_hover" src="assets/media/icons/facebook_hover.svg">
+                </a>
+              </li>
+              <li><a href="https://twitter.com/beautosys?t=ZOA2Dmvx_6fgTXfiM7LUvQ&s=09" target="_blank">
+                  <img src="assets/media/icons/twitter.svg" class="icon" alt="">
+                  <img alt="" class="icon_hover" src="assets/media/icons/twitter_hover.svg">
+                </a></li>
+              <li><a href="https://instagram.com/beautosystems?igshid=YmMyMTA2M2Y" target="_blank">
+                  <img src="assets/media/icons/instagram.svg" class="icon" alt="">
+                  <img alt="" class="icon_hover" src="assets/media/icons/instagram_hover.svg">
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="tabinfo">
+    <div class="d-flex justify-content-between text-secondary small-font">
+      <div class="text-center my-2 w-500 letter-spacing">
+        © 2023 Copyright: All rights reserved
+        <a class="text-secondary w-500 text-decoration-underline" href="javascript:void(0)">Beauto Systems Pvt. Ltd</a>
+      </div>
+      <div class="d-flex my-2">
+        <p class="me-5 mb-0">
+          <a href="javascript:void(0)" class="underline text-reset">Privacy Policy</a>
+        </p>
+        <p class="mb-0">
+          <a href="javascript:void(0)" class="underline text-reset">Terms of Use</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</footer>

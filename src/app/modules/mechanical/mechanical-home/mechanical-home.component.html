@@ -1,0 +1,34 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<div class=" ">
+
+    <div class="tabcusmeting">
+        <div class="tabinfo topPaddingDomainPage">
+            <ul>
+                <li (click)="servicesView('introduction')" [ngClass]="{'active': tabchanedrop === 'introduction'}">
+                    Introduction</li>
+                <!-- <li (click)="servicesView('ourwork')" [ngClass]="{'active': tabchanedrop === 'ourwork'}">Our Work</li> -->
+                <li (click)="servicesView('blogs')" [ngClass]="{'active': tabchanedrop === 'blogs'}">Blogs</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'introduction' ">
+        <app-mechanical-introduction></app-mechanical-introduction>
+    </div>
+    <!--end Introduction-->
+
+    <!-- <div class="Introduction" *ngIf="tabchanedrop === 'ourwork' ">
+        <app-our-works [ourWorksItems]="ourWorksItems"></app-our-works>
+    </div> -->
+
+    <div class="Introduction" *ngIf="tabchanedrop === 'blogs' ">
+        <app-blogs [blogItems]="blogItems"></app-blogs>
+    </div>
+
+
+
+
+</div>

@@ -1,0 +1,72 @@
+@import "fonts";
+
+// size
+$full: 100%;
+$half: 50%;
+$quarter: 25%;
+
+$max-width: toRem(1200px);
+$max-width-small: toRem(700px);
+$margin-auto: 0 auto;
+
+$md: toRem(1000px);
+$sm: toRem(600px);
+$xs: toRem(300px);
+
+// Header
+$md-header: toRem(1150px);
+
+// Sidebar
+$sidebar-width: toRem(64px);
+
+// Colors
+$primary: #2673E5;
+$secondary: #487AE3;
+$secondary-gradient-color: #475F96;
+$primary-opacity: #2673e54d;
+ 
+$black: #000000;
+$white: #ffffff; 
+$success: #2eca8b;
+$warning: #f17425;
+$info: #17a2b8;
+$danger: #e43f52;
+$dark: #3c4858; 
+$lighten: #FAFAFC;
+$muted: #E2E7EF;
+$extra-muted: #e7ebf2;
+
+
+$secondary-color-base: linear-gradient(135deg, $secondary 0%, $secondary-gradient-color 100%); 
+    
+
+// fonts
+$primary-font: 'roboto';
+
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$full-bold: 900;
+
+$font-xs: 12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 20px;
+$font-lg: 24px;
+$font-extra-lg: toRem(60px);
+
+$font-size-base: toRem($primary-fs);
+$font-weight-base: $regular;
+$font-color-base: $black;
+$font-family-base: $primary-font;
+$body-bg-color: $white;
+
+$letter-spacing-base: toRem(1px);
+
+$translate: translate(0%, -50%);
+$translate-center: translate(-50%, -50%);

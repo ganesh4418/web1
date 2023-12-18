@@ -1,0 +1,296 @@
+@import "includes";
+
+.searchtop+.search {
+  position: absolute;
+  top: 50%;
+  right: 45px;
+  transform: translate(0%, -50%);
+}
+
+.search {
+  cursor: pointer;
+}
+
+.form-control {
+  padding-right: 2rem;
+}
+
+::-webkit-input-placeholder {
+  font-size: $font-xs;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+:-ms-input-placeholder {
+  font-size: $font-xs;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+::placeholder {
+  font-size: $font-xs;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.h-subsidiaries {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: .5px;
+  margin-bottom: 5px;
+  color: #2673e5;
+}
+
+.brandimg {
+  img {
+    width: 22px;
+    height: 24px;
+  }
+}
+
+.active {
+  .topMenu {
+    color: #2673e5;
+  }
+}
+
+.hover-clr:hover span {
+  color: #2673e5 !important;
+}
+
+.topMenu {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  color: #0009;
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    color: #2673e5;
+  }
+}
+
+.topMenu::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #2673e5;
+  transform-origin: bottom right;
+  transition: transform .25s ease-out;
+}
+
+.topMenu:hover {
+  color: #2673e5;
+}
+
+.topMenu:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.min-box {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+}
+
+.searchtop {
+  border: 1px solid $muted;
+  padding: 13px 14px;
+  border-radius: 10px;
+  width: 100%;
+  background: $lighten;
+  max-width: 100%;
+  padding-right: 3rem;
+}
+
+.headerbg {
+  background: $lighten;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  border-bottom: 1px solid $muted;
+}
+
+.px-20 {
+  @include paddings(0px, 20px);
+}
+
+.menu-bar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  flex-direction: column;
+  color: $white;
+  @include paddings(32px, 16px);
+  overflow: auto;
+  max-height: 100vh;
+
+  p {
+    margin: 0;
+    color: $white;
+    @include paddingsFromLeft(15px);
+  }
+
+  &>div:nth-child(5) a,
+  &>div:nth-child(9) a {
+    padding-bottom: 0.7rem !important;
+    border-bottom: 1px solid #fafafc4d;
+  }
+
+  .searchtop {
+    background: transparent;
+    color: $lighten;
+    @include paddingsFromRight(50px);
+  }
+
+  input.searchtop.w-100::placeholder {
+    color: $muted;
+  }
+
+  .close {
+    position: relative;
+    left: -8px;
+  }
+}
+
+.menu-bar::-webkit-scrollbar-track,
+.menu-bar::-webkit-scrollbar,
+.menu-bar::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.smallbdsicon {
+  width: 20px !important;
+  height: 22px !important;
+}
+
+// .mobile-menu-right-align{
+//   padding-left: 19rem;
+// }
+
+.topmenudrop {
+  margin-right: 10px;
+}
+
+.d-fl {
+  display: flex;
+}
+
+.mobile-col {
+  button {
+    margin: unset !important;
+  }
+
+  mat-icon {
+    margin-left: 1px;
+    font-size: 19px;
+    color: #fff;
+  }
+}
+
+.submenu {
+  margin-top: 5px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  .topMenu {
+    margin-bottom: 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* identical to box height, or 162% */
+
+    /* White */
+
+    color: #ffffff;
+  }
+}
+
+
+
+
+.showinmoblih {
+  display: none;
+}
+
+.showinmoblihhide {
+  display: block;
+}
+
+@media screen and (min-width: 480px) and (max-width: 896px) {
+
+  .showinmoblih {
+    display: block;
+  }
+
+  .showinmoblihhide {
+    display: none;
+  }
+
+  .px-20 {
+    padding: 0rem 0.25rem;
+  }
+
+
+  //   .d-none {
+  //     display: none!important;
+  // }
+  // .d-md-none{
+  //   display: flex !important;
+  // }
+  // .mobile-menu{
+  //   width: 100%;
+  // }
+
+}
+
+.h-locations {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: .5px;
+  margin-bottom: 5px;
+  color: #2673e5;
+  margin-left: 37px;
+}
+
+::ng-deep .swiper-button-next::after {
+  content: "next";
+  font-size: 10px;
+  color: #0009 ;
+  font-weight: 600 !important;
+}
+
+::ng-deep .swiper-button-prev::after {
+  
+  font-size: 10px;
+  color: #0009;
+  font-weight: 600 !important;
+}
+
+.countries {
+  width: 150px;
+  position: absolute;
+  left: 350px;
+}
+
+.testimonialsImg {
+  padding-left: 5px;
+}

@@ -1,0 +1,150 @@
+<section class="bg-gradient-primary pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="mb-4 text-white">
+                    <h4 class="mb-0">Let's Build Something Awesome!</h4>
+                    <p>Connect with us by sharing a few details below.</p>
+                </div>
+                <div class="bg-white p-4 py-4 rounded form-outline">
+                    <form [formGroup]="exploreMoreForm" class="form" (ngSubmit)="onSubmit(exploreMoreForm)">
+                        <div class="row">
+                            <!-- <a class="close" href="javascript:void(0)" (click)="closeClicked()">    </a> -->
+
+
+                            <!-- <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> -->
+                            <div class="col-md-6 mb-3">
+                                <div class="back-button"><a (click)="closeClicked()" >X</a></div>
+
+                                <div class="floating-label">
+                                    <input type="text" id="firstname" placeholder="First Name*" class="form-control form-input"
+                                        formControlName="firstName" required autocomplete="off">
+                                    <label for="firstname" class="form-label">First name*</label>
+                                </div>                               
+
+
+                                <div *ngIf="exploreMoreFormControl['firstName'].touched && exploreMoreFormControl['firstName'].invalid" >
+                                    <div *ngIf="exploreMoreFormControl['firstName'].errors && exploreMoreFormControl['firstName'].errors['required']">
+                                        <small class="form-text text-danger">Enter your first name</small>
+                                    </div>
+                                    <div *ngIf="exploreMoreFormControl['firstName'].errors && exploreMoreFormControl['firstName'].errors['pattern']" >
+                                        <small class="form-text text-danger">Enter valid first name</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+
+                                <div class="floating-label">
+                                    <input type="text" id="lastName" placeholder="Last Name*" class="form-control form-input"
+                                        formControlName="lastName" required autocomplete="off">
+                                    <label for="lastName" class="form-label">Last name*</label>
+                                </div>   
+
+                               
+                                <div *ngIf="exploreMoreFormControl['lastName'].touched && exploreMoreFormControl['lastName'].invalid">
+                                    <div *ngIf="exploreMoreFormControl['lastName'].errors && exploreMoreFormControl['lastName'].errors['required']">
+                                        <small class="form-text text-danger">Enter your last name</small>
+                                    </div>
+                                    <div *ngIf="exploreMoreFormControl['lastName'].errors && exploreMoreFormControl['lastName'].errors['pattern']">
+                                        <small class="form-text text-danger">Enter valid last name</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+
+                                <div class="floating-label">
+                                    <input type="email" id="email" placeholder="Enter Email Address*" class="form-control form-input"
+                                        formControlName="email" required autocomplete="off">
+                                    <label for="email" class="form-label">Enter Email Address*</label>
+                                </div>  
+
+                               <div *ngIf="exploreMoreFormControl['email'].touched && exploreMoreFormControl['email'].invalid">
+                                    <div *ngIf="exploreMoreFormControl['email'].errors && exploreMoreFormControl['email'].errors['required']">
+                                        <small class="form-text text-danger">Enter your email</small>
+                                    </div>
+                                    <div *ngIf="exploreMoreFormControl['email'].errors && exploreMoreFormControl['email'].errors['pattern']">
+                                        <small class="form-text text-danger">Enter valid email</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="floating-label">
+                                    <select class="form-control form-select form-input" formControlName="country"
+                                        (change)="onSelectChange($event)">
+                                        <option value="" disabled selected hidden>Country *</option>
+                                        <option *ngFor="let country of prefixes" [value]="country.name">
+                                            {{country.name}}
+                                        </option>
+                                    </select>
+                                    <label for="country" class="form-label">Select Country*</label>
+                                </div>
+                                <div *ngIf="(exploreMoreFormControl['country'].touched && exploreMoreFormControl['country'].invalid) ">
+                                    <div *ngIf="exploreMoreFormControl['country'].errors && exploreMoreFormControl['country'].errors['required']">
+                                        <small class="form-text text-danger">Enter your country</small>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                
+                                <input type="text" id="contactPreNo" class="form-control" formControlName="contactPreNo"
+                                    readonly>
+                            </div>
+                            <div class="col-md-9 mb-3">
+                                <div class="position-relative">
+                                    <!-- <mat-icon class="mobile">mobile_friendly</mat-icon> -->
+
+                                    <div class="floating-label">
+                                        <input type="text" id="contactNo" placeholder="Enter Contact Number*" class="form-control form-input"
+                                        formControlName="contactNo" maxlength="14" required autocomplete="off">
+                                        <label for="contactNo" class="form-label">Enter Contact Number *</label>
+                                    </div>
+
+                                   
+                                    <div *ngIf="exploreMoreFormControl['contactNo'].touched && exploreMoreFormControl['contactNo'].invalid">
+                                        <div
+                                            *ngIf="exploreMoreFormControl['contactNo'].errors && exploreMoreFormControl['contactNo'].errors['required']">
+                                            <small class="form-text text-danger">Enter contact no</small>
+                                        </div>
+                                        <div
+                                            *ngIf="exploreMoreFormControl['contactNo'].errors && exploreMoreFormControl['contactNo'].errors['pattern']">
+                                            <small class="form-text text-danger">Enter valid contact no</small>
+                                        </div>
+                                        <div
+                                            *ngIf="exploreMoreFormControl['contactNo'].errors && exploreMoreFormControl['contactNo'].errors['minlength']">
+                                            <small class="form-text text-danger">Enter min {{minMobileLength}} length contact no</small>
+                                        </div>
+                                        <div
+                                            *ngIf="exploreMoreFormControl['contactNo'].errors && exploreMoreFormControl['contactNo'].errors['maxlength']">
+                                            <small class="form-text text-danger">Enter max {{maxMobileLength}} length contact no</small>
+                                        </div>
+                                        <div
+                                            *ngIf="exploreMoreFormControl['contactNo'].errors &&  exploreMoreFormControl['contactNo'].errors['prefixValid']">
+                                            <small class="form-text text-danger">Enter valid contact no</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="floating-label ">
+                                    <textarea name="" id="" cols="30" rows="5" class="form-control textarea"
+                                     formControlName="msg" required></textarea>
+                                    <label for="msg" class="form-label">Describe Your Idea*</label>
+                                </div>
+
+                              
+                                    <div *ngIf="exploreMoreFormControl['msg'].touched && exploreMoreFormControl['msg'].invalid">
+                                        <div *ngIf="exploreMoreFormControl['msg'].errors && exploreMoreFormControl['msg'].errors['required']">
+                                            <small class="form-text text-danger">Write your idea</small>
+                                        </div>
+                                    </div> 
+                            </div>
+                            <div class="col-md-12 mb-3 text-center">
+                                <button class="btn btn-primary" [disabled]="exploreMoreForm.invalid" type="submit"> Submit </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

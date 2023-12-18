@@ -1,0 +1,128 @@
+<div class="innbanners">
+    <div class="row align-items-center m-0 services-top">
+        <div class="col-md-5 offset-md-1 pb-4 mb-2 pb-md-0 mb-md-0 pt-4 mt-2 mt-md-0 pt-md-0">
+            <div class="info">
+                <div class="bannertxt"> Graphic</div>
+                <div class="subbannertxt">Design</div>
+                <div class="subinfo">
+                    We create brand and 360 degree graphic solutions.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0 video-4k">
+            <div class="y-tube">
+                <iframe width="100%" height="415" src="https://www.youtube.com/embed/IiLCgzcyqhc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">What is Graphic Design</span>
+                </div>
+            </div>
+
+            <div class="physicalInfo">
+                <p class="what-is-design-text"> Graphic design is the practise of using words, pictures, and other
+                    visual elements to communicate ideas to an audience, often in order to achieve a certain result.
+                    <br />
+                    Graphic design is a field of study, a profession, and an applied art whose work involves presenting
+                    visual messages to target audiences in order to achieve predetermined goals.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionsapce ourstrengths">
+
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our Capabilities</span>
+                </div>
+            </div>
+
+            <div class="ourbg">
+
+                <div class="row m-0">
+                    <div class=" col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-6 t-center">
+                        <img src="assets/media/images/our-capabilitites/03_Graphic-Design-Services_GIF_.gif" alt="" class="gif-file"> </div>
+                    <div class=" col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6">
+
+                        <div class="Capabilitiesinfo">
+
+                            <ul>
+                                <li>Identity Design</li>
+                                <li>360 Branding</li>
+                                <li>Packaging Design</li>
+                                <li>Illustrations</li>
+                                <li>Merchandising</li>
+                                <li>Icon Design</li>
+                                <li>Marketing Material<br> Design</li>
+                                <li>Digital and offset printing solutions</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="bggary">
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>
+
+<section class="sectionsapce">
+    <div class="tabinfo">
+
+        <div class="quotes ">
+            <div class="bg">
+                <div>
+                    Design is <br/>
+                    <span class="design-sc-font-size">
+                        <span class="desing-sc-bold">T</span>hinking
+                    </span>
+                    made
+                    <span class="design-sc-font-size">
+                        <span class="desing-sc-bold">V</span>isual.
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="quotesAu">- Saul Bass</div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="bglet" *ngIf = "!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Design <br>
+            Something Together!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf = "connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>

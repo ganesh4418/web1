@@ -1,0 +1,115 @@
+<section class="banner">
+    <div class="bg-video-wrap">
+        <video class="background" loop autoplay playsinline oncanplay="this.play()"
+            onloadedmetadata="this.muted = true">
+            <source src="assets/media/video/Homepage video re-edit04.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+        </div>
+        <div class="v_banner test">
+            <img src="assets/media/images/logo_outline.svg" alt="" class="bImg center">
+            <div class="banner-title-small center"> Innovating </div>
+            <div class=" "><span class="banner-title-large">Be</span>
+                <span class="banner-title-small">autiful </span>
+                <span class="banner-title-large">Auto</span>
+                <span class="banner-title-small">mations</span>
+            </div>
+            <div class="v_subtitle center">
+                From strategy to execution, our winning combinations of innovative thinking, scientific design,<br>
+                sophisticated development and advanced engineering ensure we are delivering fresh value to help you grow
+            </div>
+            <a href="https://www.youtube.com/watch?v=mDbgpnLkLhg" target="_blank" class="mt-3 btn btn-primary center">
+                Check out more <img class="ms-2" src="assets/media/icons/play.svg" alt="">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="bggary">
+    <div class="tabinfo">
+        <div class="position-relative  ">
+            <h6 class="title mb-4">Beauto Innovated for Brands Like</h6>
+        </div>
+        
+
+        <div class="brandspace  ">
+            <swiper [config]="swiperConfig" [loop]="true" [autoplay]="true">
+                <ng-template swiperSlide *ngFor="let brands of brand">
+                    <img src="{{brands.pic}}" class="brandsImg" alt="">
+                    <div class="brandsnames">
+                        {{brands.name}}
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+
+        
+        
+
+        <!-- <div class="testimonials center">
+            <swiper [config]="client" [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [loop]="true"
+                [spaceBetween]="0" [navigation]="true" class="swiper_w">
+                <ng-template swiperSlide *ngFor="let comments of coverflow">
+                    <div class="col-md-9 mx-auto">
+                        <div class="testimonialsCard">
+                            <img src="assets/media/icons/quote_arrow.svg" class="img-fluid mb-4" width="45px" alt="">
+                            <div class="info">{{comments.msg}}</div>
+                            <img class="img-fluid testimonialsImg" src="{{comments.pic}}" alt="" />
+                            <h6>{{comments.name}}</h6>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div> -->
+    </div>
+</section>
+
+<section class="earth-bg">
+    <img  src="assets/media/images/home Annimation.gif" alt="" class="we-are-expanding">
+    <span class="expanding-globally">We are <span class="bold-text">Expand</span>ing 
+    <span _ngcontent-wgt-c78="" class="bold-text">Globally</span>
+</span>
+    <span _ngcontent-wgt-c78="" class="reaching">Reaching new horizons and connecting with diverse cultures around the world.</span>
+</section>
+
+<app-all-work-slider [ourWorksItems]="ourWorksItems" [title]="title"></app-all-work-slider>
+
+<section class="pb-100 pt-100">
+    <div class="achievements position-relative d-flex align-items-center">
+        <div class="tabinfo position-relative">
+            <h6 class="swiper_top title  ">What’s Happening @ Beauto</h6>
+            <swiper [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="1" [spaceBetween]="50"
+                [navigation]="true" class="mySwiper" [loop]="true" class="pt-85 mySwiper">
+                <ng-template swiperSlide *ngFor="let awards of about">
+                    <div class="row">
+                        <div class="col-md-5 achievementsBG   ">
+                            <img class="img-fluid round-border" src="{{awards.pic}}" alt="" />
+                        </div>
+                        <div class="col-md-7 d-flex align-items-center">
+                            <div class="ms-5 p-5 text-left card-shadow   ">
+                                <div class="small">{{awards.smallTitle}}</div>
+                                <div class="awardsTitle">{{awards.title}}</div>
+                                <div class="awardsDesc">
+                                    <div class="mb-2">{{awards.desc}}</div>
+                                    <div *ngFor="let alink of awards.links" class="d-inline">
+                                        <a href="{{alink.link}}" target="_blank" *ngIf="alink.link!=''">
+                                            <img src="{{alink.symbol}}" width="20" height="20" alt=""
+                                                *ngIf="alink.symbol!=''">
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex view-allNews">
+                        <a class="arrow_animation d-inline-flex text-primary w-500 all-case-studies " routerLink="/news">View All news
+                            <img src="assets/media/icons/Arrow-Link.svg" class="arrow_anim opacity-6" alt="" >
+                        </a>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+    </div>
+</section>
+<app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>

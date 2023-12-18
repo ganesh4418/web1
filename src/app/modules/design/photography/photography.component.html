@@ -1,0 +1,115 @@
+<div class="innbanners">
+    <div class="row align-items-center m-0 services-top">
+        <div class="col-md-5 offset-md-1 pb-4 mb-2 pb-md-0 mb-md-0 pt-4 mt-2 mt-md-0 pt-md-0">
+            <div class="info">
+                <div class="bannertxt"> Photography</div>
+                <!-- <div class="subbannertxt">Design</div> -->
+                <div class="subinfo">
+                    We capture motions and stills in frame.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0 video-4k">
+            <div class="y-tube">
+                <iframe width="100%" height="415" src="https://www.youtube.com/embed/sEdL3e7MRJQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">What is Photography</span>
+                </div>
+            </div>
+
+            <div class="physicalInfo">
+                <p class="what-is-design-text">Photography is the science, practise, and art of making long-lasting images by capturing light, either chemically or electronically using a light-sensitive substance like photographic film or an image sensor.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionsapce ourstrengths">
+
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our Capabilities</span>
+                </div>
+            </div>
+
+            <div class="ourbg">
+
+                <div class="row m-0">
+
+                    <div class=" col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-6 t-center">
+                        <img src="assets/media/images/our-capabilitites/05_Photography_Services_GIF_.gif" alt="" class="gif-file"></div>
+                    <div class=" col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6">
+                        <div class="Capabilitiesinfo">
+
+                            <ul>
+                                <li>Photography</li>
+                                <li>Videography</li>
+                                <li>Food Photography</li>
+                                <li>Industrial Machine Shoots</li>
+                                <li>Cinematic Shoot and Editing</li>
+                                <li>Unboxing Videography</li>
+
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="bggary">
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>
+
+<section class="sectionsapce">
+    <div class="tabinfo">
+        <div class="quotes ">
+            <div class="bg">
+                <div>
+                    Photography helps
+                    <span class="desingC">
+                        <span class="desing-sc-bold">P</span>eople
+                        <span class="quotes"> to </span><span class="desing-sc-bold">S</span>ee
+                    </span>
+                </div>
+            </div>
+            <div class="quotesAu">- Berenice Abbott</div>
+        </div>
+    </div>
+</section>
+<section class="bglet" *ngIf = "!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Design <br>
+            Something Together!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf = "connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>

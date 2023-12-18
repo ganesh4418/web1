@@ -1,0 +1,125 @@
+<div class="innbanners">
+    <div class="row align-items-center m-0 services-top">
+        <div class="col-md-5 offset-md-1 pb-4 mb-2 pb-md-0 mb-md-0 pt-4 mt-2 mt-md-0 pt-md-0">
+            <div class="info">
+
+                <div class="bannertxt"> Animation & VFX</div>
+                <div class="subbannertxt">Design</div>
+                <div class="subinfo">
+                    We animate untold stories with impactful visuals.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0 video-4k">
+            <div class="y-tube">
+                <iframe width="100%" height="415" src="https://www.youtube.com/embed/wT3oce4Uibk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">What is Animation & VFX Design</span>
+                </div>
+            </div>
+
+            <div class="physicalInfo">
+                <p class="what-is-design-text">The skill of generating special effects and other designs for different types of media, such as video games, movies, and even social media posts, is known as animation design. <br/>
+                    Digital effects that improve animation, film, and still images are referred to as VFX.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionsapce ourstrengths">
+
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our Capabilities</span>
+                </div>
+            </div>
+
+            <div class="ourbg">
+
+                <div class="row m-0">
+
+                    <div class=" col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-6 t-center"> 
+                        <img src="assets/media/images/our-capabilitites/04_Animation_GIF_.gif" alt="" class="gif-file"> </div>
+                    <div class=" col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6">
+
+                        <div class="Capabilitiesinfo">
+
+                            <ul>
+                                <li>2D Motion Graphics</li>
+                                <li>2D and 3D Animation</li>
+                                <li>Story Telling</li>
+                                <li>Character Design</li>
+                                <li>VFX Composition and Roto</li>
+                                <li>Texturing, rigging and lighting</li>
+                                <li>Mascot Design and FX-Stimulation</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="bggary">
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>
+
+<section class="sectionsapce">
+    <div class="tabinfo">
+
+        <div class="quotes ">
+            <div class="bg">
+                <div>
+                    <div class=""> Animation can explain whatever the</div>
+                    <span class="desingC">
+                        <span class="desing-sc-bold">M</span>ind of man
+                        <span class="quotes"> can </span><span class="desing-sc-bold">C</span>onceive.
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="quotesAu">- Walt Disney</div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="bglet" *ngIf = "!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Design <br>
+            Something Together!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Check now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf = "connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>

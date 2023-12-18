@@ -1,0 +1,1043 @@
+@import "includes";
+
+@media (min-width: 1400px) {
+    .tabinfo {
+        width: 100% !important;
+        margin: auto !important;
+        margin-left: 10% !important;
+        max-width: 84% !important;
+    }
+}
+
+@media (min-width: 1800px) {
+    .tabinfo {
+        width: 100% !important;
+        margin: auto !important;
+        max-width: 1500px !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .tabinfo.custom_width {
+        max-width: calc(100% - 11%) !important;
+        margin-right: 0 !important;
+        margin-left: 11% !important;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 992px) {
+    .btn.btn-small {
+        min-width: 100px;
+        font-size: 11px;
+    }
+
+    .tabinfo {
+        margin: auto !important;
+        max-width: 88% !important;
+        width: 80% !important;
+    }
+
+    .submiti {
+        padding-top: 6.5rem !important;
+    }
+
+    .about_img {
+        top: 2.4rem !important;
+    }
+    .sidebar {
+        width: 90px;
+    }
+
+    .submitideaForm {
+        margin-top: 20px;
+        margin-left: 0rem !important;
+        width: 83% !important;
+    }
+
+    .awardsTitle {
+        font-size: 19px !important;
+        line-height: 30px !important;
+    }
+
+    .card-shadow {
+        width: 88% !important;
+        min-height: auto !important;
+    }
+
+    .ms-5 {
+        margin-left: 2rem !important;
+    }
+
+    .p-5 {
+        padding: 2rem !important;
+    }
+
+    div.quotes {
+        padding-bottom: 2rem;
+    }
+
+    .bg::after {
+        top: -2rem !important;
+    }
+
+    .bg::before {
+        right: 2rem;
+    }
+
+    .responsive-top-spacing-blog {
+        margin-top: 0 !important;
+    }
+
+    .responsive-top-spacing-softSer {
+        margin-top: 0px !important;
+    }
+}
+
+@media (max-width: 820px) and (min-width: 720px) {
+    .innbanners .subbannertxt {
+        font-size: 38px;
+        line-height: 11px;
+        letter-spacing: 0.01em;
+        color: #000000;
+    }
+    .innbanners .bannertxt {
+        font-size: 25px;
+        line-height: 57px;
+        letter-spacing: 0.01em;
+        color: #000000;
+    }
+
+    .innbanners .subbannertxt {
+        font-size: 28px;
+        line-height: 11px;
+    }
+
+    .tabinfo {
+        width: 70% !important;
+        margin: auto !important;
+        max-width: 85% !important;
+    }
+    .fs-48 {
+        font-size: 27px;
+    }
+    .innbanners {
+        width: 95%;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 768px) {
+    .sidebar {
+        .menu {
+            padding: 11px 0px 11px 0px;
+        }
+    }
+
+    .tabinfo {
+        margin: auto !important;
+        max-width: 75% !important;
+        width: 100% !important;
+    }
+
+    // .sidebar {
+    //     div {
+    //         margin: 0rem 0.15rem !important;
+    //     }
+    // }
+
+    .ContactFotter {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        .menu {
+            margin: 0 !important;
+
+            .icon,
+            .icon_hover {
+                width: 20px;
+                height: 20px;
+            }
+
+            p {
+                margin-top: 0px !important;
+            }
+        }
+    }
+
+    .testimonials .swiper {
+        width: 100%;
+    }
+    // .sidebar.left {
+    //     display: none;
+    // }
+}
+
+@media only screen and (max-device-width: 768px) {
+    .topPadding {
+        margin-top: 11rem;
+    }
+
+    .about_img {
+        top: 7.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    // .case-box {
+    //     padding-right: 10%;
+    // }
+
+    .no-gutter .col-md-4 {
+        width: 100%;
+        padding: 0;
+    }
+
+    // app-events app-filter .custom {
+    //     margin-right: 6%;
+    //     padding-top: 5rem !important;
+    // }
+
+    app-all-work-study-template app-filter .all-work-change {
+        // margin-right: 6%;
+        padding-top: 5rem !important;
+    }
+
+    app-study-template app-filter .all-work-change {
+        // margin-right: 6%;
+        padding-top: 5rem !important;
+    }
+
+    .mat-tab-header,
+    .tabcusmeting {
+        position: sticky !important;
+        width: 100%;
+        background: $white;
+        z-index: 9;
+        top: 136px;
+        box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 4%);
+        // border-bottom: none;
+    }
+
+    .quotesAu {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .submiti {
+        .space {
+            margin-left: 7rem !important;
+        }
+    }
+    .space {
+        margin-left: 5rem !important;
+    }
+
+    .tabinfo {
+        margin: auto !important;
+        max-width: 80% !important;
+        width: 75% !important;
+    }
+
+    .read-more {
+        background-color: transparent;
+        padding: 9px 8px;
+        border-radius: 50px;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .submiti {
+        position: relative;
+        padding-top: 9rem !important;
+    }
+
+    .submitideaForm {
+        margin-left: 0px !important;
+        margin-top: 20px;
+        width: 81% !important;
+    }
+
+    .fs-48 {
+        font-size: 36px;
+    }
+
+    // .tabinfo {
+    //     width: 80% !important;
+    //     margin: auto !important;
+    //     max-width: 85% !important;
+    //     padding-left: 15px !important;
+    //     padding-right: 15px !important;
+    // }
+
+    .pt-100,
+    .sectionsapce {
+        @include paddingsFromTop(25px);
+    }
+
+    .pb-100,
+    .sectionsapce {
+        @include paddingsFromBottom(25px);
+    }
+
+    .sidebar {
+        .menu {
+            padding: 0.3rem !important;
+            border: 1px solid transparent;
+
+            p {
+                margin: 0rem;
+                font-size: 11px !important;
+                font-weight: 500;
+                margin-top: 9px !important;
+            }
+        }
+
+        div {
+            margin: 0rem 0.15rem !important;
+        }
+    }
+
+    .bannerDesing .test,
+    .banner .test {
+        font-size: 24px !important;
+        line-height: 32px !important;
+    }
+
+    .btn.btn-primary {
+        @include paddings(8px, 15px);
+        min-width: 100px;
+    }
+
+    .btn.btn-secondary {
+        @include paddings(8px, 15px);
+        min-width: 100px;
+    }
+
+    .banner {
+        .bg-video-wrap {
+            height: 100% !important;
+            max-height: 300px !important;
+        }
+
+        video {
+            min-height: auto !important;
+            max-height: 100% !important;
+        }
+
+        .v_subtitle {
+            display: none;
+        }
+
+        .bImg {
+            height: 300px !important;
+        }
+
+        .overlay {
+            height: 100% !important;
+        }
+    }
+
+    .testimonials .testimonialsCard h6,
+    .brandsnames {
+        font-size: 10px !important;
+    }
+
+    .testimonials {
+        .col-md-9 {
+            flex: 0 0 auto;
+            width: 85%;
+        }
+
+        .swiper-slide {
+            width: 100% !important;
+        }
+
+        .swiper {
+            width: 100%;
+        }
+
+        .testimonials .swiper-slide-active .testimonialsCard {
+            padding: 2rem 1rem;
+        }
+
+        .info {
+            font-weight: 400 !important;
+            font-size: 10px !important;
+            line-height: 16px !important;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .brandsImg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .title {
+        font-size: 12px !important;
+    }
+
+    .card-shadow {
+        margin-left: 0 !important;
+        padding: 1rem 21px !important;
+        min-height: auto !important;
+        width: 99% !important;
+    }
+
+    .achievements {
+        margin: 0 !important;
+
+        .title {
+            left: 15px;
+        }
+
+        .col-md-5.achievementsBG,
+        .col-md-5.achievementsBG + .col-md-7 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .achievements::before {
+        top: auto;
+        margin-top: 10rem;
+        height: 56px;
+    }
+
+    .achievements::after {
+        top: 42%;
+        margin-top: auto;
+        height: 56px;
+    }
+
+    .awardsTitle {
+        font-size: 17px !important;
+        line-height: 24px !important;
+    }
+
+    .awardsDesc {
+        font-size: 16px !important;
+        font-weight: 300 !important;
+        line-height: 23px !important;
+        letter-spacing: 0.2px !important;
+    }
+
+    .achievements .swiper-button-prev,
+    #case-study.swiper .swiper-button-prev {
+        right: 26px;
+    }
+
+    .achievements .swiper-button-prev,
+    .achievements .swiper-button-next {
+        top: 45px;
+    }
+
+    .swiper-button-next {
+        right: 0 !important;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-button-next:after,
+    .swiper-button-prev:after,
+    #case-study .swiper-button-next:after,
+    #case-study .swiper-button-prev:after {
+        height: 20px !important;
+        width: 20px !important;
+    }
+
+    .swiper-button-next:after,
+    #case-study .swiper-button-next:after {
+        background-repeat: no-repeat !important;
+    }
+
+    #case-study.swiper .swiper-button-prev {
+        right: 30px;
+    }
+
+    #case-study .swiper-button-next,
+    #case-study .swiper-button-prev {
+        top: 43px;
+    }
+
+    .text-ellipsis {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .text-ellipsis-multiline {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .case-box .mh-200 {
+        min-height: auto !important;
+    }
+
+    footer.text-center {
+        text-align: left !important;
+    }
+
+    // .quick {
+    //     ul {
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //     }
+
+    //     li {
+    //         flex: 1 1 50%;
+    //     }
+    // }
+
+    .title {
+        &::after {
+            top: -15px !important;
+        }
+    }
+
+    .ContactFotter {
+        gap: 0.5rem !important;
+        flex-direction: column;
+    }
+
+    .d-flex.justify-content-between.p-0.social {
+        justify-content: flex-start !important;
+    }
+
+    .d-flex.text-secondary.small-font {
+        flex-direction: column;
+    }
+
+    .d-flex.my-2 {
+        justify-content: center;
+    }
+
+    .mobile-menu {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    header .px-4 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    app-home {
+        .bggary {
+            padding: 0 !important;
+        }
+
+        .testimonials {
+            margin-top: 2rem !important;
+            padding-bottom: 3rem;
+        }
+
+        .case-box.mb-5 {
+            margin: 0 !important;
+        }
+    }
+
+    .tabcusmeting + div,
+    .tabcusmeting + section,
+    .tabcusmeting + app- {
+        @include paddingsFromTop(0px);
+        @include paddingsFromBottom(0px);
+    }
+
+    .bannerDesing .v_subtitle {
+        display: none;
+    }
+
+    .pl-140.pt-100 {
+        padding-top: 0 !important;
+    }
+
+    .tabcusmeting {
+        padding-top: 50px;
+
+        li {
+            font-size: $font-sm;
+        }
+    }
+
+    .ourstrengths .col-md-4:nth-child(3) {
+        margin-top: 4rem;
+    }
+
+    div.quotes {
+        font-size: 24px !important;
+        line-height: 40px !important;
+        @include paddingsFromTop(32px);
+        padding-bottom: 2rem;
+
+        .desingC,
+        .desing-sc {
+            font-size: 44px !important;
+            line-height: 44px;
+        }
+    }
+
+    .ourstrengths .card-gary,
+    .ourstrengths .card-white {
+        margin: auto;
+        width: 100% !important;
+    }
+
+    .bannerDesing .test {
+        max-width: 100% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .no-gutter .col-md-4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .logo-shadow {
+        position: absolute;
+        transform: unset;
+        left: auto;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .innbanners,
+    .ourbg {
+        width: 95% !important;
+        margin-left: auto !important;
+        margin-top: 3.4rem;
+    }
+
+    .bglet {
+        padding: 2rem 1rem !important;
+    }
+
+    .innbanners .bannertxt,
+    .innbanners .subbannertxt {
+        font-size: 24px !important;
+        line-height: 32px !important;
+    }
+
+    .quotesAu {
+        font-size: 24px !important;
+        width: 100%;
+    }
+
+    .Capabilitiesinfo li {
+        display: flex !important;
+        width: 100% !important;
+        margin: 1rem !important;
+        font-size: 1rem !important;
+    }
+
+    .physicalInfo p {
+        font-size: $font-xs;
+    }
+
+    .bg::after {
+        top: 0rem !important;
+        width: 100% !important;
+    }
+
+    .bg::before {
+        top: 0.7rem !important;
+        width: 100% !important;
+    }
+
+    .right-absolute.vertical-center,
+    .vertical-center {
+        position: relative !important;
+        transform: unset;
+        top: 0;
+    }
+
+    .container.px-5.h-100 {
+        padding-top: 140px;
+    }
+
+    app-our-team {
+        .h-100 {
+            height: auto !important;
+            margin-bottom: 2rem !important;
+        }
+    }
+    .breadcrumb-fixed {
+        margin-top: 0 !important;
+        top: 89px !important;
+    }
+    div.tabinfo.des-padding {
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 2000px) {
+    img.vertical-center.img-fluid.w-100.mw-50.team_img {
+        max-width: 65rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .tabinfoaboutus {
+        width: 100% !important;
+        margin: auto !important;
+        max-width: 1500px !important;
+    }
+    .shadow-box {
+        left: 40px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1600px) {
+    .sidebar div:nth-child(6) {
+        border-bottom: none !important;
+    }
+
+    .sidebar div:last-child {
+        display: none;
+    }
+    .shadow-box {
+        left: 40px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    app-events app-filter .custom {
+        margin-right: 6%;
+        padding-top: 9rem !important;
+    }
+
+    .mat-tab-header,
+    .tabcusmeting {
+        position: sticky !important;
+        width: 100%;
+        background: $white;
+        z-index: 9;
+        top: 104px;
+        box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 4%);
+        border-bottom: none;
+    }
+
+    app-all-work-study-template app-filter .all-work-change {
+        // margin-right: 6%;
+        padding-top: 9rem !important;
+    }
+
+    app-study-template app-filter .all-work-change {
+        // margin-right: 6%;
+        padding-top: 9rem !important;
+    }
+}
+
+@media (min-width: 480) and (max-width: 768px) {
+    .mat-tab-header,
+    .tabcusmeting {
+        top: 145px !important;
+    }
+
+    .row.no-gutter {
+        grid-gap: 0;
+        gap: 14px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 896px)  {
+    .sidebar {
+        display: none !important;
+    }
+    .tabinfo {
+        margin: auto !important;
+        max-width: 90% !important;
+        width: 90% !important;
+    }
+
+    .btn.btn-small {
+        min-width: 100px;
+        font-size: 11px;
+    }
+    .form-label {
+        position: absolute;
+        font-family: inherit;
+        font-size: 0.9rem;
+    }
+
+
+}
+
+.hidem{
+    display: block;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+
+
+    .breadcrumb-fixed {
+        margin-top: 0 !important;
+        top: 77px !important;
+    }
+    
+    .hidem{
+        display: none;
+    }
+    .sidebar {
+        display: none !important;
+    }
+
+    .mat-tab-header,
+    .tabcusmeting {
+        top: 90px;
+    }
+
+    .testimonialsCard {
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+    }
+
+    .arrow_icon .mat-icon {
+        margin-left: 0px !important;
+    }
+
+    .our-team-heading {
+        font-size: 30px !important;
+        line-height: 1;
+    }
+
+    .ourTeam {
+        margin-top: 0px !important;
+    }
+
+    .outtemP {
+        width: 90% !important;
+    }
+
+    .mt5 {
+        margin-top: 11rem !important;
+    }
+
+    .space {
+        margin-left: 1rem !important;
+    }
+
+    .submiti {
+        position: relative;
+        padding-top: 7rem !important;
+    }
+
+    .submitideaForm {
+        margin-left: 0px !important;
+        margin-top: 20px;
+        width: 90% !important;
+    }
+
+    .p0Right {
+        padding-right: 0px;
+        padding: 0px;
+        margin-top: 10px;
+    }
+
+    .p0Left {
+        padding-left: 0px;
+        padding: 0px;
+    }
+
+    .topPadding {
+        padding-top: 28%;
+    }
+
+    .tabinfo {
+        width: 100% !important;
+        margin: auto !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .fs-48 {
+        font-size: 22px;
+    }
+
+    .about_img {
+        top: -0.5rem !important;
+    }
+
+    // .img-fluid {
+    //     max-width: 100%;
+    //     height: auto;
+    //     width: 100%;
+    // }
+
+    .abt-desc {
+        line-height: 30px !important;
+        font-weight: 300;
+        font-size: 16px !important;
+        margin-bottom: 0.9rem !important;
+    }
+
+    .row.no-gutter {
+        grid-template-columns: none;
+    }
+
+    .news .tabinfo {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+}
+
+@media (min-width: 2560px) {
+    .innbanners {
+        width: 87% !important;
+        margin-left: auto;
+    }
+
+    .video-4k {
+        flex: 0 0 auto;
+        width: 27%;
+    }
+}
+
+@media (min-width: 1792px) {
+    .our-team-card {
+        padding-right: 3%;
+    }
+}
+
+@media (min-width: 1715px) {
+    .row.no-gutter-4k {
+        grid-gap: 50px;
+        gap: 72px !important;
+        justify-content: start;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .tabinfo {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    // .mobile-menu-right-align {
+    //     padding-left: 14rem !important;
+    // }
+}
+
+// @media (min-width: 425px) {
+
+//     .mobile-icon {
+//         display: none;
+//     }
+
+//     .desktop-icon {
+//         display: flex;
+//     }
+// }
+
+@media (max-width: 475px) {
+    .mobile-menu {
+        justify-content: inherit;
+        width: 100%;
+    }
+    .submiti {
+        .space {
+            margin-left: 1rem !important;
+        }
+    }
+
+    .left-space {
+        margin-left: 0% !important;
+    }
+
+    .services-top {
+        margin-top: 20% !important;
+    }
+
+    .serv_title {
+        font-size: 30px !important;
+    }
+
+    .Servicescard .titleserv {
+        font-size: 16px !important;
+    }
+
+    .Servicescard .dec {
+        font-size: 12px !important;
+    }
+
+    .Somethingbtn {
+        font-size: 35px !important;
+    }
+
+    .about-mobile {
+        margin-top: -24%;
+    }
+
+    .about_img img {
+        margin-top: 28%;
+    }
+
+    .below-quotes-space {
+        margin-bottom: 2rem;
+    }
+
+    .team_img_mobile {
+        transform: translate(0%, 25%) !important;
+    }
+
+    .titlesubmit {
+        font-size: 35px !important;
+        margin-top: 6%;
+
+        span {
+            font-size: 35px !important;
+        }
+    }
+
+    // .mobile-icon {
+    //     display: flex;
+    // }
+
+    // .desktop-icon {
+    //     display: none;
+    // }
+}
+
+// @media (min-width:321px)and(max-width:375px) {
+//     .mobile-menu-right-align {
+//         padding-left: 17rem !important;
+//     }
+// }
+
+@media only screen and (max-device-width: 768px) {
+    .filter-buttons {
+        margin-right: 8px;
+        padding: 3px 8px;
+        font-size: 10px;
+        line-height: 18px;
+    }
+    .tab-c {
+        .pt-5 {
+            padding-top: 6rem !important;
+        }
+    }
+
+    .blogf {
+        .tab-c {
+            .pt-5 {
+                padding-top: 1rem !important;
+            }
+        }
+    }
+}

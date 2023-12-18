@@ -1,0 +1,41 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+<div class="m-20 products">
+
+    <div class="tabcusmeting">
+        <div class="tabinfo topPaddingDomainPage d-flex alchenter">
+
+            <div>
+                <a href="/all-products">
+                <img src="../../../assets/media/images/arrow_back_ios.svg" alt="">
+            </a>
+            </div>
+
+            <div class="ayu"> AYU   </div>
+
+            <div>
+                <ul class="scrolling-wrapper">
+                    <li (click)="servicesView('Overview')"  [ngClass]="{'activep':  tabchanedrop == 'Overview'}" >Overview</li>
+                    <li (click)="servicesView('Techspecs')" [ngClass]="{'activep': tabchanedrop == 'Techspecs'}">Tech Specs</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div *ngIf=" tabchanedrop == 'Overview'">
+        <app-overview></app-overview>
+    </div>
+
+    <div *ngIf="tabchanedrop == 'Techspecs'">
+        <app-techspecs></app-techspecs>
+    </div>
+
+
+
+
+
+
+</div>

@@ -1,0 +1,167 @@
+<section class="bannerDesing">
+    <div class="bg-video-wrap">
+
+        <video class="background" loop autoplay playsinline oncanplay="this.play()"
+            onloadedmetadata="this.muted = true">
+            <source src="assets/media/video/software.mp4" type="video/mp4" />
+            <track label="English" kind="captions" default>
+        </video>
+        <div class="overlay">
+        </div>
+        <div class="v_banner test">
+            <div> Innovate in</div>
+            <div><span>Day-to-day</span> life </div>
+
+            <div class="v_subtitle">
+                Experience life with technology.
+            </div>
+
+            <a href="https://www.youtube.com/watch?v=C32R2aBTosY" target="_blank" class="mt-4 btn btn-primary">Check out more
+                <img src="assets/media/icons/play.svg" class="ms-2">
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Development Process</span>
+                </div>
+            </div>
+
+            <img src={{gifUrl}} alt=""  >
+        </div>
+    </div>
+</section>
+
+<section class="pt-100 ourstrengths">
+    <div class="bgbluecard">
+    </div>
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our Skills/Strengths</span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                    <!--box1-->
+                    <div class="card-gary">
+                        <div><img src="./assets/media/images/blueDiamond.svg" alt="" class="gif-background">
+                            <img src="assets/media/images/software/Front-End.gif" alt="">
+                        </div>
+                        <div class="cardtitle"> Frontend Web and Mobile</div>
+                        <div class="dsc">Mesmerizing designs with Next Gen <br> technology and frameworks. </div>
+                    </div>
+                    <!--boxend-->
+
+                    <!--box1-->
+                    <div class="card-white cardspace">
+                        <div><img src="./assets/media/images/blueDiamond.svg" alt="" class="gif-background">
+                            <img src="assets/media/images/software/Database.gif" alt="">
+                        </div>
+                        <div class="cardtitle"> Database</div>
+                        <div class="dsc">Game changing insgihts through a <br> world-class Data analysis.</div>
+                    </div>
+                    <!--boxend-->
+
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                    <!--box1-->
+                    <div class="card-white cardspace">
+                        <div><img src="./assets/media/images/blueDiamond.svg" alt="" class="gif-background">
+                            <img src="assets/media/images/software/Backend.gif" alt="">
+                        </div>
+                        <div class="cardtitle">Backend</div>
+                        <div class="dsc">Implement and forget, stability with <br> experience.</div>
+                    </div>
+                    <!--boxend-->
+
+                    <!--box1-->
+                    <div class="card-gary cardspace">
+                        <div><img src="./assets/media/images/blueDiamond.svg" alt="" class="gif-background">
+                            <img src="assets/media/images/software/Application-Penetration-Testing.gif" alt="">
+                        </div>
+                        <div class="cardtitle"> Application and Penetration Testing</div>
+                        <div class="dsc">Automate the complete test
+                        </div>
+                    </div>
+                    <!--boxend-->
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-xl-4 col-xxl-4">
+
+                    <div class="tabgirdindi">
+                    <!--box1-->
+                    <div class="card-gary">
+                        <div><img src="./assets/media/images/blueDiamond.svg" alt="" class="gif-background">
+                            <img src="assets/media/images/software/Architecture.gif" alt="">
+                        </div>
+                        <div class="cardtitle"> Architecture</div>
+                        <div class="dsc">Design your thoughts.</div>
+                    </div>
+                    <!--boxend-->
+
+                    <!--box1-->
+                    <div class="card-white cardspace">
+                        <div><img src="./assets/media/images/blueDiamond.svg" alt="" class="gif-background">
+                            <img src="assets/media/images/software/Cloud.gif" alt="">
+                        </div>
+                        <div class="cardtitle"> Cloud and Dev Ops</div>
+                        <div class="dsc">Distributed and quick to market <br> using Cloud and DevOps.</div>
+                    </div>
+                    <!--boxend-->
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</section>
+
+<section class="pb-100 above-quotes-space-new  ">
+    <div class="tabinfo">
+
+        <div class="quotes ">
+
+
+            <div class="bg">
+                <div>
+                    <span class="desingC">Software is a great combination between</span>
+                    <div class="second-line">
+                        <span class="desing-sc-bold">A</span><span class="desing-sc">rtistry
+                        </span>
+                        <span class="desing-sc">and </span>
+                        <span class="desing-sc-bold">E</span>
+                        <span class="desing-sc">ngineering</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="quotesAu"> - Bill Gates </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>

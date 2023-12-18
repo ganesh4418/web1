@@ -1,0 +1,196 @@
+@import "includes";
+
+.submitiBg {
+    position: absolute;
+    right: 8rem;
+    top: 9rem;
+    transform: rotate(12deg);
+}
+
+.tcenter {
+    text-align: center;
+}
+
+
+.btnSubmit {
+    background: linear-gradient(135deg, #487AE3 0%, #475F96 100%);
+    border-radius: 62px;
+    padding: 9px 42px;
+    border: none;
+    color: $white;
+    margin: 20px 0px;
+}
+
+
+
+.submiti {
+    position: relative;
+    padding-top: 4rem;
+    min-height: 500px;
+}
+
+.upload {
+    margin: 20px 0px;
+}
+
+.space {
+    margin-left: 11rem;
+}
+
+.p0Left {
+    padding-left: 0px;
+}
+
+.p0Right {
+    padding-right: 0px;
+}
+
+.spaceIdea {
+    margin: 30px 0px;
+}
+
+.titlesubmit {
+    font-family: "Roboto Light";
+    font-size: 48px;
+
+    span {
+        font-family: Roboto;
+        font-size: 48px;
+        font-weight: 700;
+
+    }
+}
+
+.submitideaForm {
+
+    margin-left: 11rem;
+    margin-top: 20px;
+
+    width: 60%;
+
+    .titleidea {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        margin-bottom: 10px;
+    }
+
+    .inputc {
+        background: transparent;
+        border: 1px solid $muted;
+        border-radius: 12px;
+        padding: 16px 24px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        height: 58px;
+        color: $black;
+    }
+
+    .inputc:focus {
+        border-width: 2px;
+        border-color: $primary;
+    }
+
+    .mb20 {
+        margin-bottom: 1rem;
+    }
+
+}
+
+.w100 {
+    width: 100%;
+}
+
+input[type=file]::file-selector-button {
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 96px;
+    height: 40px;
+    border: 1px solid $primary;
+    border-radius: 100px;
+    color: $primary;
+    background: transparent;
+    margin-right: 6%;
+}
+
+.attachment {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.choose {
+    background: $white;
+    border-radius: 35px;
+    color: $primary;
+    border: 1px solid $primary;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 12px;
+    margin-top: 10px;
+}
+
+#file-chosen {
+    margin-left: 3rem;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-res {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.alternate-contact-label{
+    font-size: 14px;
+    padding: 0;
+}
+
+@media screen and (min-width: 480px) and (max-width: 896px) {
+    .space {
+        margin-left: 5rem
+    }
+
+    .submitideaForm {
+        margin-left: 0rem;
+        margin-top: 20px;
+        width: 95%;
+    }
+
+    .pt-5 {
+        padding-top: 0rem !important;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.choose{
+    cursor: pointer;
+}
+
+.choose:hover{
+    background-color: #487AE3;
+    color: white;
+}
+
+.textarea{
+    color: rgba(0, 0, 0, 0.4);
+}

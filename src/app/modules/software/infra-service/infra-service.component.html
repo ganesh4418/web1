@@ -1,0 +1,120 @@
+<div class="innbanners">
+    <div class="row align-items-center m-0 services-top">
+        <div class="col-md-5 offset-md-1 pb-4 mb-2 pb-md-0 mb-md-0 pt-4 mt-2 mt-md-0 pt-md-0">
+            <div class="info">
+                <div class="bannertxt">Infra</div>
+                <div class="subbannertxt">Services</div>
+                <div class="subinfo">Streamline your software journey with our all-in-one technology solutions</div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0 video-4k">
+            <div class="y-tube">
+                <!-- <iframe width="100%" height="415" src="https://www.youtube.com/embed/wT3oce4Uibk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe> -->
+                <video width="100%" height="auto" autoplay muted>
+                    <source src="assets/media/images/pagein/Software/Infra Services.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">What we offer</span>
+                </div>
+            </div>
+
+            <div class="physicalInfo  ">
+                <p class="what-is-design-text">We provide the underlying technology that supports the development,
+                    deployment, and operation of software applications. These services can include things like cloud
+                    computing platforms, databases, storage systems, networking services, and more. These services help
+                    to simplify the process of building and running applications by providing a reliable and scalable
+                    infrastructure that can be easily configured and managed. They also help to increase the efficiency
+                    and speed of software development by eliminating the need to set up and maintain infrastructure
+                    resources manually.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionsapce ourstrengths">
+
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our Capabilities</span>
+                </div>
+            </div>
+
+            <div class="ourbg">
+
+                <div class="row m-0">
+
+                    <div class=" col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-6 t-center  "> 
+                         <img src="assets/media/images/our-capabilitites/07_Software_Infrastructure_Services_GIF.gif" alt="" class="gif-file"></div>
+                    <div class=" col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6  ">
+
+                        <div class="Capabilitiesinfo">
+                            <ul>
+                                <li>Software app. development support</li>
+                                <li>Reliable and scalable infrastructure</li>
+                                <li>Deployment and operation</li>
+                                <li>Database management</li>
+                                <li>Cloud computing platforms</li>
+                                <li>Networking services</li>
+                                <li>Easy configuration and management</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="bggary">
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>
+<!-- 
+<section class="sectionsapce">
+    <div class="tabinfo">
+        <div class="quotes ">
+            <div class="bg">
+                <div>
+                    Photography helps
+                    <span class="desingC">
+                        <span class="desing-sc-bold">P</span>eople
+                        <span class="quotes"> to </span><span class="desing-sc-bold">S</span>ee
+                    </span>
+                </div>
+            </div>
+            <div class="quotesAu">- Walt Disney</div>
+        </div>
+    </div>
+</section> -->
+<section class="bglet" *ngIf="!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Build <br>
+            Something Awesome!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf="connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>

@@ -1,0 +1,61 @@
+@import "includes";
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 10px;
+    line-height: 14px;
+    min-width: auto;
+    svg:hover {
+        background: #0000001a;
+    }
+}
+
+::ng-deep {
+    .mat-dialog-container {
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    .custom-modalbox {
+        justify-content: flex-end;
+        align-items: center;
+        right: 48px;
+        left: auto;
+        // width: calc(100% - 48px);
+        position: absolute !important;
+    }
+
+    .email,
+    .mobile {
+        position: absolute;
+        left: 15px;
+        top: 13px;
+    }
+
+    ::placeholder,
+    select,
+    textarea {
+        color: #000 !important;
+    }
+
+    .custom-modalbox {
+        max-height: 83vh;
+        max-width: 60vw !important;
+    }
+
+    @media (min-width: 768px) {
+        .custom-modalbox {
+            max-height: 84vh;
+            max-width: 65vw !important;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .custom-modalbox {
+            max-height: 86vh;
+            max-width: 30vw !important;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.submitiBg {
+    position: absolute;
+    right: 8rem;
+    top: 9rem;
+    transform: rotate(12deg);
+}
+
+.submiti {
+    position: relative;
+    padding-top: 4rem;
+    min-height: 500px;
+}
+
+.titlesubmit {
+    font-family: "Roboto Light";
+    font-size: 48px;
+
+    span {
+        font-family: Roboto;
+        font-size: 48px;
+        font-weight: 700;
+
+    }
+}
+
+.space {
+    margin-left: 11rem;
+}
+
+.btnexplore {
+    background: white;
+    border-radius: 35px;
+    color: #2673E5;
+    border: 1px solid #2673E5;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 32px;
+    margin-top: 10px;
+}
+
+.text-color{
+    color: #2673E5;
+}
+
+
+.outer {
+    width: 100%;
+    text-align: center;
+}
+
+.t-font-size{
+    font-size: 24px;
+    font-weight: 300;
+}
+

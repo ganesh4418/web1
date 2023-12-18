@@ -1,0 +1,235 @@
+@import "includes";
+
+.img-container {
+  position: relative;
+  text-align: center;
+}
+
+.top-left-content {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: $font-xs;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 30px;
+  color: $white;
+}
+
+.content-center {
+  transition: 0.5s ease;
+  opacity: 0;
+  @extend %vertical-center;
+  text-align: center;
+}
+
+.case-box {
+  height: 100%;
+
+  .perfect-center {
+    opacity: 0;
+  }
+
+  .mh-200 {
+    min-height: 180px;
+  }
+
+  &:hover {
+    background: $white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 2px 2px 20px 0px #00000014;
+
+    .top-left-content {
+      font-weight: $medium;
+      color: $black;
+      background-color: #e2e7ef99;
+    }
+
+    .img-container {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      box-shadow: 0 0 10px 0 rgb(100 100 100 / 26%);
+      background: linear-gradient(180deg, rgba(38, 115, 229, 0.85) 0%, rgba(71, 95, 150, 0.85) 100%);
+
+      img {
+        mix-blend-mode: multiply;
+        background: #2673e5;
+      }
+    }
+
+    img {
+      opacity: 0.3;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .perfect-center {
+      opacity: 1;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.card:hover .top-left-content {
+  color: $black;
+  background-color: lightgray;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.read-more {
+  background-color: transparent;
+  padding: 10px 16px;
+  border-radius: 50px;
+  border: 1px solid $white;
+  color: $white;
+  font-weight: $regular;
+  font-size: 14px;
+
+  &:hover {
+    background-color: $primary;
+  }
+}
+@media (max-width: 768px) {
+  .read-more {
+    background-color: transparent;
+    padding: 10px 11px;
+    border-radius: 44px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 9px;
+}
+
+}
+
+.text-inner {
+  padding: 12px !important;
+}
+
+.all-case-studies {
+  .arrow_anim {
+    margin-left: 0em;
+    -webkit-transition: all 0.6s ease;
+  }
+
+  :hover .arrow_anim {
+    margin-left: 1em;
+    -webkit-transition: all 0.3s ease;
+  }
+}
+
+.arrow_anim::before {
+  margin-left: 0.1em;
+  margin-top: -0.3em;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  content: "";
+}
+
+.all-case-studies:hover::before {
+  margin-top: 0.3em;
+  content: "";
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.6s ease;
+}
+.arrow_animation img {
+  transition: 0.5s;
+  transform: translateY(0%);
+  .arrow_anim {
+    transition: 0.5s;
+    transform: translateY(25%);
+  }
+}
+
+.arrow_animation:hover img {
+  transform: translateY(-25%);
+}
+
+.quotes {
+  margin-top: 5em 0px;
+  font-family: "Roboto Light";
+  font-style: normal;
+  font-size: 72px;
+  line-height: 86px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #000000;
+
+  .desingC {
+      font-family: "Roboto Light";
+      font-weight: 300;
+      font-style: normal;
+      font-size: 72px;
+  }
+
+  .desing-sc {
+      font-family: "Roboto Light";
+      font-weight: 100;
+      font-style: normal;
+      font-size: 55px;
+  }
+
+  .desing-sc-bold {
+      font-family: "Roboto Medium";
+      font-weight: 100;
+      font-style: normal;
+  }
+}
+
+.bg{
+  margin-top: 15px;
+}
+
+.bg::before {
+  content: "";
+  background-image: Url("./assets/media/images/startT.svg");
+
+  display: inline-block;
+  position: relative;
+  /* top: 49px; */
+  /* margin-top: 0rem; */
+  height: 34px;
+  /* width: 50px; */
+  background-repeat: no-repeat;
+  width: 90%;
+  top: 40px;
+  right: 55px;
+}
+
+.bg::after {
+  content: "";
+  background-image: Url("./assets/media/images/startE.svg");
+  display: inline-block;
+  height: 43px;
+  width: 90%;
+  text-align: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -1rem;
+}
+
+.pt-30{
+  padding-top: 70px;
+  margin-left: 20px;
+}
+
+
+@media (min-width:1920px){
+  .pt-30{
+    padding-top: 80px;
+    margin-left: 70px;
+  }
+}

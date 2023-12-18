@@ -1,0 +1,142 @@
+<!-- <section class="bannerDesing">
+    <div class="bg-video-wrap">
+        <img src="assets/media/images/softwareServices.png" alt="" class="serimg">
+        <div class="overlay">
+        </div>
+        <div class="v_banner test">
+
+            <div><span>Software</span> Services </div>
+        </div>
+
+    </div>
+</section> -->
+
+<section class="tabinfo responsive-top-spacing-softSer">
+    <div class="py-4 my-1">
+        <div class="serv_title">
+            <div>Software<span> Services</span></div>
+        </div>
+    </div>
+
+    <div>
+        <div class="row no-gutter">
+            <div class="col-md-4">
+                <div class="Servicescard">
+                    <img src="assets/media/images/sProductDevelopment.png" class="img-fluid" alt="">
+
+                    <div class="decdottom">
+                        <div class="titleserv"> Product Development </div>
+                        <div class="dec"> Designing and developing scalable and reliable software products to empower organizations to optimize their operations and drive success.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Servicescard">
+                    <img src="assets/media/images/mobileDevelopment.png" class="img-fluid" alt="">
+                    <div class="decdottom">
+                        <div class="titleserv">Mobile & Web Development </div>
+                        <div class="dec">Applications that run seamlessly on web and mobile with optimised design and
+                            user
+                            experience.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="Servicescard">
+
+                    <img src="assets/media/images/software/3.png" class="img-fluid" alt="">
+
+                    <div class="decdottom">
+                        <div class="titleserv"> Architecture & Design </div>
+                        <div class="dec"> Blueprint for software products and applications that aligns with business
+                            objectives. Optimised solution to achieve common quality goals of performance and security.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="Servicescard">
+                    <img src="assets/media/images/software/4.png" class="img-fluid" alt="">
+                    <div class="decdottom">
+                        <div class="titleserv">Data Analytics </div>
+                        <div class="dec">Leveraging the power of data to provide insightful metrics, predictions and
+                            visualizations.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="Servicescard">
+
+                    <img src="assets/media/images/software/5.png" class="img-fluid" alt="">
+
+                    <div class="decdottom">
+                        <div class="titleserv"> AR/VR </div>
+                        <div class="dec"> Partnering with leading organizations to bring their AR/VR products to life and deliver exceptional experiences to users.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="Servicescard">
+                    <img src="assets/media/images/software/6.png" class="img-fluid" alt="">
+                    <div class="decdottom">
+                        <div class="titleserv">Consulting & Staffing </div>
+                        <div class="dec">Technical consultation for industries in varied domains that includes software,
+                            mechatronics and IIOT solutions. Deployment of strictly evaluated and well qualified staff
+                            to fill the talent gap for companies.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="Servicescard">
+
+                    <img src="assets/media/images/software/7.png" class="img-fluid" alt="">
+
+                    <div class="decdottom">
+                        <div class="titleserv">Infra Services </div>
+                        <div class="dec"> Optimizing and maintaining the technology backbone of an organization to
+                            support its day-to-day operations and long-term goals.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="Servicescard">
+                    <img src="assets/media/images/software/8.png" class="img-fluid" alt="">
+                    <div class="decdottom">
+                        <div class="titleserv">Technology Consulting </div>
+                        <div class="dec">Helping businesses navigate the ever-evolving landscape of technology to make
+                            informed decisions and drive growth.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="bglet" *ngIf = "!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Build <br>
+            Something Awesome!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf = "connectClicked"></app-connect-now>

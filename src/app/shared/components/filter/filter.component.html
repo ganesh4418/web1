@@ -1,0 +1,35 @@
+<section>
+    <div class="tab-c">
+        <div class="row pt-5 pb-4 mb-1 align-items-center custom  all-work-change">
+            <div class="col-md-9 p-0">
+                <div *ngIf="selectedTab!=='All'">
+                    <button mat-stroked-button *ngFor="let sb of subCategoryList" class="filter-buttons"
+                        (click)="onFilterButton(sb)"
+                        [ngClass]="{ 'selected-button':selectedItem === sb, 'unselected-button':selectedItem !== sb  }">{{sb}}</button>
+                </div>
+            </div>
+            <div class="col-md-3 p-0">
+                <div class="dropsort mb-3">
+                    <div>Sort By</div>
+                    <div>
+                        <div class="arrow_icon">
+                            <button class="border-0 selected-menu-item" mat-icon-button [matMenuTriggerFor]="menu"
+                                (click)="$event.stopPropagation()">{{sortItem}}
+                                <mat-icon class="">keyboard_arrow_down</mat-icon>
+                            </button>
+                        </div>
+                        <mat-menu #menu="matMenu" backdropClass="servicescustomize" class="filtercustomize">
+                            <button mat-menu-item (click)="onSortBy('default')">Default</button>
+                            <button mat-menu-item (click)="onSortBy('newly-added')">Newly Added</button>
+                            <button mat-menu-item (click)="onSortBy('oldest_ones')">Oldest Ones</button>
+                            <button mat-menu-item (click)="onSortBy('sort_by_A-Z')">Sort by A-Z</button>
+                            <button mat-menu-item (click)="onSortBy('sort_by_Z-A')">Sort by Z-A</button>
+                        </mat-menu>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,35 @@
+<div class="pl-140 pt-100 ">
+    <app-breadcrumb></app-breadcrumb>
+</div>
+
+<div class="tabcusmeting">
+    <div class="tabinfo topPaddingDomainPage">
+
+        
+        <ul class="scrolling-wrapper ourWork">
+            <li class="" (click)="servicesView('All')" [ngClass]="{'active': tabchanedrop === 'All'}">
+                All</li>
+            <li class="" (click)="servicesView('Design')" [ngClass]="{'active': tabchanedrop === 'Design'}">Design</li>
+            <li class="" (click)="servicesView('Software')" [ngClass]="{'active': tabchanedrop === 'Software'}">Software</li>
+            <!-- <li class="" (click)="servicesView('Mechanical')" [ngClass]="{'active': tabchanedrop === 'Mechanical'}">Mechanical</li>
+            <li class="" (click)="servicesView('Electronics')" [ngClass]="{'active': tabchanedrop === 'Electronics'}">Electronics</li> -->
+            
+        </ul>
+    </div>
+</div>
+
+<app-study-template [caseStudyItems]="caseStudyItems" [selectedTab]="selectedTab" [subCategoryList]="subCategoryList" (selectedItem)="onSelectedButton($event)"></app-study-template>
+
+<!-- <section>
+    <div>
+        <div class="">  
+            <mat-tab-group mat-stretch-tabs="true" mat-align-tabs="center" (selectedTabChange)="onChangeTab($event)" [(selectedIndex)]="selectedTabIndex">
+                <mat-tab label="All"><app-study-template [caseStudyItems]="caseStudyItems" [selectedTab]="selectedTab" [subCategoryList]="subCategoryList" (selectedItem)="onSelectedButton($event)"></app-study-template></mat-tab>
+                <mat-tab label="Design"><app-study-template [caseStudyItems]="caseStudyItems" [selectedTab]="selectedTab" [subCategoryList]="subCategoryList" (selectedItem)="onSelectedButton($event)"></app-study-template></mat-tab>
+                <mat-tab label="Software"><app-study-template [caseStudyItems]="caseStudyItems" [selectedTab]="selectedTab" [subCategoryList]="subCategoryList" (selectedItem)="onSelectedButton($event)"></app-study-template></mat-tab>
+                <mat-tab label="Mechanical"><app-study-template [caseStudyItems]="caseStudyItems" [selectedTab]="selectedTab" [subCategoryList]="subCategoryList" (selectedItem)="onSelectedButton($event)"></app-study-template></mat-tab>
+                <mat-tab label="Electronics"><app-study-template [caseStudyItems]="caseStudyItems" [selectedTab]="selectedTab" [subCategoryList]="subCategoryList" (selectedItem)="onSelectedButton($event)"> </app-study-template></mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</section> -->

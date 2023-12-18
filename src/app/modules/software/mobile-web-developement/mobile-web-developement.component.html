@@ -1,0 +1,128 @@
+<div class="innbanners">
+    <div class="row align-items-center m-0 services-top">
+        <div class="col-md-5 offset-md-1 pb-4 mb-2 pb-md-0 mb-md-0 pt-4 mt-2 mt-md-0 pt-md-0">
+            <div class="info">
+                <div class="bannertxt">Mobile and Web</div>
+                <div class="subbannertxt">Developement</div>
+                <div class="subinfo">
+                    Building seamless mobile and web experiences - Crafting outstanding digital solutions to empower
+                    your business. </div>
+            </div>
+        </div>
+        <div class="col-md-6 p-0 video-4k">
+            <div class="y-tube">
+                <!-- <iframe width="100%" height="415" src="https://www.youtube.com/embed/wT3oce4Uibk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe> -->
+                <video width="100%" height="auto" autoplay muted>
+                    <source src="assets/media/images/pagein/Software/Mobile & Web Development.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="bggary sectionsapce">
+    <div class="tabinfo">
+        <div class="designprocess">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">What we offer and contribute</span>
+                </div>
+            </div>
+
+            <div class="physicalInfo  ">
+                <p class="what-is-design-text">We specialize in web and mobile development, allowing us to create
+                    customized digital solutions for our clients. Our experienced team has the skills and expertise to
+                    design, develop, and deploy feature-rich web and mobile applications that will drive business growth
+                    and enhance user experience. By working closely with our clients, we understand their unique needs
+                    and deliver innovative digital solutions that provide tangible value and help them stay ahead in
+                    their digital journey.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionsapce ourstrengths">
+
+    <div class="tabinfo">
+        <div class="ourstrengths">
+            <div class="home-beauto">
+                <div>
+                    <span class="title  ">Our Capabilities</span>
+                </div>
+            </div>
+
+            <div class="ourbg">
+
+                <div class="row m-0">
+
+                    <div class=" col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-6 t-center  "> 
+                         <img src="assets/media/images/our-capabilitites/02_Mobile_Web_GIF.gif" alt="" class="gif-file"></div>
+                    <div class=" col-sm-12 col-md-7 col-lg-6 col-xl-6 col-xxl-6  ">
+
+                        <div class="Capabilitiesinfo">
+                            <ul>
+                                <li>Front-end development</li>
+                                <li>Back-end development</li>
+                                <li>Front-end frameworks</li>
+                                <li>CI/CD pipelines</li>
+                                <li>CMS development</li>
+                                <li>Android and iOS</li>
+                                <li>Database design and management</li>
+                                <li>Test-driven development</li>
+                                <li>Agile software development</li>
+                                <li>E-commerce software development</li>
+                                <li>Hybrid mobile apps</li>
+                                <li>Cloud infra & deployment</li>
+                                <li>Maintenance and support</li>
+                                <li>Performance optimization</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<section class="bggary">
+    <app-case-studies [caseStudyItems]="caseStudyItems" [title]="title"></app-case-studies>
+</section>
+<!-- 
+<section class="sectionsapce">
+    <div class="tabinfo">
+        <div class="quotes ">
+            <div class="bg">
+                <div>
+                    Photography helps
+                    <span class="desingC">
+                        <span class="desing-sc-bold">P</span>eople
+                        <span class="quotes"> to </span><span class="desing-sc-bold">S</span>ee
+                    </span>
+                </div>
+            </div>
+            <div class="quotesAu">- Walt Disney</div>
+        </div>
+    </div>
+</section> -->
+<section class="bglet" *ngIf="!connectClicked">
+    <div class="Somethingbtn position-relative">
+        <div class="t-em">
+            Let's Build <br>
+            Something Awesome!
+            <br>
+            <a href="javascript:void(0)" (click)="connect()" class="mt-5 btn btn-secondary">
+                Connect now
+            </a>
+        </div>
+        <img width="200px" src="assets/media/images/logo_outline.svg" alt="" class="logo-shadow">
+    </div>
+</section>
+
+<app-connect-now *ngIf="connectClicked" (close)="connectCloseClicked($event)"></app-connect-now>
